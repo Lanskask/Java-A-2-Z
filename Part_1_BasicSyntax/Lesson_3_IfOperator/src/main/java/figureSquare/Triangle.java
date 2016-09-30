@@ -8,8 +8,6 @@ public class Triangle {
     public Point b;
     public Point c;
 
-    double square;
-
     public Triangle(Point a, Point b, Point c) {
         this.a = a;
         this.b = b;
@@ -17,12 +15,37 @@ public class Triangle {
     }
 
     public double area() {
-        //calculate the triangle area
-        square = b.distanceTo(c) * a.distanceTo(b) /
-                a.distanceTo(c) * a.distanceTo(c) / 2;
-        if (square == 0 ) {
-            System.out.println("It's impossible to build Triangle with such points.");
-        }
+        /*
+         * By the Geron's Formula
+         */
+
+        double square, perimetre, AB, BC, CA;
+        AB = a.distanceTo(b);
+        BC = b.distanceTo(c);
+        CA = c.distanceTo(a);
+
+        perimetre = (AB + BC + CA) / 2;
+        square = Math.sqrt( perimetre *
+                            (perimetre - AB) *
+                            (perimetre - BC) *
+                            (perimetre - CA)
+                          );
+
         return square;
     }
+
+    public double maxLength(Point a, Point b, Point c) {
+        double maxLength = 0;
+
+        maxLength = a.distanceTo(b);
+
+        if( b.distanceTo(c) > maxLength ) {
+            maxLength = b.distanceTo(c) ;
+        } else if (c.distanceTo(a) > maxLength ) {
+            maxLength = c.distanceTo(a);
+        }
+
+        return maxLength;
+    }
+
 }
