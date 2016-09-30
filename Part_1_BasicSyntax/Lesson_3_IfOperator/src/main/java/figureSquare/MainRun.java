@@ -10,7 +10,8 @@ public class MainRun {
     static Point c = new Point(4, 0);
 
     static Triangle meinTriangle = new Triangle(a, b, c);
-    public static void main(String[] arg) {
+
+    public static void main(String[] args) {
 
         if (meinTriangle.area() == 0 ) {
             System.out.println("It's impossible to build Triangle with such points.");
