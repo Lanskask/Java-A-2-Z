@@ -23,24 +23,21 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="Lesson_1" />
-        <module name="Lesson_2_DataTypes" />
+        <module name="lesson_2_DataTypes" />
         <module name="Lesson_3_IfOperator" />
         <module name="Lesson_4_Cycle" />
         <module name="Lesson_5_Arrays" />
-        <module name="smurtazin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="11______Java-A-2-Z" target="1.5" />
+      <module name="java-a-2-z" target="1.5" />
       <module name="Lesson_1" target="1.5" />
-      <module name="Lesson_1_ Inheritance" target="1.5" />
-      <module name="Lesson_2_DataTypes" target="1.5" />
+      <module name="lesson_2_DataTypes" target="1.5" />
       <module name="Lesson_3_IfOperator" target="1.5" />
       <module name="Lesson_4_Cycle" target="1.5" />
       <module name="Lesson_5_Arrays" target="1.5" />
-      <module name="Part_1_BasicSyntax" target="1.5" />
+      <module name="part_1_BasicSyntax" target="1.5" />
       <module name="Part_2_OOP" target="1.5" />
-      <module name="smurtazin" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
