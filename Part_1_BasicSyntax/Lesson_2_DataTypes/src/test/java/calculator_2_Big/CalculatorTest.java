@@ -55,8 +55,6 @@ public class CalculatorTest {
         System.out.println("Test Div Result: " +
                 calculator.getResult());
         assertEquals(2, calculator.getResult());
-
-
     }
 
 }
