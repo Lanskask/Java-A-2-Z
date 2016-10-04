@@ -23,7 +23,7 @@ public class CalculatorTest {
 
         calculator.substruct(4, 2);
 
-        assertEquals( (int) 2.0, (int) calculator.getResult());
+        assertEquals( 2, (int) calculator.getResult());
     }
 
     @Test
