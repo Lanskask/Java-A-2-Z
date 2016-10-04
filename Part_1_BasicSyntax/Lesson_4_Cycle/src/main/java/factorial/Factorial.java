@@ -5,24 +5,16 @@ package factorial;
  */
 public class Factorial {
 
-//    public Factorial {
-//        int numberToFactorize = 5;
-//    };
+    private int previosNumber = 1;
 
-    static int previosNumber = 1;
-
-    static public int makeFactorial(int numberToFactorize) {
+    public void makeFactorial(int numberToFactorize) {
         for (int i = 1; i <= numberToFactorize; i++) {
-            previosNumber *= i;
+            this.previosNumber *= i;
         }
-        return  previosNumber;
     }
 
-    public static void main(String[] args) {
-        int numberToFactorize = 5;
-        System.out.println( numberToFactorize + "! = " +
-                            makeFactorial(numberToFactorize));
-    }
-//    int getPreviosNumber = value[i] * value[i + 1];
+    public int getFactorizedNumber() {
+        return this.previosNumber;
+    };
 
 }
