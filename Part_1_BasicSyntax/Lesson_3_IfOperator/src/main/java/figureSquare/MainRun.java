@@ -36,5 +36,4 @@ public class MainRun {
 //        System.out.println( "Triangle sides: " +
 //                a.distanceTo(b) + "; " + b.distanceTo(c) + "; " + c.distanceTo(a) + ". " );
     }
-
 }

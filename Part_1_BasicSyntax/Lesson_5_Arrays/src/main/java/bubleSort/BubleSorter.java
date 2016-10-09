@@ -10,28 +10,25 @@ public class BubleSorter {
         this.array = array;
     }
 
-//    private void swap(int firstValue, int secondValue) {
     private void swap(int outputArray[], int j) {
         int tempValue;
 //        System.out.println("In swap method");
-//        System.out.println(firstValue + " " + secondValue);
         tempValue = outputArray[j];
         outputArray[j] = outputArray[j+1];
         outputArray[j+1] = tempValue;
-//        System.out.println(firstValue + " " + secondValue);
     }
 
-    public int[] bubleSorting() {
-        int outputArray[] = array;
-
-        for (int i = 0; i < outputArray.length; i++) {
-            for (int j = 0; j < outputArray.length - 1; j++) {
-                if( outputArray[j] > outputArray[j+1] ) {
-                    swap(outputArray, j);
+    public void bubleSorting() {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length - 1; j++) {
+                if( array[j] > array[j+1] ) {
+                    swap(array, j);
                 }
             }
         }
+    }
 
-        return outputArray;
+    public int[] getArray() {
+        return array;
     }
 }

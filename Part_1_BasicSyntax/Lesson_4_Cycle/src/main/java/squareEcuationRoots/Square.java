@@ -10,7 +10,6 @@ class Square {
     double discriminant;
 
     double x1, x2;
-//    double xAnswers[];
     double[] xAnswers = new double[2];
 
     public Square(float a, float b, float c) {

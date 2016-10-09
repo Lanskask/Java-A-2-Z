@@ -16,8 +16,6 @@ public class SquareTesting {
         System.out.println("When X = " + x + ", Y is equal " +
                 mySquare.calculate(x));
 
-
-
         xAnswers = mySquare.solvEquation();
         start = (float) xAnswers[0];
         finish = (float) xAnswers[1];

@@ -1,12 +1,21 @@
 package removeTheSame;
 
+import static java.util.Arrays.copyOfRange;
+
 /**
  * Created by a1 on 08.10.16.
  */
-public class SameRemover {
+public class ArrayToSameRemove {
+    private int array[];
+    private int newArray[];
 
+    public ArrayToSameRemove(int array[]) {
+        this.array = array;
+    }
+
+    // Prepearing functions
     int[] generateArray() {
-        int[] array = new int[10];
+//        int[] array = new int[10];
         for(int i = 0; i < array.length; i++) {
             array[i] = (int) Math.round( Math.random()*100 );
         }
@@ -14,28 +23,33 @@ public class SameRemover {
     }
 
     void printArray(int array[], String arrayTag) {
-        System.out.print(arrayTag + " array:\n\t");
+        System.out.print("\n" + arrayTag + " array:\n\t");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + ", ");
         }
+        System.out.println();
     }
 
-    void removeTheSame(int array[]) {
+    // Main Doing Neaded functions
+    private void moveAllRightArrayToTheLeft(int i) {
+//        System.out.println(i);
+        for (; i < array.length - 1; i++) {
+            array[i] = array[i + 1];
+        }
+    }
 
-//        int a, b;
-//        a = array[i];
-//        b = array[j];
-//        if ( a == b ) {
-//
-//        }
-
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length; j++) {
-                if( array[i] == array[j] && i != j) {
-                    System.out.println("array["+ i +"] = array[" + "].");
-                }
+    void cleaningFunction() {
+        for (int i = 0; i < array.length - 1; i++) {
+            if( array[i] == array[i + 1] ) {
+//                System.out.println("array[" + i + "]=["+ i +"+1]= " + array[i]);
+                moveAllRightArrayToTheLeft(i);
+                array = copyOfRange(array, 0, array.length - 1 );
             }
         }
-    } // end removeTheSame
+        newArray = array;
+    }
 
+    public int[] getNewArray() {
+        return newArray;
+    }
 }
