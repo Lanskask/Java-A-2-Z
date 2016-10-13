@@ -8,9 +8,13 @@ import static org.junit.Assert.*;
  * Created by a1 on 08.10.16.
  */
 public class BubleSorterTest {
+
+    int[] array = {2, 1, 0, 1, 1, 0, 2, 0, 1, 2, 1, 2};
+    int[] newArray;
+
     @Test
     public void bubleSorting() throws Exception {
-      // Making start preparing
+        // Making start preparing
         int[] array = new int[10];
 
         // Making initial array
@@ -18,17 +22,17 @@ public class BubleSorterTest {
             array[i] = (int) Math.round( Math.random()*100 );
         }
 
-      // Starting to testing
-        BubleSorter sorter = new BubleSorter(array);
+        // Starting to testing
+        BubleSorter sorterClass = new BubleSorter(array);
 
-        array = sorter.getArray();
+        sorterClass.bubleSorting();
+        array = sorterClass.getArray();
 
-
-//        Uncomment to view the result array
-        /*System.out.print("\n\nOutput array:\n\t ");
+        // Uncomment to view the result array
+        System.out.print("\n\nOutput array:\n\t ");
         for(int i = 0; i < array.length; i++) {
             System.out.print(array[i] + ", ");
-        }*/
+        }
 
         // Checking
         boolean check = true;
@@ -37,9 +41,27 @@ public class BubleSorterTest {
                 check = false;
             }
         }
-
         // Final Check
         assertTrue( check );
+    }
+
+    @Test
+    public void cleaningFunction() throws Exception {
+        BubleSorter sorterClassArray = new BubleSorter(array);
+
+        sorterClassArray.showArray(array, "Before sorting");
+        sorterClassArray.bubleSorting();
+
+        sorterClassArray.cleaningFunction();
+
+        sorterClassArray.showArray(array, "Array");
+
+        newArray = sorterClassArray.getNewArray();
+        sorterClassArray.showArray(newArray, "New Array");
+
+        sorterClassArray.checkingArrayFunction();
+        boolean check = sorterClassArray.getCheck();
+        assertTrue(check);
     }
 
 }

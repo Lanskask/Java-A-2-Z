@@ -1,15 +1,15 @@
-package removeTheSame;
+package oldRemoveTheSame;
 
 import static java.util.Arrays.copyOfRange;
 
 /**
  * Created by a1 on 08.10.16.
  */
-public class ArrayToSameRemove {
+public class ArrayTheSameRemove {
     private int array[];
     private int newArray[];
 
-    public ArrayToSameRemove(int array[]) {
+    public ArrayTheSameRemove(int array[]) {
         this.array = array;
     }
 
