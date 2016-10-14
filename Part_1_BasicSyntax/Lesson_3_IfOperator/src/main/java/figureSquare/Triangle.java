@@ -21,7 +21,9 @@ public class Triangle {
 
     /*double AB, BC, CA;
     double[] sidesArray = {AB, BC, CA};*/
-    Vector[] vectorsArray = {AB, BC, CA}; // **
+//    Vector[] vectorsArray = {AB, BC, CA}; // **
+    Vector[] vectorsArray = {this.AB, this.BC, this.CA}; // **
+
 
     /**
      * TODO what to do with vectorsArray up here and in the method below
@@ -101,25 +103,19 @@ public class Triangle {
         System.out.println();
     }
 
-    /*double getNearPointAngle(int[] numberOfNeededPoints, int i) {
-        double cSide = sidesArray[i];
-        double aSide = sidesArray[numberOfNeededPoints[0]];
-        double bSide = sidesArray[numberOfNeededPoints[1]];
-*//*        for (int j = 0; j < numberOfNeededPoints.length; j++) {
-
-        }*//*
-        double angleSize = Math.acos( (Math.pow(aSide, 2) + Math.pow(bSide, 2) - Math.pow(cSide, 2))
-                / (2 * aSide * cSide ) );
-        return angleSize;
-    }*/
-
     double getNearPointAngle(int[] numberOfNeededPoints, int i) { // getNearPointAngleViaVector
         Vector[] vectorsArray = {this.AB, this.BC, this.CA}; // **
 
-        /**TODO Maybe to add this. before vectorsArray here ?*/
+        /**TODO How to make common vectorsArray ?
+         * Maybe to add this. before vectorsArray here ?*/
+        /*Vector AB = this.vectorsArray[i];
+        Vector BC = this.vectorsArray[numberOfNeededPoints[0]];
+        Vector CA = this.vectorsArray[numberOfNeededPoints[1]];*/
+
         Vector AB = vectorsArray[i];
         Vector BC = vectorsArray[numberOfNeededPoints[0]];
         Vector CA = vectorsArray[numberOfNeededPoints[1]];
+
         // BC ^ CA
         /*System.out.println("In triangle Class");
         System.out.println("this.AB: " + this.AB + "; this.BC: " + this.BC + "; this.CA: " + this.CA);
@@ -127,18 +123,19 @@ public class Triangle {
         showArray(numberOfNeededPoints, "InTriangle Class; Number of needed points");
         System.out.println("vectorsArray[numberOfNeededPoints[0]]: " + vectorsArray[numberOfNeededPoints[0]]);
         System.out.println("vectorsArray[numberOfNeededPoints[1]]: " + vectorsArray[numberOfNeededPoints[1]]);
-        showArray(vectorsArray, "vectorsArray ");*/
+        showArray(vectorsArray, "vectorsArray ");
 
-        /*System.out.println("AB: " + AB + "; BC: " + BC + "; CA: " + CA);
-        System.out.println("BC.X : " + BC.X + "; CA.X : " + CA.X + "; CA.X : " + BC.Y + "; CA.X : " + CA.Y);*/
-        double fractionUp = BC.X *  CA.X + BC.Y *  CA.Y;// ;
+        System.out.println("AB: " + AB + "; BC: " + BC + "; CA: " + CA);*/
+//        System.out.println("BC.X : " + BC.X + "; CA.X : " + CA.X + "; BC.Y : " + BC.Y + "; CA.Y : " + CA.Y);
+        double fractionUp = Math.abs(BC.X *  CA.X + BC.Y *  CA.Y);// ;
         double fractionDown = BC.getVectorLength() * CA.getVectorLength();
-        double angleSize = Math.acos( fractionUp / fractionDown );
+        /*System.out.println("fractionUp: " + fractionUp );
+        System.out.println("fractionDown: " + fractionDown );
+        System.out.println( "Fraction: " + fractionUp / fractionDown );*/
+        double angleSize = Math.acos( fractionUp / fractionDown ) * 180/3.14;
         return angleSize;
     }
 
-
-//    double allAnglesSize(Point a, Point b, Point c) {
     double allAnglesSize() {
         double allAnglesSizeQuantity = 0;
 //        Point[] pointArray = {a, b, c};
@@ -147,25 +144,30 @@ public class Triangle {
             /**
              *  It is needed that allNumbers to be generated each time
              */
+//            System.out.println(" -- In allAnglesSize -- ");
             int[] allNumbers = allNumbersArray(vectorsArray.length);
             int[] numberOfNeededPoints = arrayWithRemovedIElement(allNumbers, i);
+//            showArray(allNumbers, "All Numbers");
+//            showArray(numberOfNeededPoints, "number Of Needed Points");
             double neededAngle = getNearPointAngle(numberOfNeededPoints, i);
             allAnglesSizeQuantity += neededAngle;
+//            System.out.println("neededAngle: " + neededAngle);
+
         }
         return allAnglesSizeQuantity;
     }
 
     boolean triangleExistionByAngles() {
         boolean exist = false;
-        if(allAnglesSize() <= 180) exist = true;
+        if( (180 - 0.2) <= allAnglesSize()  && allAnglesSize() <= (180 + 0.2)) exist = true;
         return exist;
     }
 
     public void area() {
-        /*
+        /**
          * By the Geron's Formula
          */
-        if ( this.triangleExistion(ABSideLength, BCSideLength, CASideLength) ) {
+        if ( triangleExistionByAngles() && this.triangleExistion(ABSideLength, BCSideLength, CASideLength) ) {
             double halfPerimeter;
             halfPerimeter = (ABSideLength + BCSideLength + CASideLength) / 2;
             area = Math.sqrt( halfPerimeter *

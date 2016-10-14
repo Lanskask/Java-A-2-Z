@@ -6,9 +6,9 @@ package figureSquare;
 public class Vector {
     public double X, Y;
     private double vectorLength = 0;
-//    Point A, B;
-    Point A = new Point(0,0);
-    Point B = new Point(0,3);
+    Point A, B;
+//    Point A = new Point(0,0);
+//    Point B = new Point(0,3);
 
 //    Point(double x, double y)
 //    Vector(Point A, Point B)
@@ -18,8 +18,11 @@ public class Vector {
         this.A = A;
         this.B = B;
 //        System.out.println("B: " + B + "; A:" + A);
+        /** TODO I think that everithins should be done with out Math.abs at vectors coordinates*/
+//        this.X = Math.abs(B.x - A.x);
+//        this.Y = Math.abs(B.y - A.y);
         this.X = B.x - A.x;
-        this.Y = B.y - A.x;
+        this.Y = B.y - A.y;
 //        System.out.println("B.x: " + B.x + "; A.x:" + A.x);
     }
 

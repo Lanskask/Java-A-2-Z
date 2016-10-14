@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1f3d432-1a2d-43c8-bfe8-4ac6e3f90da2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/experiments/ClassA.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/experiments/ClassB.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figureSquare/Vector.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/test/java/experiments/ClassBTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figureSquare/MainRun.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/target/classes/figureSquare/MainRun.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/target/classes/figureSquare/Triangle.class" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/target/classes/figureSquare/Triangle.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figureSquare/Triangle.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figureSquare/Triangle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figureSquare/Vector.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figureSquare/Vector.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/test/java/figureSquare/TriangleTest.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/test/java/figureSquare/TriangleTest.java" />
     </list>
     <ignored path="11______Java-A-2-Z.iws" />
@@ -44,11 +39,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Triangle.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Triangle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figureSquare/Triangle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+            <state relative-caret-position="253">
+              <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
               <folding>
                 <element signature="method#triangleExistion#0;class#Triangle#0" expanded="false" />
                 <element signature="method#allNumbersArray#0;class#Triangle#0" expanded="false" />
@@ -56,6 +51,9 @@
                 <element signature="method#showArray#0;class#Triangle#0" expanded="false" />
                 <element signature="method#showArray#1;class#Triangle#0" expanded="false" />
                 <element signature="method#showArray#2;class#Triangle#0" expanded="false" />
+                <element signature="method#getNearPointAngle#0;class#Triangle#0" expanded="false" />
+                <element signature="method#allAnglesSize#0;class#Triangle#0" expanded="false" />
+                <element signature="method#maxLength#0;class#Triangle#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -95,17 +93,17 @@
         <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figureSquare/Vector.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="245">
-              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+              <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TriangleTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TriangleTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/test/java/figureSquare/TriangleTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="54" column="78" selection-start-line="54" selection-start-column="78" selection-end-line="54" selection-end-column="78" />
+            <state relative-caret-position="407">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -114,8 +112,8 @@
       <file leaf-file-name="Point.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figureSquare/Point.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="36" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="36" />
+            <state relative-caret-position="126">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -197,9 +195,9 @@
         <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/experiments/ClassMain.java" />
         <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/experiments/ClassB.java" />
         <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/test/java/experiments/ClassBTest.java" />
-        <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/test/java/figureSquare/TriangleTest.java" />
         <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figureSquare/Vector.java" />
         <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figureSquare/Triangle.java" />
+        <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/test/java/figureSquare/TriangleTest.java" />
       </list>
     </option>
   </component>
@@ -1154,38 +1152,45 @@
       <option name="project" value="LOCAL" />
       <updated>1476394829102</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Acsesebility of vectorsArray fixing">
+      <created>1476473568163</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1476473568163</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TriangleTest - 2016.10.14 at 19h 14m 20s.xml">
+    <history-entry file="TriangleTest - 2016.10.14 at 21h 07m 16s.xml">
       <configuration name="TriangleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TriangleTest - 2016.10.14 at 19h 15m 22s.xml">
+    <history-entry file="TriangleTest - 2016.10.14 at 21h 08m 38s.xml">
       <configuration name="TriangleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TriangleTest - 2016.10.14 at 19h 16m 25s.xml">
+    <history-entry file="TriangleTest - 2016.10.14 at 21h 09m 10s.xml">
       <configuration name="TriangleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TriangleTest - 2016.10.14 at 19h 17m 43s.xml">
+    <history-entry file="TriangleTest - 2016.10.14 at 21h 10m 02s.xml">
       <configuration name="TriangleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TriangleTest - 2016.10.14 at 19h 18m 49s.xml">
+    <history-entry file="TriangleTest - 2016.10.14 at 21h 11m 14s.xml">
       <configuration name="TriangleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TriangleTest - 2016.10.14 at 19h 23m 38s.xml">
+    <history-entry file="TriangleTest - 2016.10.14 at 21h 11m 57s.xml">
       <configuration name="TriangleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TriangleTest - 2016.10.14 at 19h 25m 34s.xml">
+    <history-entry file="TriangleTest - 2016.10.14 at 21h 12m 19s.xml">
       <configuration name="TriangleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TriangleTest - 2016.10.14 at 19h 25m 54s.xml">
+    <history-entry file="TriangleTest - 2016.10.14 at 21h 12m 46s.xml">
       <configuration name="TriangleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TriangleTest - 2016.10.14 at 19h 30m 35s.xml">
+    <history-entry file="TriangleTest - 2016.10.14 at 21h 13m 16s.xml">
       <configuration name="TriangleTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TriangleTest - 2016.10.14 at 19h 31m 33s.xml">
+    <history-entry file="TriangleTest - 2016.10.14 at 21h 15m 01s.xml">
       <configuration name="TriangleTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1263,7 +1268,8 @@
     <MESSAGE value="Factorial Testing 1" />
     <MESSAGE value="BubleSorter+SquareEquation+removeTheSame" />
     <MESSAGE value="Making Matrix Testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Making Matrix Testing" />
+    <MESSAGE value="Acsesebility of vectorsArray fixing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Acsesebility of vectorsArray fixing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1630,14 +1636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figureSquare/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="36" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/test/java/experiments/ClassBTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1646,26 +1644,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figureSquare/Vector.java">
+    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figureSquare/Point.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="126">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/test/java/figureSquare/TriangleTest.java">
+    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figureSquare/Vector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="54" column="78" selection-start-line="54" selection-start-column="78" selection-end-line="54" selection-end-column="78" />
+        <state relative-caret-position="245">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figureSquare/Triangle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+        <state relative-caret-position="253">
+          <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
           <folding>
             <element signature="method#triangleExistion#0;class#Triangle#0" expanded="false" />
             <element signature="method#allNumbersArray#0;class#Triangle#0" expanded="false" />
@@ -1673,7 +1671,18 @@
             <element signature="method#showArray#0;class#Triangle#0" expanded="false" />
             <element signature="method#showArray#1;class#Triangle#0" expanded="false" />
             <element signature="method#showArray#2;class#Triangle#0" expanded="false" />
+            <element signature="method#getNearPointAngle#0;class#Triangle#0" expanded="false" />
+            <element signature="method#allAnglesSize#0;class#Triangle#0" expanded="false" />
+            <element signature="method#maxLength#0;class#Triangle#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/test/java/figureSquare/TriangleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="77" />
+          <folding />
         </state>
       </provider>
     </entry>
