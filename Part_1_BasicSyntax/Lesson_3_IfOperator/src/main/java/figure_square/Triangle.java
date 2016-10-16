@@ -14,16 +14,8 @@ public class Triangle {
 
     double ABSideLength, BCSideLength, CASideLength;
 
-    /*Vector AB = new Vector(a, b);
-    Vector BC = new Vector(b, c);
-    Vector CA = new Vector(c, a);*/
     Vector AB, BC, CA;
-
-    /*double AB, BC, CA;
-    double[] sidesArray = {AB, BC, CA};*/
-//    Vector[] vectorsArray = {AB, BC, CA}; // **
     Vector[] vectorsArray = {this.AB, this.BC, this.CA}; // **
-
 
     /**
      * TODO what to do with vectorsArray up here and in the method below

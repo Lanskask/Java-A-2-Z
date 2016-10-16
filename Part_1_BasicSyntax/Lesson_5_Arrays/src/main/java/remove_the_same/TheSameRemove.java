@@ -65,13 +65,8 @@ public class TheSameRemove {
             for (int j = 0; j < array.length - 1; j++) {
                 for (int k = 0; k < array.length; k++) {
                     if (array[j] == array[k] && (j != k)) {
-//                        System.out.println("array[" + j + "] = " + array[j] + " " +
-//                                "and array[" + k + "] = " + array[k]);
-
                         removeIElement(k);
-//                        printArrayInLine(array, "");
                     }
-
                     System.out.println("j: " + j + "; k: " + k);
                 }
             }
@@ -83,11 +78,7 @@ public class TheSameRemove {
         for (int i = 0; i < array.length-1; i++) {
             for (int j = 0; j < array.length; j++) {
                 if(array[i] == copyOfRange(array, i + 1, array.length)[j] ) {
-                    System.out.println("array[" + i + "] = " + array[i] + " " +
-                            "and array[" + j + "] = " + array[j]);
-
                     removeIElement(j);
-
                     printArrayInLine(array, "");
                 }
             }
