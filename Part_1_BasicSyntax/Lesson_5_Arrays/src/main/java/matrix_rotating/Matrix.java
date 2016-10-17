@@ -9,9 +9,6 @@ public class Matrix {
     private int matrixSize;
     private int[][] matrix;
 
-/*    public void setMatrixSize(int matrixSize) {
-        this.matrixSize = matrixSize;
-    }*/
 
     public int getMatrixSize() {
         return matrixSize;
@@ -21,9 +18,6 @@ public class Matrix {
         return matrix;
     }
 
-//    public Matrix(int matrixSize) {
-//        this.matrix[matrixSize][matrixSize] = matrix[matrixSize][matrixSize];
-//    }
 
     public Matrix(int matrixSize) {
         this.matrix = new int[matrixSize][matrixSize];
@@ -47,8 +41,6 @@ public class Matrix {
             System.out.println();
         }
     }
-
-
 
 //        Rotating
     void rotatingMatrix() {

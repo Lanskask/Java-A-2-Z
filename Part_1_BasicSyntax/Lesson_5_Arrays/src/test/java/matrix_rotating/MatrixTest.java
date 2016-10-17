@@ -116,6 +116,8 @@ public class MatrixTest {
             checkRotatedMatrix = true;
         }
         assertTrue(checkRotatedMatrix);
+//        assertThat(rightSideOfInitialMatrix, is(equalTo());
+//        assertEquals();
     }
 
 }

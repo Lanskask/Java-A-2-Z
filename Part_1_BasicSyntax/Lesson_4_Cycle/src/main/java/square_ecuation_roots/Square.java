@@ -24,17 +24,7 @@ class Square {
         return y;
     }
 
-//    float solvEquation(float a, float b, float c) {
-//    double[] solvEquation(Square mySquare) {
     double[] solvEquation() {
-//        mySquare.a = a;
-//        mySquare.b = b;
-//        mySquare.c = c;
-
-//        this.a = a;
-//        this.b = b;
-//        this.c = c;
-
         discriminant = Math.pow(b, 2) - 4 * a *c;
 
         if ( discriminant > 0 ) {
@@ -56,11 +46,9 @@ class Square {
     }
 
     void show(float start, float finish, float step) {
-
         System.out.println("Xs between " + start+
                 " and " + finish + " with step: " + step);
 
-//        System.out.println(start + "; " + finish +"; "+ step);
         for (float x1 = start; x1 < finish; x1 += step) {
             System.out.print(x1 + ", ");
         }
