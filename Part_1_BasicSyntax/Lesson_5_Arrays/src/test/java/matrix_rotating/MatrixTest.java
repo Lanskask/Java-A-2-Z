@@ -66,7 +66,6 @@ public class MatrixTest {
     @Test
     public void rotatingMatrix() throws Exception {
 
-
         Matrix matrix = new Matrix(matrixSize);
 
 //        matrixSize = matrix.getMatrixSize();

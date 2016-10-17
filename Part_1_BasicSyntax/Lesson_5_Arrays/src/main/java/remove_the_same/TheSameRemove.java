@@ -67,7 +67,7 @@ public class TheSameRemove {
                     if (array[j] == array[k] && (j != k)) {
                         removeIElement(k);
                     }
-                    System.out.println("j: " + j + "; k: " + k);
+//                    System.out.println("j: " + j + "; k: " + k);
                 }
             }
             this.checkingArrayInUniqeItems();
@@ -79,7 +79,7 @@ public class TheSameRemove {
             for (int j = 0; j < array.length; j++) {
                 if(array[i] == copyOfRange(array, i + 1, array.length)[j] ) {
                     removeIElement(j);
-                    printArrayInLine(array, "");
+//                    printArrayInLine(array, "");
                 }
             }
         }
