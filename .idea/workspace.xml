@@ -2,28 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1f3d432-1a2d-43c8-bfe8-4ac6e3f90da2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/matrixnew/Matrix.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/matrixnew/MatrixTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/main/java/squareequationnew/Square.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/test/java/squareequationnew/SquareTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/target/classes/figureSquare/Point.class" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/target/classes/figureSquare/Point.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/target/classes/figureSquare/Triangle.class" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/target/classes/figureSquare/Triangle.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_2_DataTypes/src/main/java/calculator_2_big/ArgRunner.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_2_DataTypes/src/main/java/calculator2big/ArgRunner.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_2_DataTypes/src/main/java/calculator_2_big/Calculate.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_2_DataTypes/src/main/java/calculator2big/Calculate.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_2_DataTypes/src/main/java/calculator_2_big/Calculator.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_2_DataTypes/src/main/java/calculator2big/Calculator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_2_DataTypes/src/main/java/calculator_2_big/InteractRunner.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_2_DataTypes/src/main/java/calculator2big/InteractRunner.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_2_DataTypes/src/test/java/calculator_2_big/CalculatorTest.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_2_DataTypes/src/test/java/calculator2big/CalculatorTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figure_square/Point.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figuresquare/Point.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figure_square/Triangle.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figuresquare/Triangle.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figure_square/Vector.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figuresquare/Vector.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/test/java/figure_square/TriangleTest.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/test/java/figuresquare/TriangleTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/main/java/square_ecuation_roots/Square.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/main/java/squareecuationroots/Square.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/test/java/square_ecuation_roots/SquareTest.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/test/java/squareecuationroots/SquareTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/buble_sort/BubleSorter.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/bublesort/BubleSorter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/matrix_rotating/Matrix.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/matrixrotating/Matrix.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/old_remove_the_same/ArrayTheSameRemove.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/removeduplicatesold/ArrayTheSameRemove.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/old_remove_the_same/MainRemover.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/removeduplicatesold/MainRemover.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/remove_the_same/TheSameRemove.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/removeduplicates/TheSameRemove.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/buble_sort/BubleSorterTest.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/bublesort/BubleSorterTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/matrix_rotating/MatrixTest.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/matrixrotating/MatrixTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/remove_the_same/TheSameRemoveTest.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/removeduplicates/TheSameRemoveTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figuresquare/Triangle.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figuresquare/Triangle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/removeduplicates/TheSameRemoveTest.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/removeduplicates/TheSameRemoveTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="11______Java-A-2-Z.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,24 +42,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TheSameRemove.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/removeduplicates/TheSameRemove.java">
+      <file leaf-file-name="Square.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/main/java/squareequationnew/Square.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="707">
-              <caret line="76" column="28" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
-              <folding>
-                <element signature="method#removingTheSameOld#0;class#TheSameRemove#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="364">
+              <caret line="25" column="68" selection-start-line="25" selection-start-column="68" selection-end-line="25" selection-end-column="68" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TheSameRemoveTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/removeduplicates/TheSameRemoveTest.java">
+      <file leaf-file-name="SquareTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/test/java/squareequationnew/SquareTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="220">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,9 +92,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/test/java/factorial/FactorialTest.java" />
-        <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/main/java/factorial/Factorial.java" />
-        <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figureSquare/Point.java" />
         <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figureSquare/MainRun.java" />
         <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/removeTheSame/SameRemover.java" />
         <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/bubleSort/Main.java" />
@@ -153,10 +136,13 @@
         <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/matrix_rotating/MatrixTest.java" />
         <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/matrixrotating/MatrixTest.java" />
         <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/main/java/squareecuationroots/Square.java" />
-        <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figuresquare/Triangle.java" />
         <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/matrixnew/MatrixTest.java" />
         <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/removeduplicates/TheSameRemove.java" />
         <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/removeduplicates/TheSameRemoveTest.java" />
+        <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figuresquare/Triangle.java" />
+        <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/test/java/squareecuationroots/SquareTest.java" />
+        <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/test/java/squareequationnew/SquareTest.java" />
+        <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/main/java/squareequationnew/Square.java" />
       </list>
     </option>
   </component>
@@ -254,7 +240,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Lesson_5_Arrays" />
+              <option name="myItemId" value="Lesson_4_Cycle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -272,7 +258,75 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Lesson_5_Arrays" />
+              <option name="myItemId" value="Lesson_4_Cycle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="squareequationnew" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-a-2-z" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="11______Java-A-2-Z" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Part_1_BasicSyntax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lesson_4_Cycle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="squareecuationroots" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-a-2-z" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="11______Java-A-2-Z" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Part_1_BasicSyntax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lesson_4_Cycle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -302,7 +356,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Lesson_5_Arrays" />
+              <option name="myItemId" value="Lesson_4_Cycle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -328,7 +382,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Lesson_5_Arrays" />
+              <option name="myItemId" value="Lesson_4_Cycle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -341,6 +395,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="squareequationnew" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -358,7 +416,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Lesson_5_Arrays" />
+              <option name="myItemId" value="Lesson_4_Cycle" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -371,44 +429,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="matrixrotating" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java-a-2-z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="11______Java-A-2-Z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Part_1_BasicSyntax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lesson_5_Arrays" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="matrixnew" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -428,20 +448,21 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="squareequationnew" />
       <recent name="matrixnew" />
       <recent name="experiments" />
       <recent name="matrixRotating" />
       <recent name="removeTheSame" />
-      <recent name="squareEcuationRoots" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
-      <recent name="junit.framework.TestCase" />
       <recent name="" />
+      <recent name="junit.framework.TestCase" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="squareequationnew" />
       <recent name="matrixnew" />
       <recent name="matrixRotating" />
     </key>
@@ -450,7 +471,7 @@
       <recent name="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TheSameRemoveTest">
+  <component name="RunManager" selected="JUnit.SquareTest (1)">
     <configuration default="false" name="MatrixTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -503,32 +524,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ClassBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="experiments.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Lesson_3_IfOperator" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="experiments" />
-      <option name="MAIN_CLASS_NAME" value="experiments.ClassBTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="SquareTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -567,6 +562,32 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="removeduplicates" />
       <option name="MAIN_CLASS_NAME" value="removeduplicates.TheSameRemoveTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="SquareTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="squareequationnew.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Lesson_4_Cycle" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="squareequationnew" />
+      <option name="MAIN_CLASS_NAME" value="squareequationnew.SquareTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -901,17 +922,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.MatrixTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.TriangleTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ClassBTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.SquareTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TheSameRemoveTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SquareTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TheSameRemoveTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.SquareTest (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TheSameRemoveTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.MatrixTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SquareTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TriangleTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ClassBTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SquareTest (1)" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TriangleTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TheSameRemoveTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.MatrixTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SquareTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1088,38 +1109,45 @@
       <option name="project" value="LOCAL" />
       <updated>1476728274259</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Remove the Same - Make OK1">
+      <created>1476895614128</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1476895614128</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TheSameRemoveTest - 2016.10.17 at 18h 10m 27s.xml">
-      <configuration name="TheSameRemoveTest" configurationId="JUnit" />
+    <history-entry file="SquareTest_(1) - 2016.10.19 at 19h 29m 51s.xml">
+      <configuration name="SquareTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TheSameRemoveTest - 2016.10.17 at 18h 12m 16s.xml">
-      <configuration name="TheSameRemoveTest" configurationId="JUnit" />
+    <history-entry file="SquareTest_(1) - 2016.10.19 at 19h 37m 34s.xml">
+      <configuration name="SquareTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TheSameRemoveTest - 2016.10.17 at 18h 13m 05s.xml">
-      <configuration name="TheSameRemoveTest" configurationId="JUnit" />
+    <history-entry file="SquareTest_(1) - 2016.10.19 at 19h 44m 12s.xml">
+      <configuration name="SquareTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TheSameRemoveTest - 2016.10.17 at 18h 14m 27s.xml">
-      <configuration name="TheSameRemoveTest" configurationId="JUnit" />
+    <history-entry file="SquareTest_(1) - 2016.10.19 at 19h 44m 32s.xml">
+      <configuration name="SquareTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TheSameRemoveTest - 2016.10.19 at 18h 44m 15s.xml">
-      <configuration name="TheSameRemoveTest" configurationId="JUnit" />
+    <history-entry file="SquareTest_(1) - 2016.10.19 at 19h 45m 22s.xml">
+      <configuration name="SquareTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TheSameRemoveTest - 2016.10.19 at 18h 45m 32s.xml">
-      <configuration name="TheSameRemoveTest" configurationId="JUnit" />
+    <history-entry file="SquareTest_(1) - 2016.10.19 at 19h 47m 43s.xml">
+      <configuration name="SquareTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TheSameRemoveTest - 2016.10.19 at 18h 45m 50s.xml">
-      <configuration name="TheSameRemoveTest" configurationId="JUnit" />
+    <history-entry file="SquareTest_(1) - 2016.10.19 at 19h 49m 59s.xml">
+      <configuration name="SquareTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TriangleTest - 2016.10.14 at 21h 12m 46s.xml">
-      <configuration name="TriangleTest" configurationId="JUnit" />
+    <history-entry file="SquareTest_(1) - 2016.10.19 at 19h 50m 54s.xml">
+      <configuration name="SquareTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TriangleTest - 2016.10.14 at 21h 13m 16s.xml">
-      <configuration name="TriangleTest" configurationId="JUnit" />
+    <history-entry file="SquareTest_(1) - 2016.10.19 at 19h 51m 53s.xml">
+      <configuration name="SquareTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TriangleTest - 2016.10.14 at 21h 15m 01s.xml">
+    <history-entry file="TriangleTest - 2016.10.19 at 19h 04m 31s.xml">
       <configuration name="TriangleTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1130,18 +1158,18 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26205787" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25241157" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2448" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5987159" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3601286" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3681672" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20877458" sideWeight="0.49164677" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20045386" sideWeight="0.49164677" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1236,7 +1264,8 @@
     <MESSAGE value="Removing comments" />
     <MESSAGE value="Control commit 1" />
     <MESSAGE value="Beautify removeTheSame" />
-    <option name="LAST_COMMIT_MESSAGE" value="Beautify removeTheSame" />
+    <MESSAGE value="Remove the Same - Make OK1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove the Same - Make OK1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1249,14 +1278,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_2_DataTypes/src/main/java/calculator2big/Calculate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_ConditionalOperator/TriangleSquare/pom.xml" />
     <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_ConditionalOperator/TriangleSquare/src/main/java/triangleSquare/Calculator.java" />
     <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_2_DataTypes/src/main/java/calculator2big/InteractRunner.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1373,7 +1394,6 @@
     <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/with_buble_sort/SameRemoverWithbubleSort.java" />
     <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/removeduplicatesold/MainRemover.java" />
     <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/remove_the_same/RemoveInTwoArrays.java" />
-    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figuresquare/Vector.java" />
     <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/main/java/square_ecuation_roots/SquareTesting.java" />
     <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/matrixrotating/MatrixTest.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1390,37 +1410,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/main/java/squareecuationroots/Square.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/test/java/squareecuationroots/SquareTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/test/java/figuresquare/TriangleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figuresquare/Point (2).java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figuresquare/Point.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -1432,14 +1422,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-238">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figuresquare/Triangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1498,8 +1480,79 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/removeduplicates/TheSameRemoveTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="24">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figuresquare/Triangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2371">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figuresquare/Vector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/main/java/figuresquare/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/src/test/java/figuresquare/TriangleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="46" column="77" selection-start-line="46" selection-start-column="77" selection-end-line="46" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/main/java/squareecuationroots/Square.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="e#374#375#0" expanded="false" />
+            <element signature="e#438#439#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/test/java/squareecuationroots/SquareTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/test/java/squareequationnew/SquareTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/main/java/squareequationnew/Square.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="25" column="68" selection-start-line="25" selection-start-column="68" selection-end-line="25" selection-end-column="68" />
           <folding />
         </state>
       </provider>

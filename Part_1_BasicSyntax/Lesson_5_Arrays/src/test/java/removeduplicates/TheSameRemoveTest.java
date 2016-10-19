@@ -9,13 +9,13 @@ import static org.junit.Assert.*;
  */
 public class TheSameRemoveTest {
 
-//    int[] array = {1, 0, 1, 1, 0};
 
 
     @Test
     public void checkingArrayFunction() throws Exception {
 
         int[] array = {2, 1, 0, 1, 1, 0, 2, 0, 1, 2, 1, 2};
+
         int[] newArray;
 
         TheSameRemove myTheSameRemoveArray = new TheSameRemove(array);
@@ -24,7 +24,6 @@ public class TheSameRemoveTest {
         myTheSameRemoveArray.removingTheSame();
 
         newArray = myTheSameRemoveArray.getArray();
-
         int[] expectedArray = {2, 1, 0};
 
         assertArrayEquals(expectedArray, newArray);

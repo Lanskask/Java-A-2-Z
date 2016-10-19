@@ -7,7 +7,6 @@ import static java.util.Arrays.copyOfRange;
  */
 public class Triangle {
 
-    // Fields
     public Point a;
     public Point b;
     public Point c;
@@ -15,7 +14,7 @@ public class Triangle {
     double ABSideLength, BCSideLength, CASideLength;
 
     Vector AB, BC, CA;
-    Vector[] vectorsArray = {this.AB, this.BC, this.CA}; // **
+    Vector[] vectorsArray = new Vector[3]; // **
 
     /**
      * TODO what to do with vectorsArray up here and in the method below
@@ -24,7 +23,6 @@ public class Triangle {
     private double area;
     private double maxLength;
 
-    // Methods
     public double getArea() {
         return area;
     }
