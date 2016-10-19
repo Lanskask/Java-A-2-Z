@@ -17,16 +17,10 @@ public class Matrix {
         return matrix;
     }
 
-//    public Matrix(int matrixSize) {
-//        this.matrix = new int[matrixSize][matrixSize];
-//        this.matrixSize = matrixSize;
-//    }
-
     public Matrix(int[][] outerMatrix) {
         this.matrix = outerMatrix;
         this.matrixSize = outerMatrix[0].length;
     }
-
 
     void showMatrix(String tag) {
         System.out.println(tag + " ");

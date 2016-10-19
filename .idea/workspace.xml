@@ -4,7 +4,6 @@
     <list default="true" id="d1f3d432-1a2d-43c8-bfe8-4ac6e3f90da2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/matrixnew/Matrix.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/matrixnew/Matrix.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/matrixnew/MatrixTest.java" afterPath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/matrixnew/MatrixTest.java" />
     </list>
     <ignored path="11______Java-A-2-Z.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,17 +36,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Matrix.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Matrix.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/matrixnew/Matrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="42" column="75" selection-start-line="42" selection-start-column="75" selection-end-line="42" selection-end-column="75" />
+            <state relative-caret-position="-35">
+              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MatrixTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MatrixTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/matrixnew/MatrixTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="347">
@@ -136,8 +135,8 @@
         <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/test/java/squareecuationroots/SquareTest.java" />
         <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/test/java/squareequationnew/SquareTest.java" />
         <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/src/main/java/squareequationnew/Square.java" />
-        <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/matrixnew/Matrix.java" />
         <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/matrixnew/MatrixTest.java" />
+        <option value="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/matrixnew/Matrix.java" />
       </list>
     </option>
   </component>
@@ -1084,7 +1083,14 @@
       <option name="project" value="LOCAL" />
       <updated>1476899722631</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Matrix Rotating - written with out generating">
+      <created>1476900728836</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1476900728836</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1121,7 +1127,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1133,7 +1139,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2448" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5987159" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3681672" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1234,7 +1240,8 @@
     <MESSAGE value="Beautify removeTheSame" />
     <MESSAGE value="Remove the Same - Make OK1" />
     <MESSAGE value="SquareTest - as in exercise written" />
-    <option name="LAST_COMMIT_MESSAGE" value="SquareTest - as in exercise written" />
+    <MESSAGE value="Matrix Rotating - written with out generating" />
+    <option name="LAST_COMMIT_MESSAGE" value="Matrix Rotating - written with out generating" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1508,14 +1515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/matrixnew/Matrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="42" column="75" selection-start-line="42" selection-start-column="75" selection-end-line="42" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/test/java/matrixnew/MatrixTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
@@ -1523,6 +1522,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/src/main/java/matrixnew/Matrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-35">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
