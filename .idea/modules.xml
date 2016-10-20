@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Part_1_BasicSyntax/Final_Exersize/Final_Exersize.iml" filepath="$PROJECT_DIR$/Part_1_BasicSyntax/Final_Exersize/Final_Exersize.iml" />
       <module fileurl="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_1/Lesson_1.iml" filepath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_1/Lesson_1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_2_DataTypes/Lesson_2_DataTypes.iml" filepath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_2_DataTypes/Lesson_2_DataTypes.iml" />
       <module fileurl="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/Lesson_3_IfOperator.iml" filepath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/Lesson_3_IfOperator.iml" />

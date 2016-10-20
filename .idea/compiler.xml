@@ -22,6 +22,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="Final_Exersize" />
         <module name="Lesson_1" />
         <module name="lesson_2_DataTypes" />
         <module name="Lesson_2_DataTypes" />
@@ -31,6 +32,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Final_Exersize" target="1.5" />
       <module name="java-a-2-z" target="1.5" />
       <module name="Lesson_1" target="1.5" />
       <module name="Lesson_2_DataTypes" target="1.5" />
