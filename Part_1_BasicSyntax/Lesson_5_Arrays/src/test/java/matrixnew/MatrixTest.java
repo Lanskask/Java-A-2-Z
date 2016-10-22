@@ -18,14 +18,11 @@ public class MatrixTest {
                 {2, 3, 4},
                 {9, 3, 4}   };
         int[] expectedArray = {4, 4, 4};
-
+        int[] arrayUpNew = new int[3];
         Matrix matrix = new Matrix(array);
 
-        matrix.rotatingMatrix();
-
         int[][] getedRotatedMatrix = matrix.getMatrix();
-
-        int[] arrayUpNew = new int[3];
+        matrix.rotatingMatrix();
         for (int i = 0; i < arrayUpNew.length; i++) {
             arrayUpNew[i] = getedRotatedMatrix[0][i];
         }
