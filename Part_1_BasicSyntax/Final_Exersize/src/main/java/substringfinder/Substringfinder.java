@@ -15,9 +15,9 @@ public class Substringfinder {
                 founded = true;
                 for (int k = 0; k < subCharArray.length; k++) {
                     if (bigCharArray[i + k] == subCharArray[k]) {
-                        founded &= true;
+                        founded = true;
                     } else {
-                        founded &= false;
+                        founded = false;
                     }
                 }
             }
