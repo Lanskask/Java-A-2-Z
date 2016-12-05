@@ -1,0 +1,27 @@
+@startuml
+
+	class Item {
+		addNewRequest()
+		editRequest()
+		deleteRequest()
+		showRequestList()
+		showRequestListFiltered()
+		addCommentToRequest()
+
+		name
+		description
+		creationDate
+		commentsList
+	}
+
+	class Task {
+		String:calculatePrice()
+	}
+
+	class Bug {
+
+	}
+
+	Item <|-- Task
+	Item <|-- Bug
+@enduml

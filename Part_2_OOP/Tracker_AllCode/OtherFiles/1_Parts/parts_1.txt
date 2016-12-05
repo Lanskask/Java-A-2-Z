@@ -1,0 +1,10 @@
+@startuml
+
+package "models" {
+	/'extends Item '/
+	Bug -|> Item 
+	/'extends Item'/
+	Task -|> Item 
+}
+
+@enduml
