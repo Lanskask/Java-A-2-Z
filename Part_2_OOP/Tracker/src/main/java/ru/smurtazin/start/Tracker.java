@@ -43,6 +43,7 @@ public class Tracker extends Item {
 				);
 			}
 		}
-	}
 
+		WorkingWithMenu();
+	}
 }
