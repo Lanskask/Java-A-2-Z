@@ -43,11 +43,22 @@
      return "CREATE TABLE " + task_id + "_Comments"
    }
 
-   CREATE TABLE tasks_notes.Task_Comments (
-     comment_id INT NOT NULL AUTO_INCREMENT,
-     comment_text VARCHAR(1000) NOT NULL,
-     task_id INT NOT NULL,
-   PRIMARY KEY (comment_id));
+   sql_query_to_create_table = (
+     "CREATE TABLE Task_%1$s_Comments (
+       comment_id INT NOT NULL AUTO_INCREMENT,
+       comment_text VARCHAR(1000) NOT NULL,
+       task_id INT NOT NULL,
+     PRIMARY KEY (comment_id));"
+   , task_id);
+
+   sql_query_add_respective_comments_table = Sting.format(
+     "ALTER TABLE Task_%1$s_Comments 
+     ADD INDEX task_id_idx (task_id ASC);
+     ALTER TABLE Task_Comments 
+     ADD CONSTRAINT task_id
+       FOREIGN KEY (task_id)
+       REFERENCES tasks_notes.Tasks (task_id);"
+   , task_id); 
 
 
 - MenuItems:
@@ -58,16 +69,17 @@
         String task_name = System.console().readLine("Print task's name:");
         String task_description = System.console().readLine("Print task's description:");
       
-        sql_query = String.format("INSERT INTO tasks (task_name, task_description, task_creationDate) VALUES (%s, %s);", task_name, task_description);
+        sql_query = String.format("INSERT INTO Tasks (task_name, task_description, task_creationDate) VALUES (\`%1$s\`, \`%2$s\`, %3$s);", task_name, task_description, datetime.now());
 
     editTask()
       name: "Edit a task."
       .actions: 
-        String task_name = System.console().readLine("Choose task's id:");
-        String task_name = System.console().readLine("Print task's name:");
+        String task_id = System.console().readLine("Choose task's id:");
+        // String task_name = System.console().readLine("Print task's name:");
         String task_description = System.console().readLine("Print task's description:");
 
-        sql_query = String.format("UPDATE tasks (task_id, task_name, task_description) VALUES (%1$s, %2$s, %3$s);", task_id, task_name, task_description);
+        sql_query = String.format("UPDATE Tasks SET task_text=\`%1$s\` WHERE task_id = %2$s;", task_text, task_id);
+
 
     deleteTask()
       name: "Delete task."
@@ -76,12 +88,15 @@
         String task_name = System.console().readLine("Print task's name:");
         String task_description = System.console().readLine("Print task's description:");
 
-        sql_query = String.format("UPDATE tasks (task_id, task_name, task_description) VALUES (%1$s, %2$s, %3$s);", task_id, task_name, task_description);
+        sql_query = String.format("DELETE FROM products WHERE task_id=%1$s;", task_id);
+    
+
 
     showTaskList()
       name: "Show all tasks."
       .actions: 
         sql_query = String.format("SELECT * FROM Tasks\" - parse from database to console");
+        // ResultSet - ?
 
     showTaskListFiltered()
       name: "Show tasks by filter."
