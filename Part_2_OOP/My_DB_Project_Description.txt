@@ -1,0 +1,105 @@
+// My_DB_Project_Description.txt
+
+Добавление новой заявки
+Редактирования заявки.
+Удаления заявки.
+Отображение списка всех заявок.
+Отображения заявок с условием фильтра.
+Добавлять к заявки комментарий.
+
++SQLЗапросы:
+  создание таблицы
+  удаление из таблицы
+  изменение параметров строчки в таблице
+
+  фильтр - ?
+
+
++Tables:
+  Tasks
+  Task_Comments
+
+- (table) interface Tasks:
+   int - task_id - AutoIncrement NOT NULL(NN) FOREIGN_KEY-table.task_id
+   varchar(100) - task_name - NOT NULL
+   varchar(1000) - task_description - NOT NULL
+   date - task_creationDate - AUTO NOT NULL
+
+   // varchar(1000) - task_commentsList - null
+
+    CREATE TABLE tasks_notes.Tasks (
+      task_id INT NOT NULL AUTO_INCREMENT,
+      task_name VARCHAR(100) NOT NULL,
+      task_description VARCHAR(1000) NOT NULL,
+      task_creationDate DATETIME NOT NULL,
+    PRIMARY KEY (task_id));
+
+- table (interface) Task_Comments:
+   int - comment_id - AutoIncrement NOT NULL(NN) 
+   varchar(1000) - comment_text
+   int - task_id - AutoIncrement NOT NULL(NN) 
+
+   String sqlQueryToCreateCommentTable(int task_id) {
+     return "CREATE TABLE " + task_id + "_Comments"
+   }
+
+   CREATE TABLE tasks_notes.Task_Comments (
+     comment_id INT NOT NULL AUTO_INCREMENT,
+     comment_text VARCHAR(1000) NOT NULL,
+     task_id INT NOT NULL,
+   PRIMARY KEY (comment_id));
+
+
+- MenuItems:
+    addNewTask()
+      name: "Add new task."
+      .actions: 
+        System.out.println("Make new task:");
+        String task_name = System.console().readLine("Print task's name:");
+        String task_description = System.console().readLine("Print task's description:");
+      
+        sql_query = String.format("INSERT INTO tasks (task_name, task_description, task_creationDate) VALUES (%s, %s);", task_name, task_description);
+
+    editTask()
+      name: "Edit a task."
+      .actions: 
+        String task_name = System.console().readLine("Choose task's id:");
+        String task_name = System.console().readLine("Print task's name:");
+        String task_description = System.console().readLine("Print task's description:");
+
+        sql_query = String.format("UPDATE tasks (task_id, task_name, task_description) VALUES (%1$s, %2$s, %3$s);", task_id, task_name, task_description);
+
+    deleteTask()
+      name: "Delete task."
+      .actions: 
+        String task_name = System.console().readLine("Choose task's id:");
+        String task_name = System.console().readLine("Print task's name:");
+        String task_description = System.console().readLine("Print task's description:");
+
+        sql_query = String.format("UPDATE tasks (task_id, task_name, task_description) VALUES (%1$s, %2$s, %3$s);", task_id, task_name, task_description);
+
+    showTaskList()
+      name: "Show all tasks."
+      .actions: 
+        sql_query = String.format("SELECT * FROM Tasks\" - parse from database to console");
+
+    showTaskListFiltered()
+      name: "Show tasks by filter."
+      .actions: 
+        String filter = System.console().readLine("Print filter: ");
+              EXAMPLE: "where task_id > 3 and task_name CONTAINS 'abr' "
+        System.out.println("Filter parameters:\n... \n");
+           task_id, task_name, task_description - ?, task_creationDate, task_commentsList 
+           comment_id, comment_text - ?
+        transtaleFilterToSQLQuery( filter );
+        sql_query = String.format("SELECT * FROM Tasks WHERE %s \" - parse from database to console", filter);
+
+    addCommentToTask()  
+      name: "Add comment to a task."
+      .actions: 
+        String task_id = System.console().readLine("Choose task - print task_id: ");
+        if ( task_id != null ) {
+          sql_query = String.format( sqlQueryToCreateCommentTable(task_id) );
+        }
+
+    
