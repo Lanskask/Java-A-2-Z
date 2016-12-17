@@ -7,43 +7,39 @@ public class Tracker extends Item {
 	public Item[] items = new Item[3];
 
 	public static void main(String[] args) {
-		/*Item item = new Item("name", "desc", 0l);
-		System.out.println(
-			"Item objet:\n" + 
-			"\tName: " + item.getName() + ";\n" + 
-			"\tDesc: " + item.getDescription() + ";"
-		);
-		System.out.println();
+		private Item[] items = new Item[10];
+		private int position = 0;
 
-		// Task task = new Task("name", "desc");
-		Item task = new Task("name", "desc");
-		
-		System.out.println(
-			"Task objet:\n" + 
-			"\tName: " + task.getName() + ";\n" + 
-			"\tDesc: " + task.getDescription() + ";"
-		);*/
-
-		Tracker tracker = new Tracker();
-
-		tracker.items[0] = new Item("item", "desc", 0l);
-		tracker.items[1] = new Task("task", "desc");
-		tracker.items[2] = new Bug();
-
-		for (Item item : tracker.items) {
-			System.out.println(
-				"\nOne more object:\n" + 
-				"\tName: " + item.getName() + ";\n" + 
-				"\tDesc: " + item.getDescription() + ";"
-			);	
-
-			if (item instanceof Task) {
-				System.out.println(
-					"\tCalculated price: " + ((Task) item).calculatePrice()
-				);
-			}
+		public Item add(Item item) {
+			this.items[position++] = item;
+			return item;
 		}
 
-		WorkingWithMenu();
+		public addNewTask() {
+			System.out.println("Add new task:");
+      String task_name = System.console().readLine("Print task's name:");
+      String task_description = System.console().readLine("Print task's description:");
+		}
+		public editTask(String id) {
+			String task_id = System.console().readLine("Choose task's id:");
+      String task_description = System.console().readLine("Print task's description:");
+		}
+		public deleteTask(String id) {
+
+		}
+		public showTasksList() {
+        System.out.println("All tasks:") 
+        for (Task task : tasks) {
+        	System.out.println(task.id);
+        	System.out.println(task.name);
+        	System.out.println(task.description);
+        }
+		}
+		/*public showTaskListFiltered(String id) {
+
+		}*/
+		public addCommentToTask(String id) {
+
+		}
 	}
 }

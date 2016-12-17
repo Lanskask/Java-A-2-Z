@@ -1,4 +1,0 @@
-// Cool Class Diagram
-[Customer|-forname:string;surname:string|doShiz()]<>-orders*>[Orderrr]
-[Orderrr]++-0..*>[LineItem]
-[Orderrr]-[note:Aggregate root{bg:wheat}]

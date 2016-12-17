@@ -85,16 +85,14 @@
       name: "Delete task."
       .actions: 
         String task_name = System.console().readLine("Choose task's id:");
-        String task_name = System.console().readLine("Print task's name:");
-        String task_description = System.console().readLine("Print task's description:");
 
         sql_query = String.format("DELETE FROM products WHERE task_id=%1$s;", task_id);
     
 
-
     showTaskList()
       name: "Show all tasks."
-      .actions: 
+      .actions:
+        System.out.println("All tasks:") 
         sql_query = String.format("SELECT * FROM Tasks\" - parse from database to console");
         // ResultSet - ?
 
