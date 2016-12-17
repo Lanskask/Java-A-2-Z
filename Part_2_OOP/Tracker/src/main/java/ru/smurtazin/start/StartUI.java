@@ -7,13 +7,30 @@ public class StartUI {
 	public static void main(String[] args) {
 		Tracker tracker = new Tracker();
 
+		// --- Function testing: ---
 		Item newItem1 = new Item("newItem1 name", "newItem1 description", new Date() );
 		tracker.add(newItem1);
 
 		Item newItem2 = new Item("newItem2 name2", "newItem2 description2", new Date() );
 		tracker.add(newItem2);
 
-		tracker.showTasksList();
-		
+		// --- Tested functions: ---
+		tracker.showTasksList();	// +
+		// tracker.addNewTask(); // +
+		// tracker.editTask(); // +
+
+		// Function to test: 
+		tracker.addCommentToTask();
+		tracker.addCommentToTask();
+		tracker.showTaskComments();
+
+		// tracker.deleteTask();
+		// --- Functions to add: ---
+		// удаления, 
+		// получения списка по фильтру. 
+		tracker.showFilteredTaskList();
+
+		// --- Result ---
+		tracker.showTasksList();		
 	}
 }

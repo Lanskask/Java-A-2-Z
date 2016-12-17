@@ -7,7 +7,8 @@ public class Item {
 	private String name;
 	private String description;
 	private Date creationDate;
-	private String[] commentsList;
+	private String[] commentsList = new String[10];
+	private int comment_inList_position = 0;
 
 	public Item() {		
 	}
@@ -53,6 +54,9 @@ public class Item {
 	}
 	public void setCommentsList(String[] commentsList) {
 		this.commentsList = commentsList;
+	}
+	public void addComment(String comment) {
+		this.items[comment_inList_position++] = comment;
 	}
 
 }
