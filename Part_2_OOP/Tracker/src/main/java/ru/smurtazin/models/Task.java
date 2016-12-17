@@ -7,8 +7,8 @@ public class Task extends Item {
 	public long create;*/
 
 	public Task(String name, String desc)	{
-		this.name = name;
-		this.description = desc;
+		this.setName(name);
+		this.setDescription(desc);
 	}
 
 	public String calculatePrice() {
