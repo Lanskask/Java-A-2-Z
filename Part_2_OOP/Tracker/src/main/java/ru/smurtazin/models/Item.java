@@ -55,7 +55,4 @@ public class Item {
 		this.commentsList = commentsList;
 	}
 
-
-
-
 }

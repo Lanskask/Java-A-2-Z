@@ -2,6 +2,8 @@ package ru.smurtazin.start;
 
 import ru.smurtazin.models.*;
 import java.util.Random;
+import java.util.Date;
+import java.util.Arrays;
 
 public class Tracker extends Item {
 	
@@ -33,9 +35,39 @@ public class Tracker extends Item {
 
 	// --- My Functions ---
 	public void addNewTask() {
+
 		System.out.println("Add new task:");
     String task_name = System.console().readLine("Print task's name:");
     String task_description = System.console().readLine("Print task's description:");
+
+    Item item = new Item(task_name, task_description, new Date());
+
+		item.setId(this.generateId());
+		this.items[position++] = item;
+	}
+	public void showTasksList() {
+      System.out.println("All tasks:");
+      for (Item item : items) {
+      	if (item != null) {
+      		System.out.println(
+	      		"Item " +
+						Arrays.asList(items).indexOf(item)
+					 	+ ":"
+					 );
+	      	System.out.println(
+	      		"\tItem ID: " +
+	      		item.getId()
+	      	);
+	      	System.out.println(
+	      		"\tItem name: " +
+	      		item.getName()
+	      	);
+	      	System.out.println(
+	      		"\tItems description:\n\t\t " +
+	      		item.getDescription()
+	      	);	
+      	}      	
+      }
 	}
 	public void editTask(String id) {
 		String task_id = System.console().readLine("Choose task's id:");
@@ -44,14 +76,7 @@ public class Tracker extends Item {
 	public void deleteTask(String id) {
 
 	}
-	public void showTasksList() {
-      System.out.println("All tasks:");
-      for (Item item : items) {
-      	System.out.println(item.getId());
-      	System.out.println(item.getName());
-      	System.out.println(item.getDescription());
-      }
-	}
+	
 	/*public showTaskListFiltered(String id) {
 
 	}*/
