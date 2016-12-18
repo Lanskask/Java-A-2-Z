@@ -7,6 +7,10 @@ import java.util.Arrays;
 
 // public class Tracker extends Item {
 public class Tracker {
+
+	/*public Tracker() {
+		
+	}*/
 	
 	public Item[] items = new Item[10];
 	private int position = 0;
@@ -149,7 +153,7 @@ public class Tracker {
 				 );
     	}
     } 
-    
+
 	} 
 
 }
