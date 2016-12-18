@@ -56,7 +56,7 @@ public class Item {
 		this.commentsList = commentsList;
 	}
 	public void addComment(String comment) {
-		this.items[comment_inList_position++] = comment;
+		this.commentsList[comment_inList_position++] = comment;
 	}
 
 }

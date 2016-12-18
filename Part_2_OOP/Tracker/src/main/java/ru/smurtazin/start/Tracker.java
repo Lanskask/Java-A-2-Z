@@ -5,7 +5,8 @@ import java.util.Random;
 import java.util.Date;
 import java.util.Arrays;
 
-public class Tracker extends Item {
+// public class Tracker extends Item {
+public class Tracker {
 	
 	public Item[] items = new Item[10];
 	private int position = 0;
@@ -96,15 +97,15 @@ public class Tracker extends Item {
 	}
 	public void deleteTask() {
 		System.out.println("\nYou desided to delete some task.");
-		String task_id = System.console().readLine("Choose id of the task you whant to delete:");
+		String task_id = System.console().readLine("Choose id of the task you want to delete: ");
 		Item item = findById(task_id);
 
     String answer_toDeleteTask1 = System.console().readLine("Are you sure to detele this task? (y/n):");
     if( answer_toDeleteTask1.equals("y") ) {
 	    String answer_toDeleteTask2 = System.console().readLine("Are you absolutely sure, that you want to detele this task? (y/n):");
     	if( answer_toDeleteTask2.equals("y") ) {
-	    	item = null;
-	    	// findById(task_id) = null;
+	    	// TODO: I don't know why, but this doesn't work: item = null;
+				items[Arrays.asList(items).indexOf(item)] = null;
 	   	}
     }
 	}
@@ -115,22 +116,22 @@ public class Tracker extends Item {
 	}*/
 	public void addCommentToTask() {
 	// setCommentsList(String[] commentsList) 
-		System.out.println("\nYou desided to add comment to some task.");
-		String task_id = System.console().readLine("Choose a task's id which you want ot add omment to:");
+		System.out.println("\nYou decided to add comment to some task.");
+		String task_id = System.console().readLine("Choose a task's id which you want to add comment to: ");
 		Item item = findById(task_id);
 
     // TODO: make little_functions file <- validate_answer_function(String question) -> y - contunue/ n - break (or nothing)
-    String answer = System.console().readLine("Do you want to add a comment to this task? (y/n):");
+    String answer = System.console().readLine("Do you want to add a comment to this task? (y/n): ");
     if( answer.equals("y") ) {
     	// TODO: менять имя task_name на new_task_name?
-	    String task_comment = System.console().readLine("Print task's name:");
-	    // TODO: make addComment functionit Item.class
-	    item.addComment(task_comment);
+	    String task_comment = System.console().readLine("Print comment: ");
+	    // TODO: make it like: item.addComment(task_comment);
+			items[Arrays.asList(items).indexOf(item)].addComment(task_comment);
     }
 	}
 	public void showTaskComments() {
 		System.out.println("\nYou desided to view some task's comments.");
-		String task_id = System.console().readLine("Choose task's id:");
+		String task_id = System.console().readLine("Choose task's id: ");
 		Item item = findById(task_id);
 
 		System.out.println(
@@ -146,9 +147,9 @@ public class Tracker extends Item {
 					Arrays.asList(items).indexOf(item)
 				 	+ ":"
 				 );
-    	} // endif  
-    } // endfor
-
+    	}
+    } 
+    
 	} 
 
 }

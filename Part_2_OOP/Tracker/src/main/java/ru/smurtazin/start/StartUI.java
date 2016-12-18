@@ -16,19 +16,18 @@ public class StartUI {
 
 		// --- Tested functions: ---
 		tracker.showTasksList();	// +
+
 		// tracker.addNewTask(); // +
 		// tracker.editTask(); // +
 
-		// Function to test: 
+		// --- Function to test: ---
 		tracker.addCommentToTask();
 		tracker.addCommentToTask();
 		tracker.showTaskComments();
 
 		// tracker.deleteTask();
 		// --- Functions to add: ---
-		// удаления, 
-		// получения списка по фильтру. 
-		tracker.showFilteredTaskList();
+		// tracker.showFilteredTaskList();
 
 		// --- Result ---
 		tracker.showTasksList();		
