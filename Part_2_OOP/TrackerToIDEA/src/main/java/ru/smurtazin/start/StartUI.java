@@ -13,14 +13,6 @@ public class StartUI {
 
 	Tracker tracker = new Tracker();
 
-	/*// Functions Content
-	Item add(Item);
-	void update(Item); // - метод должен заменить ячейку в массиве. найти ячейку надо по циклу сравнивая getId
-	void delete(Item);
-	Item[] findAll();
-	Item[] findByName(String key);
-	Item findById(String id);*/
-
 	public void addNewTask() {
 		System.out.println("\nYou desided to add new task.");
 		String task_name = System.console().readLine("Print task's name:");
@@ -30,10 +22,7 @@ public class StartUI {
 
 		tracker.add(item);
 	}
-	/**
-	 * Should call: update(Item item);
-	 */
-	public void editTask() { // TODO: check does it work or not
+	public void editTask() {
 		String task_name = null;
 		String task_description = null;
 
@@ -61,7 +50,7 @@ public class StartUI {
 		}
 	}
 
-	public void deleteTask() { // TODO: check does it work or not
+	public void deleteTask() {
 		System.out.println("\nYou desided to delete some task.");
 		String task_id = System.console().readLine("Choose id of the task you want to delete: ");
 		Item item = tracker.findById(task_id);
@@ -74,34 +63,26 @@ public class StartUI {
 			}
 		}
 	}
-	public void showTasksList(ArrayList<Item> items) {
-//	public void showTasksList(Item[] items) {
-		// TODO: Maby here should be printed something other than "\nAll tasks:"
+	private void showTasksList(ArrayList<Item> items) {
 		// System.out.println("\nAll tasks: ");
 		// for (Item item : items) {
 		// TODO: Should call: Item[] findAll();
 		for (Item item : items) {
 			if (item != null) {
 				System.out.println(
-						"Item " +
-								Arrays.asList(items).indexOf(item)
-								+ ":"
+					"Item " + Arrays.asList(items).indexOf(item) + ":"
 				);
 				System.out.println(
-						"\tItem's ID: " +
-								item.getId()
+					"\tItem's ID: " + item.getId()
 				);
 				System.out.println(
-						"\tItem's name: " +
-								item.getName()
+				    "\tItem's name: " +	item.getName()
 				);
 				System.out.println(
-						"\tItem's description:\n\t\t " +
-								item.getDescription()
+					"\tItem's description:\n\t\t " + item.getDescription()
 				);
 				System.out.println(
-						"\tItem's Date:\n\t " +
-								item.getCreationDate()
+						"\tItem's Date:\n\t " +	item.getCreationDate()
 				);
 			}
 		}
@@ -110,9 +91,7 @@ public class StartUI {
 		System.out.println("\nAll tasks: ");
 		this.showTasksList(tracker.findAll());
 	}
-	/**
-	 * Should call: Item[] findByName(String key);
-	 */
+
 	public void showFilteredList() {
 		String key = System.console().readLine("What secuence do you whant to search between item's names? ");
 		System.out.println("Founded items: ");
@@ -152,37 +131,6 @@ public class StartUI {
 				 );
     	}
     }
-	}*/
-
-	// ----------------------------------------------
-	/*public static void main(String[] args) {
-		Tracker tracker = new Tracker();
-		StartUI startUI = new StartUI();
-
-		// --- Function testing: ---
-		Item newItem1 = new Item("newItem1 name", "newItem1 description", new Date() );
-		tracker.add(newItem1);
-
-		Item newItem2 = new Item("newItem2 name2", "newItem2 description2", new Date() );
-		tracker.add(newItem2);
-
-		// --- Tested functions: ---
-		tracker.showTasksList();	// +
-
-		// startUI.addNewTask(); // +
-		// tracker.editTask(); // +
-
-		// --- Function to test: ---
-		tracker.addCommentToTask();
-		tracker.addCommentToTask();
-		tracker.showTaskComments();
-
-		// tracker.deleteTask();
-		// --- Functions to add: ---
-		// tracker.showFilteredTaskList();
-
-		// --- Result ---
-		tracker.showTasksList();
 	}*/
 
 }

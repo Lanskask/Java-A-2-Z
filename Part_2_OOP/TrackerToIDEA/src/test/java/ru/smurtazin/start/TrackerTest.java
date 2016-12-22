@@ -15,15 +15,10 @@ public class TrackerTest {
 
 //	@Before
 //	private void setUp() {
-	  String task_name;
-	  String task_description;
-	  Date task_date;
-
 	  Date thisDate = new Date();
 	  Item newItem1 = new Item("newItem1 name", "newItem1 description",  thisDate);
       Item newItem2 = new Item("newItem2 name2", "newItem2 description2", thisDate );
       Tracker tracker = new Tracker();
-      StartUI startUI = new StartUI();
 //	}
 
     @Test
@@ -34,7 +29,6 @@ public class TrackerTest {
     }
     @Test
     public void update() throws Exception {
-//      items[Arrays.asList(items).indexOf( findById( item.getId() ) )] = item;
         Item newItem = new Item("name2 newItem", "description2 newItem", new Date());
         tracker.add(newItem);
         newItem.setId(newItem1.getId());

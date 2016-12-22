@@ -24,6 +24,9 @@ public class Item {
 		this.commentsList = commentsList;
 	}
 
+
+
+
 	public String getId() {
 		return this.id;
 	}
