@@ -12,8 +12,8 @@ public class Tracker {
 
 	}*/
 
-	public Item[] items = new Item[10];
-//	public ArrayList<Item> items = new ArrayList<Item>();
+//	public Item[] items = new Item[10];
+	public ArrayList<Item> items = new ArrayList<Item>();
 
 	private int position = 0;
 
@@ -30,7 +30,8 @@ public class Tracker {
 	public Item add(Item item) {	// TO TEST
 //        items.
 		item.setId(this.generateId());
-		this.items[position++] = item;
+//		this.items[position++] = item;
+		this.items.add(item);
 		return item;
 	}
 	protected Item findById(String id) {// TO TEST
@@ -52,32 +53,36 @@ public class Tracker {
 	 * - метод должен заменить ячейку в массиве. найти ячейку надо по циклу сравнивая getId
 	 */
 	void update(Item item) { // TO TEST
-		items[Arrays.asList(items).indexOf( findById( item.getId() ) )] = item;
+//		items[Arrays.asList(items).indexOf( findById( item.getId() ) )] = item;
+        items.set( items.indexOf(item), item );
 	}
-	Item[] findAll() { // TO TEST
+	ArrayList<Item> findAll() { // TO TEST
+    // 	Item[] findAll() { // TO TEST
 		return this.items;
 	}
 	void delete(Item item) {
-		items[Arrays.asList(items).indexOf( findById( item.getId() ) )] = null;
-	}
+//		items[Arrays.asList(items).indexOf( findById( item.getId() ) )] = null;
+        items.set( items.indexOf(item), null );
+    }
 
-	public Item[] findByName(String key) { // TO TEST
+	public ArrayList<Item> findByName(String key) { // TO TEST
+//	public Item[] findByName(String key) { // TO TEST
 		// With ArrayList
-		/*ArrayList result_array = new ArrayList();
+        ArrayList<Item> result_array = new ArrayList<Item>();
 		for (Item item : this.items) {
-    	if (item.getName().contains(key)) {
-    		result_array.add(item)
-    	}
-    }*/
+            if (item.getName().contains(key)) {
+                result_array.add(item);
+            }
+        }
 
 		// WithOut ArrayList
-		Item[] result_array = new Item[items.length];
+		/*Item[] result_array = new Item[items.length];
 		int positionInResArr = 0;
 		for (Item item : this.items) {
 			if (item.getName().contains(key)) {
 				result_array[positionInResArr++] = item;
 			}
-		}
+		}*/
 
 		return result_array;
 	}

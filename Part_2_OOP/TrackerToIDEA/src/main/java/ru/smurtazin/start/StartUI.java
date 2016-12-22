@@ -1,6 +1,8 @@
 package ru.smurtazin.start;
 
 import ru.smurtazin.models.*;
+
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Arrays;
 
@@ -72,7 +74,8 @@ public class StartUI {
 			}
 		}
 	}
-	public void showTasksList(Item[] items) {
+	public void showTasksList(ArrayList<Item> items) {
+//	public void showTasksList(Item[] items) {
 		// TODO: Maby here should be printed something other than "\nAll tasks:"
 		// System.out.println("\nAll tasks: ");
 		// for (Item item : items) {
