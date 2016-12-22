@@ -70,6 +70,7 @@ public class Tracker {
     	}      	
     }
 	}
+
 	public void editTask() {
 		System.out.println("\nYou desided to edit some task.");
 		String task_id = System.console().readLine("Choose task's id:");

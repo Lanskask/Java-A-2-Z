@@ -1,0 +1,133 @@
+@startuml
+!pragma horizontalLineBetweenDifferentPackageAllowed
+
+package "models" {
+	' extends Item '
+	Bug -|> Item 
+
+	' extends Item '
+	Task -|> Item 
+}
+
+class Item {
+	- String id;
+  + String name;
+  + String description;
+  + long createDateTime;
+  + Item()
+  + Item(String name, String description, long createDateTime) 
+  + String getName()
+  + String getDescription()
+  + long getCreateDateTime() 
+  + String getId() 
+  + void setId(String id) 
+}
+
+class Task {
+	+ Task(String name, String desc) 
+	+ String calculatePrice() 
+}
+
+class Bug {
+	
+}
+
+
+package "start" {
+	class ConsoleInput
+	class Input 
+	class MenuTracker
+	class StartUI
+	class StartUITest
+	class StubInput
+	class Tracker
+	interface UserAction
+	class ValidateInput
+	class MenuOutException 
+
+	' implements 
+	ConsoleInput <|-- Input 
+
+	' implements	
+	StubInput <|-- Input 
+	ShowItems <|-- UserAction 
+	ShowItems --> MenuTracker
+
+	' AddItem implements UserAction
+	AddItem <|-- UserAction
+	AddItem --> MenuTracker
+
+	ValidateInput -> ConsoleInput 
+
+	MenuOutException -> Exception
+}
+
+class ConsoleInput {
+	- Scanner scanner = new Scanner(System.in);
+	+ String ask(String question) 
+}
+
+interface Input {
+	String ask(String question);
+}
+
+class MenuTracker {
+	- Input input;
+	- Tracker tracker;
+	- UserAction[] actions = new UserAction[5];
+
+	+ MenuTracker(Input input, Tracker tracker)
+	+ void fillAction() 
+	+ void select(int key) 
+	+ void show() 
+}
+
+class ShowItems << private static >>
+class ShowItems {
+	+ int key();
+	+ void execute(Input input, Tracker tracker);
+	+ String info();
+}
+
+class AddItem << private >>
+class AddItem {
+	+ int key() 
+	+ void execute(Input input, Tracker tracker) 
+	+ String info()
+}
+
+class StartUI {
+	- Input input;
+	+ StartUI(Input input) 
+	+ void init() 
+	+ {static} void main(String[] args) 
+}
+
+class StartUITest {
+	+ {static} void main(String[] args);
+}
+
+class StubInput {
+	- String[] answers;
+	- int position = 0;
+	+ StubInput(String[] answers)
+	+ String ask(String question) 
+}
+
+class Tracker {
+	- Item[] items = new Item[3];
+	- int position = 0;
+	- {static} final Random RN = new Random();
+	+ Item add(Item item) 
+	# Item findById(String id) 
+	~ String generateId()
+	+ Item[] getAll() 
+}
+
+interface UserAction {
+	int key();
+	void execute(Input input, Tracker tracker);
+	String info();
+}
+
+@enduml

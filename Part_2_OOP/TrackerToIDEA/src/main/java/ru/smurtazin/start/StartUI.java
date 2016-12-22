@@ -11,14 +11,17 @@ public class StartUI {
 	Tracker tracker = new Tracker();
 
 	public void addNewTask() {
+
 		System.out.println("\nYou desided to add new task.");
 		String task_name = System.console().readLine("Print task's name:");
-    String task_description = System.console().readLine("Print task's description:");
+		String task_description = System.console().readLine("Print task's description:");
 
-    Item item = new Item(task_name, task_description, new Date());
+		Item item = new Item(task_name, task_description, new Date());
 
-/*			item.setId(this.generateId());
-		this.items[position++] = item;*/
+		/*
+		item.setId(this.generateId());
+		this.items[position++] = item;
+		*/
 		tracker.add(item);
 	}
 
