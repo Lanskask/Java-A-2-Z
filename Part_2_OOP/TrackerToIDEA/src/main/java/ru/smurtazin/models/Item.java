@@ -10,7 +10,7 @@ public class Item {
 	private String[] commentsList = new String[10];
 	private int comment_inList_position = 0;
 
-	public Item() {		
+	public Item() {
 	}
 	public Item(String name, String description, Date creationDate) {
 		this.name = name;
