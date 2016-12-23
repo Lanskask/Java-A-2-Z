@@ -39,8 +39,8 @@ public class Tracker {
         items.set( items.indexOf(item), null );
     }
 	public ArrayList<Item> findByName(String key) {
-        ArrayList<Item> result_array = new ArrayList<Item>();
-		for (Item item : this.items) {
+        ArrayList<Item> result_array = new ArrayList<>();
+		for (Item item : items) {
             if (item.getName().contains(key)) {
                 result_array.add(item);
             }

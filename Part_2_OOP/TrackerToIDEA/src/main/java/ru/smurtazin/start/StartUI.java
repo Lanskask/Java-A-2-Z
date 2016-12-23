@@ -15,11 +15,10 @@ public class StartUI {
 
 	public void addNewTask() {
 		System.out.println("\nYou desided to add new task.");
-		String task_name = System.console().readLine("Print task's name:");
-		String task_description = System.console().readLine("Print task's description:");
+		String task_name = System.console().readLine("Print task's name: ");
+		String task_description = System.console().readLine("Print task's description: ");
 
 		Item item = new Item(task_name, task_description, new Date());
-
 		tracker.add(item);
 	}
 	public void editTask() {
@@ -27,22 +26,22 @@ public class StartUI {
 		String task_description = null;
 
 		System.out.println("\nYou desided to edit some task.");
-		String task_id = System.console().readLine("Choose task's id:");
+		String task_id = System.console().readLine("Choose task's id: ");
 
 		boolean allIsNotValid = false;
-		while (allIsNotValid ) {
-			String answer_toChName = System.console().readLine("Do you want to change task's name? (y/n):");
+		while (!allIsNotValid ) {
+			String answer_toChName = System.console().readLine("Do you want to change task's name? (y/n): ");
 			if (answer_toChName.equals("y")) {
-				task_name = System.console().readLine("Print task's name:");
+				task_name = System.console().readLine("Print task's name: ");
 			}
 
-			String answer_toChDescr = System.console().readLine("Do you want to change task's description? (y/n):");
+			String answer_toChDescr = System.console().readLine("Do you want to change task's description? (y/n): ");
 			if (answer_toChDescr.equals("y")) {
-				task_description = System.console().readLine("Print task's description:");
+				task_description = System.console().readLine("Print task's description: ");
 			}
 
-			if (task_name != null && task_description != null) {
-				boolean allIsValid = true;
+			if (task_name != null ^ task_description != null) {
+                allIsNotValid = true;
 				Item item = new Item(task_name, task_description, new Date());
 				item.setId(task_id);
 				tracker.update(item);
@@ -51,13 +50,13 @@ public class StartUI {
 	}
 
 	public void deleteTask() {
-		System.out.println("\nYou desided to delete some task.");
+		System.out.println("\nYou decided to delete some task.");
 		String task_id = System.console().readLine("Choose id of the task you want to delete: ");
 		Item item = tracker.findById(task_id);
 
-		String answer_toDeleteTask1 = System.console().readLine("Are you sure to detele this task? (y/n):");
+		String answer_toDeleteTask1 = System.console().readLine("Are you sure to delete this task? (y/n): ");
 		if( answer_toDeleteTask1.equals("y") ) {
-			String answer_toDeleteTask2 = System.console().readLine("Are you absolutely sure, that you want to detele this task? (y/n):");
+			String answer_toDeleteTask2 = System.console().readLine("Are you absolutely sure, that you want to detele this task? (y/n): ");
 			if( answer_toDeleteTask2.equals("y") ) {
 				tracker.delete(item);
 			}
@@ -65,13 +64,12 @@ public class StartUI {
 	}
 	private void showTasksList(ArrayList<Item> items) {
 		// System.out.println("\nAll tasks: ");
-		// for (Item item : items) {
 		// TODO: Should call: Item[] findAll();
 		for (Item item : items) {
 			if (item != null) {
-				System.out.println(
-					"Item " + Arrays.asList(items).indexOf(item) + ":"
-				);
+				System.out.printf(
+				        "Item %s :\n", items.indexOf(item) + 1
+                );
 				System.out.println(
 					"\tItem's ID: " + item.getId()
 				);
@@ -93,7 +91,7 @@ public class StartUI {
 	}
 
 	public void showFilteredList() {
-		String key = System.console().readLine("What secuence do you whant to search between item's names? ");
+		String key = System.console().readLine("What sequence do you want to search between item's names? ");
 		System.out.println("Founded items: ");
 		this.showTasksList( tracker.findByName(key) );
 	}
