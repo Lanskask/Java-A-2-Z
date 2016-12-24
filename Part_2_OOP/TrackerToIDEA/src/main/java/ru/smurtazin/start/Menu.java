@@ -10,7 +10,9 @@ import java.util.Date;
  */
 public class Menu {
 
-    StartUI startUi = new StartUI();
+    StartUI startUi = new StartUI(new StubInput(
+            new String[] {"newItem1 name", "newItem1 description"}
+    ), new Tracker());
 
     public void printMenu() {
         String menuItemsString =

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Part_1_BasicSyntax/Final_Exersize/Final_Exersize.iml" filepath="$PROJECT_DIR$/Part_1_BasicSyntax/Final_Exersize/Final_Exersize.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_1/Lesson_1.iml" filepath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_1/Lesson_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_2_DataTypes/Lesson_2_DataTypes.iml" filepath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_2_DataTypes/Lesson_2_DataTypes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/Lesson_3_IfOperator.iml" filepath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/Lesson_3_IfOperator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/Lesson_4_Cycle.iml" filepath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/Lesson_4_Cycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/Lesson_5_Arrays.iml" filepath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/Lesson_5_Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_1_BasicSyntax/Part_1_BasicSyntax.iml" filepath="$PROJECT_DIR$/Part_1_BasicSyntax/Part_1_BasicSyntax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_2_OOP/Part_2_OOP.iml" filepath="$PROJECT_DIR$/Part_2_OOP/Part_2_OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-a-2-z.iml" filepath="$PROJECT_DIR$/java-a-2-z.iml" />
+    </modules>
+  </component>
+</project>

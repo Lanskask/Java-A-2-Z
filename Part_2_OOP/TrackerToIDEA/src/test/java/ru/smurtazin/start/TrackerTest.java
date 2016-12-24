@@ -4,6 +4,8 @@ import org.junit.Ignore;
 import ru.smurtazin.models.*;
 
 import org.junit.Test;
+
+import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 import org.junit.Before;
 
@@ -27,6 +29,7 @@ public class TrackerTest {
 
         assertEquals(newItem1, tracker.items.get(0) );
     }
+
     @Test
     public void update() throws Exception {
         Item newItem = new Item("name2 newItem", "description2 newItem", new Date());
@@ -35,6 +38,7 @@ public class TrackerTest {
         tracker.update(newItem);
         assertEquals(newItem, tracker.items.get(0) );
     }
+
     @Test
     public void delete() throws Exception {
         Item newItem = new Item("name2 newItem", "description2 newItem", new Date());
@@ -42,14 +46,16 @@ public class TrackerTest {
         tracker.delete(newItem);
         assertEquals(null, tracker.items.get(0) );
     }
+
     @Test
     public void findAll() throws Exception {
         tracker.add(newItem1);
         tracker.add(newItem2);
         ArrayList<Item> arrayToCampare = new ArrayList<Item>(Arrays.asList( newItem1, newItem2 ) );
-        // TODO: How to compare to Lists?
-        assertTrue(tracker.findAll().equals(arrayToCampare));
+
+        assertThat(tracker.findAll(), is(arrayToCampare));
     }
+
     @Test
     public void findByName() throws Exception {
         tracker.add(newItem1);
@@ -58,6 +64,7 @@ public class TrackerTest {
 
         assertEquals(tracker.findByName(key), new ArrayList<Item>(Arrays.asList( newItem2 ) ));
     }
+
     @Test
     public void findById() throws Exception {
         tracker.add(newItem1);

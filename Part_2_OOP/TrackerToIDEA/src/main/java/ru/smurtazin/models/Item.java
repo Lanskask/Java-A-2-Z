@@ -12,20 +12,19 @@ public class Item {
 
 	public Item() {
 	}
+
 	public Item(String name, String description, Date creationDate) {
 		this.name = name;
 		this.description = description;
 		this.creationDate = creationDate;
 	}
+
 	public Item(String name, String description, Date creationDate, String[] commentsList) {
 		this.name = name;
 		this.description = description;
 		this.creationDate = creationDate;
 		this.commentsList = commentsList;
 	}
-
-
-
 
 	public String getId() {
 		return this.id;

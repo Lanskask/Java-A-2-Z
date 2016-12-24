@@ -1,6 +1,9 @@
 ru/smurtazin/start/StartUI.class
 ru/smurtazin/models/Bug.class
-ru/smurtazin/models/Item.class
+ru/smurtazin/start/ConsoleInput.class
 ru/smurtazin/models/Task.class
 ru/smurtazin/start/Tracker.class
 ru/smurtazin/start/Menu.class
+ru/smurtazin/start/StubInput.class
+ru/smurtazin/models/Item.class
+ru/smurtazin/start/Input.class

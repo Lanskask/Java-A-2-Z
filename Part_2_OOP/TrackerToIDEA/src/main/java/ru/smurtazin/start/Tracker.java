@@ -17,7 +17,7 @@ public class Tracker {
 	}
 	protected Item findById(String id) {
 		Item result = null;
-		for (Item item : items) {
+		for (Item item : this.items) {
 			if (item != null && item.getId().equals(id)) {
 				result = item;
 				break;
@@ -30,17 +30,21 @@ public class Tracker {
 	}
 
 	void update(Item item) {
-        items.set( items.indexOf(item), item );
+        this.items.set( this.items.indexOf(item), item );
 	}
+
 	ArrayList<Item> findAll() {
 		return this.items;
 	}
+
 	void delete(Item item) {
-        items.set( items.indexOf(item), null );
+//        this.items.set( this.items.indexOf(item), null );
+        this.items.remove( this.items.indexOf(item) );
     }
+
 	public ArrayList<Item> findByName(String key) {
         ArrayList<Item> result_array = new ArrayList<>();
-		for (Item item : items) {
+		for (Item item : this.items) {
             if (item.getName().contains(key)) {
                 result_array.add(item);
             }
