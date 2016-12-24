@@ -30,7 +30,11 @@ public class Tracker {
 	}
 
 	void update(Item item) {
-        this.items.set( this.items.indexOf(item), item );
+        Item itemtoInsert = this.findById(item.getId());
+//        System.out.println(this.items.indexOf(itemtoInsert));
+//        items.indexOf(itemtoInsert);
+        this.items.set(items.indexOf(itemtoInsert), item);
+//        this.items.set( this.items.indexOf(item), item );
 	}
 
 	ArrayList<Item> findAll() {
@@ -38,7 +42,6 @@ public class Tracker {
 	}
 
 	void delete(Item item) {
-//        this.items.set( this.items.indexOf(item), null );
         this.items.remove( this.items.indexOf(item) );
     }
 

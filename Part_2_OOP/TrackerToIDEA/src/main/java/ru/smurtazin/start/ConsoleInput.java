@@ -9,8 +9,5 @@ public class ConsoleInput implements Input {
     public String answerToQuestion(String question) {
         return System.console().readLine(question);
     }
-    /*@Override
-    public String readLine(String question) {
-        return System.console().readLine(question);
-    }*/
+
 }

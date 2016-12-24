@@ -4,8 +4,10 @@ package ru.smurtazin.start;
  * Created by a1 on 23.12.16.
  */
 public class StubInput implements Input {
-    final String[] answers;
+    String[] answers; // TODO: How to test outputs? Should it be finel?
     int position = 0;
+
+    public StubInput() {}
 
     public StubInput(String[] answers) {
         this.answers = answers;

@@ -12,6 +12,8 @@ public class StartUI {
     Input inputOutput;
     Tracker tracker; // TODO: make private?
 
+    public StartUI() {}
+
     public StartUI(Input inputOutput, Tracker tracker) {
         this.inputOutput = inputOutput;
         this.tracker = tracker;
@@ -33,26 +35,20 @@ public class StartUI {
 		System.out.println("\nYou desided to edit some task.");
         String task_id = this.inputOutput.answerToQuestion("Choose task's id: ");
 
-//		boolean allIsNotValid = false;
-//		while (!allIsNotValid ) {
-			String answer_toChName = this.inputOutput.answerToQuestion("Do you want to change task's name? (y/n): ");
+		String answer_toChName = this.inputOutput.answerToQuestion("Do you want to change task's name? (y/n): ");
+        if (answer_toChName.equals("y")) {
+			task_name = this.inputOutput.answerToQuestion("Print task's name: ");
+		}
 
-            if (answer_toChName.equals("y")) {
-				task_name = this.inputOutput.answerToQuestion("Print task's name: ");
-			}
+		String answer_toChDescr = this.inputOutput.answerToQuestion("Do you want to change task's description? (y/n): ");
+        if (answer_toChDescr.equals("y")) {
+			task_description = this.inputOutput.answerToQuestion("Print task's description: ");
+        }
 
-			String answer_toChDescr = this.inputOutput.answerToQuestion("Do you want to change task's description? (y/n): ");
-            if (answer_toChDescr.equals("y")) {
-				task_description = this.inputOutput.answerToQuestion("Print task's description: ");
-            }
+        Item item = new Item(task_name, task_description, new Date());
+		item.setId(task_id);
+        this.tracker.update(item);
 
-//			if (task_name != null ^ task_description != null) {
-//                allIsNotValid = true;
-//				Item item = new Item(task_name, task_description, new Date());
-//				item.setId(task_id);
-//				tracker.update(item);
-//			}
-//		}
 	}
 
 	private boolean checkIdExisting(String id) {
