@@ -72,9 +72,7 @@ public class StartUI {
 		String task_id = this.inputOutput.answerToQuestion("Choose id of the task you want to delete: ");
 		Item item = this.tracker.findById(task_id);
 
-        if (checkIdExisting(task_id)) {
-            System.out.println("There is such id in the list.");
-        } else {
+        if (!checkIdExisting(task_id)) {
             System.out.println("There is NO such id in the list!");
             // TODO exit() -> back to Print Menu Class;
             // TODO Make this if as a function and use it together with ask to print task_id

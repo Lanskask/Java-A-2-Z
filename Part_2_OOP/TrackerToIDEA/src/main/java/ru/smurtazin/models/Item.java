@@ -1,6 +1,7 @@
 package ru.smurtazin.models;
 
 import java.util.Date;
+import java.util.HashMap;
 
 public class Item {
 	private String id;
@@ -26,7 +27,48 @@ public class Item {
 		this.commentsList = commentsList;
 	}
 
-	public String getId() {
+    /**
+     * @return a hash code value for this object.
+     */
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (description != null ? description.hashCode() : 0);
+        result = 31 * result + (creationDate != null ? creationDate.hashCode() : 0);
+        return result;
+//        return super.hashCode();
+    }
+
+    /**
+     * @param obj the reference object with which to compare.
+     * @return {@code true} if this object is the same as the obj argument;
+     *          {@code false} otherwise.
+     */
+    @Override
+    public boolean equals(Object obj) {
+        // TODO: Shold here be as initial value true or false?
+        boolean isEqual = false;
+        Item other = (Item) obj;
+
+        if (this == obj) {
+            isEqual = true;
+        } else if (obj == null) {
+            isEqual = false;
+        } else if (getClass() != obj.getClass()) {
+            isEqual = false;
+        } else if (this.name != other.name ) {
+            isEqual = false;
+        } else if (this.description != other.description) {
+            isEqual = false;
+        } else if (this.creationDate != other.creationDate) {
+            isEqual = false;
+        }
+        return isEqual;
+//        return super.equals(obj);
+    }
+
+    public String getId() {
 		return this.id;
 	}
 	public String getName() {
