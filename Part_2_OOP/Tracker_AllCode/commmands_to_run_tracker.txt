@@ -1,2 +1,0 @@
-java -cp target\tracker-1.0.jar ru.smurtazin.start.Tracker
-mvn clean package
