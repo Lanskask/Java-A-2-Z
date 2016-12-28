@@ -1,6 +1,6 @@
 package ru.smurtazin.start;
 
-import ru.smurtazin.models.*;
+import ru.smurtazin.models.Item;
 import java.util.Random;
 import java.util.ArrayList;
 
@@ -31,10 +31,7 @@ public class Tracker {
 
 	void update(Item item) {
         Item itemtoInsert = this.findById(item.getId());
-//        System.out.println(this.items.indexOf(itemtoInsert));
-//        items.indexOf(itemtoInsert);
         this.items.set(items.indexOf(itemtoInsert), item);
-//        this.items.set( this.items.indexOf(item), item );
 	}
 
 	ArrayList<Item> findAll() {

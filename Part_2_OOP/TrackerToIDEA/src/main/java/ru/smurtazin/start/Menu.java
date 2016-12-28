@@ -38,10 +38,6 @@ public class Menu {
                 startUi.deleteTask();
             } else if (menuItemNumber.equals("5")) {
                 startUi.showFilteredList();
-            /*} else if (menuItemNumber.equals(6)) {
-                startUi.addCommentToTask();
-            } else if (menuItemNumber.equals(7)) {
-                startUi.showTaskComments();*/
             } else if (menuItemNumber.equalsIgnoreCase("e")) {
                 System.out.println("Exit ...");
                 System.exit(0);

@@ -1,16 +1,14 @@
 package ru.smurtazin.start;
 
-import ru.smurtazin.models.*;
+import ru.smurtazin.models.Item;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Arrays;
 
 public class StartUI {
-//    Input inputOutput = new StubInput();
-//    Input inputOutput;
-    Input inputOutput;
-    Tracker tracker; // TODO: make private?
+
+	private Input inputOutput;
+    private Tracker tracker; // TODO: make private?
 
     public StartUI() {}
 
@@ -48,7 +46,6 @@ public class StartUI {
         Item item = new Item(task_name, task_description, new Date());
 		item.setId(task_id);
         this.tracker.update(item);
-
 	}
 
 	private boolean checkIdExisting(String id) {
@@ -58,12 +55,6 @@ public class StartUI {
                 thereIsSuchId = true;
             }
         }
-        /*if (thereIsSuchId = true) {
-            System.out.println("There is such id in the list.");
-        } else {
-            System.out.println("There is NO such id in the list!");
-            exit();
-        }*/
         return thereIsSuchId;
     }
 
@@ -123,40 +114,4 @@ public class StartUI {
 		System.out.println("Founded items: ");
 		this.showTasksList( this.tracker.findByName(key) );
 	}
-
-	/*public void addCommentToTask() {
-		// setCommentsList(String[] commentsList)
-		System.out.println("\nYou decided to add comment to some task.");
-		String task_id = System.console().readLine("Choose a task's id which you want to add comment to: ");
-		tracker.items[Arrays.asList(items).indexOf( findById( item.getId() ) )] = tracker.findById(task_id);
-
-    String answer = System.console().readLine("Do you want to add a comment to this task? (y/n): ");
-    if( answer.equals("y") ) {
-	    String task_comment = System.console().readLine("Print comment: ");
-			tracker.items[Arrays.asList(items).indexOf(item)].addComment(task_comment);
-    }
-	}*/
-
-	/*public void showTaskComments() {
-		System.out.println("\nYou desided to view some task's comments.");
-		String task_id = System.console().readLine("Choose task's id: ");
-		Item item = findById(task_id);
-
-		System.out.println(
-			"\nAll task " +
-			item.getId() +
-			" comments: "
-		);
-
-    for (String comment : item.getCommentsList()) {
-    	if (comment != null) {
-    		System.out.println(
-      		"Comment " +
-					Arrays.asList(items).indexOf(item)
-				 	+ ":\n\t" + comment
-				 );
-    	}
-    }
-	}*/
-
 }
