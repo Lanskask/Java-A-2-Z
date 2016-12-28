@@ -22,8 +22,7 @@ public class StartUI {
         String task_name = this.inputOutput.answerToQuestion("Print task's name: ");
 		String task_description = this.inputOutput.answerToQuestion("Print task's description: ");
 
-		Item item = new Item(task_name, task_description, new Date());
-		this.tracker.add(item);
+		this.tracker.add(new Item(task_name, task_description, new Date()));
 	}
 
 	public void editTask() {
