@@ -1,10 +1,5 @@
 package ru.smurtazin.start;
 
-import ru.smurtazin.models.Item;
-
-import java.util.ArrayList;
-import java.util.Date;
-
 /**
  * Created by a1 on 22.12.16.
  */
@@ -25,7 +20,6 @@ public class Menu {
                         "Choose some action in menu.\nMenu:" +
                         menuItemsString +
                         "\n\n\tE. Quit");
-//        this.askUser();
     }
 
     public void askUser() {

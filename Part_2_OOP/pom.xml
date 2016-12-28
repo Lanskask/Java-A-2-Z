@@ -12,8 +12,8 @@
     <artifactId>Part_2_OOP</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>Lesson_1_Inheritance</module>
-        <module>../My_JDBC_Experiments</module>
+        <module>Experiments</module>
+        <module>TrackerToIDEA</module>
     </modules>
 
 

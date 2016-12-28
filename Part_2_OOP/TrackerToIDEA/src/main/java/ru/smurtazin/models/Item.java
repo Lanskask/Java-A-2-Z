@@ -65,7 +65,6 @@ public class Item {
             isEqual = false;
         }
         return isEqual;
-//        return super.equals(obj);
     }
 
     public String getId() {

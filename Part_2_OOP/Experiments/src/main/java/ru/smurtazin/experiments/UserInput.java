@@ -1,4 +1,4 @@
-package jdbc;
+package ru.smurtazin.experiments;
 
 import java.io.BufferedReader;
 import java.io.Console;

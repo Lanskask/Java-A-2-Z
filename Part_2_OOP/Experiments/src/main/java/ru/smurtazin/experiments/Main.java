@@ -1,6 +1,6 @@
-package jdbc;
+package ru.smurtazin.experiments;
 
-import com.mysql.fabric.jdbc.FabricMySQLDriver;
+//import com.mysql.fabric.jdbc.FabricMySQLDriver;
 
 import java.sql.*;
 import java.util.ArrayList;
