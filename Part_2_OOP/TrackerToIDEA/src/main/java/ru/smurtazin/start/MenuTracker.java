@@ -21,21 +21,34 @@ public class MenuTracker {
         this.tracker = tracker;
     }
 
+    public void select(int key) {
+        this.userActions[key].execute(this.input, this.tracker);
+    }
+
     // TODO: Rename
     public void fillAction() {
         // TODO: make this with ArrayList
-        this.userActions[0] = new AddNewTask(this.input, this.tracker);
+        this.userActions[0] = new AddNewTask();
+        /*this.userActions[1] = new EditTask(this.input, this.tracker);
+        this.userActions[2] = new DeleteTask(this.input, this.tracker);
+        this.userActions[3] = new ShowTasksList(this.input, this.tracker);
+        this.userActions[4] = new ShowFilteredList(this.input, this.tracker);*/
     }
 
     public void showMenu() { // showMenuItem
         for (UserAction userAction : this.userActions) {
-            System.out.println(userAction.info());
+            if (userAction != null) {
+                System.out.println(userAction.info());
+            }
         }
     }
 
     private class AddNewTask implements UserAction {
 
-        /*public AddNewTask(Input input, Tracker tracker) {
+        /*private Input input;
+        private Tracker tracker;
+
+        public AddNewTask(Input input, Tracker tracker) {
             this.input = input;
             this.tracker = tracker;
         }*/

@@ -50,7 +50,14 @@ public class Menu {
     }
 
     public static void main(String[] args) {
-        Menu menu = new Menu();
-        menu.askUser();
+        // TODO: Uncomment to do by my way... or not?
+        /*Menu menu = new Menu();
+        menu.askUser();*/
+
+        System.out.println("Here should be new staff!!");
+        Input input = new ConsoleInput();
+        Tracker tracker = new Tracker();
+        MenuTracker menuTracker = new MenuTracker(input, tracker);
+        menuTracker.showMenu();
     }
 }
