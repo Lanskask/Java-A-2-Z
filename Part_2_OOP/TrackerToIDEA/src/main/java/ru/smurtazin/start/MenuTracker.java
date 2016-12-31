@@ -27,7 +27,7 @@ public class MenuTracker {
         this.userActions[0] = new AddNewTask(this.input, this.tracker);
     }
 
-    public void showMenu() {
+    public void showMenu() { // showMenuItem
         for (UserAction userAction : this.userActions) {
             System.out.println(userAction.info());
         }
@@ -35,10 +35,10 @@ public class MenuTracker {
 
     private class AddNewTask implements UserAction {
 
-        public AddNewTask(Input input, Tracker tracker) {
+        /*public AddNewTask(Input input, Tracker tracker) {
             this.input = input;
             this.tracker = tracker;
-        }
+        }*/
 
         public int key() {
             return 0;
