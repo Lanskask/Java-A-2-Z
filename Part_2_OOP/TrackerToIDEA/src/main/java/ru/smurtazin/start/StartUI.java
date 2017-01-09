@@ -77,7 +77,8 @@ public class StartUI {
 		}
 	}
 
-	private void showTasksList(ArrayList<Item> items) {
+	// TODO: make it private acces when finish all with MenuTracker
+	public void showTasksList(ArrayList<Item> items) {
 		// TODO: Should call: Item[] findAll();
 		for (Item item : items) {
 			if (item != null) {

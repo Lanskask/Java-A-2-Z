@@ -28,11 +28,11 @@ public class MenuTracker {
     // TODO: Rename
     public void fillAction() {
         // TODO: make this with ArrayList
-        this.userActions[0] = new AddNewTask();
-        /*this.userActions[1] = new EditTask(this.input, this.tracker);
+        this.userActions[0] = new AddNewTask(input, tracker);
+        this.userActions[1] = new EditTask(this.input, this.tracker);
         this.userActions[2] = new DeleteTask(this.input, this.tracker);
         this.userActions[3] = new ShowTasksList(this.input, this.tracker);
-        this.userActions[4] = new ShowFilteredList(this.input, this.tracker);*/
+        this.userActions[4] = new ShowFilteredList(this.input, this.tracker);
     }
 
     public void showMenu() { // showMenuItem
@@ -45,13 +45,10 @@ public class MenuTracker {
 
     private class AddNewTask implements UserAction {
 
-        /*private Input input;
-        private Tracker tracker;
-
         public AddNewTask(Input input, Tracker tracker) {
-            this.input = input;
-            this.tracker = tracker;
-        }*/
+            MenuTracker.this.input = input;
+            MenuTracker.this.tracker = tracker;
+        }
 
         public int key() {
             return 0;
@@ -62,11 +59,105 @@ public class MenuTracker {
             String task_description = inputOutput.answerToQuestion("Print task's description: ");
 
             tracker.add(new Item(task_name, task_description, new Date()));
-//            startUI.addNewTask();
+//            MenuTracker.this.startUI.addNewTask();
         }
 
         public String info() {
             return String.format("%s. %s", this.key(), "Add new task.");
         }
     }
+
+    private class EditTask implements UserAction {
+
+        public EditTask(Input input, Tracker tracker) {
+            MenuTracker.this.input = input;
+            MenuTracker.this.tracker = tracker;
+        }
+
+        public int key() {
+            return 1;
+        }
+
+        public void execute(Input inputOutput, Tracker tracker) {
+            // TODO: Here should be some user interface
+
+            MenuTracker.this.startUI.editTask();
+        }
+
+        public String info() {
+            return String.format("%s. %s", this.key(), "Edit some Task.");
+        }
+    }
+
+    private class DeleteTask implements UserAction {
+
+        public DeleteTask(Input input, Tracker tracker) {
+            MenuTracker.this.input = input;
+            MenuTracker.this.tracker = tracker;
+        }
+
+        public int key() {
+            return 2;
+        }
+
+        public void execute(Input inputOutput, Tracker tracker) {
+            // TODO: Here should be some user interface
+
+            MenuTracker.this.startUI.deleteTask();
+        }
+
+        public String info() {
+            return String.format("%s. %s", this.key(), "Delete some Task.");
+        }
+    }
+
+    private class ShowTasksList implements UserAction {
+
+        public ShowTasksList(Input input, Tracker tracker) {
+            MenuTracker.this.input = input;
+            MenuTracker.this.tracker = tracker;
+        }
+
+        public int key() {
+            return 4;
+        }
+
+        public void execute(Input inputOutput, Tracker tracker) {
+            System.out.println("\nAll tasks: ");
+            if (MenuTracker.this.tracker.items.isEmpty() ) {
+                System.out.println("There is no any task.");
+            }
+            MenuTracker.this.startUI.showTasksList(MenuTracker.this.tracker.findAll());
+
+//            MenuTracker.this.startUI.showAllTasks();
+        }
+
+        public String info() {
+            return String.format("%s. %s", this.key(), "AShow All Tasks.");
+        }
+    }
+
+    private class ShowFilteredList implements UserAction {
+
+        public ShowFilteredList(Input input, Tracker tracker) {
+            MenuTracker.this.input = input;
+            MenuTracker.this.tracker = tracker;
+        }
+
+        public int key() {
+            return 5;
+        }
+
+        public void execute(Input inputOutput, Tracker tracker) {
+            String keyToFound = inputOutput.answerToQuestion("What sequence do you want to search between item's names? ");
+            System.out.println("Founded items: ");
+            MenuTracker.this.startUI.showTasksList( MenuTracker.this.tracker.findByName(keyToFound) );
+//            MenuTracker.this.startUI.showFilteredList();
+        }
+
+        public String info() {
+            return String.format("%s. %s", this.key(), "Show Filtered List.");
+        }
+    }
+
 }

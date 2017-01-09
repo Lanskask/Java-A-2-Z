@@ -58,6 +58,8 @@ public class Menu {
         Input input = new ConsoleInput();
         Tracker tracker = new Tracker();
         MenuTracker menuTracker = new MenuTracker(input, tracker);
+
+        menuTracker.fillAction();
         menuTracker.showMenu();
     }
 }
