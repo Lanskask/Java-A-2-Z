@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="ru.smurtazin.start.TrackerTest" time="1.049" errors="0" skipped="6">
+<testsuite tests="6" failures="0" name="ru.smurtazin.start.TrackerTest" time="0.846" errors="0" skipped="6">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/etc/jdk1.8.0_101/jre/lib/amd64"/>
@@ -59,22 +59,22 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="ru.smurtazin.start.TrackerTest" name="delete" time="0.174">
+  <testcase classname="ru.smurtazin.start.TrackerTest" name="delete" time="0.141">
     <skipped/>
   </testcase>
-  <testcase classname="ru.smurtazin.start.TrackerTest" name="findAll" time="0.175">
+  <testcase classname="ru.smurtazin.start.TrackerTest" name="findAll" time="0.141">
     <skipped/>
   </testcase>
-  <testcase classname="ru.smurtazin.start.TrackerTest" name="update" time="0.175">
+  <testcase classname="ru.smurtazin.start.TrackerTest" name="update" time="0.141">
     <skipped/>
   </testcase>
-  <testcase classname="ru.smurtazin.start.TrackerTest" name="findById" time="0.175">
+  <testcase classname="ru.smurtazin.start.TrackerTest" name="findById" time="0.141">
     <skipped/>
   </testcase>
-  <testcase classname="ru.smurtazin.start.TrackerTest" name="findByName" time="0.175">
+  <testcase classname="ru.smurtazin.start.TrackerTest" name="findByName" time="0.141">
     <skipped/>
   </testcase>
-  <testcase classname="ru.smurtazin.start.TrackerTest" name="add" time="0.175">
+  <testcase classname="ru.smurtazin.start.TrackerTest" name="add" time="0.141">
     <skipped/>
   </testcase>
 </testsuite>
