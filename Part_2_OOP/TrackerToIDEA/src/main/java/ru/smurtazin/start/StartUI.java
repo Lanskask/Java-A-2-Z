@@ -8,17 +8,13 @@ import java.util.Date;
 public class StartUI {
 
 	private Input inputOutput;
-    private Tracker tracker; // TODO: make private?
+    private Tracker tracker;
 
     public StartUI() {}
 
     public StartUI(Input inputOutput, Tracker tracker) {
         this.inputOutput = inputOutput;
         this.tracker = tracker;
-    }
-
-    public Input getStartUiInputOutpus() {
-        return this.inputOutput;
     }
 
 	public void addNewTask() {

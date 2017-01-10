@@ -14,8 +14,8 @@ public class MenuTracker {
     private Tracker tracker;
     private UserAction[] userActions = new UserAction[5];
 //    public ArrayList<UserAction> userActions = new ArrayList<UserAction>();
-    private StartUI startUI;
-    private int key = 1;
+    private StartUI startUI = new StartUI(input, tracker);
+    private int key;
 
     public MenuTracker(Input input, Tracker tracker) {
         this.input = input;
@@ -35,22 +35,24 @@ public class MenuTracker {
     }
 
     // TODO: Rename
-    public void fillAction() {
+    public void fillActionsArray() {
         // TODO: make this with ArrayList
-        this.userActions[0] = new AddNewTask(this.input, this.tracker);
-        this.userActions[1] = new EditTask(this.input, this.tracker);
-        this.userActions[2] = new DeleteTask(this.input, this.tracker);
-        this.userActions[3] = new ShowTasksList(this.input, this.tracker);
-        this.userActions[4] = new ShowFilteredList(this.input, this.tracker);
+        // TODO: Should I remove this. ?
+        this.userActions[0] = this.new AddNewTask(this.input, this.tracker);
+        this.userActions[1] = this.new EditTask(this.input, this.tracker);
+        this.userActions[2] = this.new DeleteTask(this.input, this.tracker);
+        this.userActions[3] = this.new ShowTasksList(this.input, this.tracker);
+        this.userActions[4] = this.new ShowFilteredList(this.input, this.tracker);
     }
 
     public void showMenu() { // showMenuItem
+        this.key = 1;
         for (UserAction userAction : this.userActions) {
             if (userAction != null) {
                 System.out.println(userAction.info());
             }
         }
-        System.out.println("E. Exit.");
+        System.out.println("\nE. Exit.");
     }
 
     private class AddNewTask implements UserAction {
@@ -65,11 +67,11 @@ public class MenuTracker {
         }
 
         public void execute(Input inputOutput, Tracker tracker) {
-            String task_name = inputOutput.answerToQuestion("Print task's name: ");
-            String task_description = inputOutput.answerToQuestion("Print task's description: ");
+            /*String task_name = inputOutput.answerToQuestion("Print task's name: ");
+            String task_description = inputOutput.answerToQuestion("Print task's description: ");*/
 
-            tracker.add(new Item(task_name, task_description, new Date()));
-//            MenuTracker.this.startUI.addNewTask();
+//            tracker.add(new Item(task_name, task_description, new Date()));
+            MenuTracker.this.startUI.addNewTask();
         }
 
         public String info() {
@@ -90,7 +92,6 @@ public class MenuTracker {
 
         public void execute(Input inputOutput, Tracker tracker) {
             // TODO: Here should be some user interface
-
             MenuTracker.this.startUI.editTask();
         }
 
@@ -137,9 +138,9 @@ public class MenuTracker {
             if (MenuTracker.this.tracker.items.isEmpty() ) {
                 System.out.println("There is no any task.");
             }
-            MenuTracker.this.startUI.showTasksList(MenuTracker.this.tracker.findAll());
-
-//            MenuTracker.this.startUI.showAllTasks();
+//            MenuTracker.this.startUI.showTasksList(MenuTracker.this.tracker.findAll());
+            System.out.println("Some log 1");
+            MenuTracker.this.startUI.showAllTasks();
         }
 
         public String info() {

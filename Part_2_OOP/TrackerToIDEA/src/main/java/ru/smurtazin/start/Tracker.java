@@ -15,6 +15,7 @@ public class Tracker {
 		this.items.add(item);
 		return item;
 	}
+
 	protected Item findById(String id) {
 		Item result = null;
 		for (Item item : this.items) {
@@ -25,13 +26,14 @@ public class Tracker {
 		}
 		return result;
 	}
+
 	private String generateId() {
 		return String.valueOf(RN.nextInt());
 	}
 
 	void update(Item item) {
-        Item itemtoInsert = this.findById(item.getId());
-        this.items.set(items.indexOf(itemtoInsert), item);
+        Item itemToInsert = this.findById(item.getId());
+        this.items.set(items.indexOf(itemToInsert), item);
 	}
 
 	ArrayList<Item> findAll() {
