@@ -15,7 +15,11 @@ public class StartUI {
     public StartUI(Input inputOutput, Tracker tracker) {
         this.inputOutput = inputOutput;
         this.tracker = tracker;
-	}
+    }
+
+    public Input getStartUiInputOutpus() {
+        return this.inputOutput;
+    }
 
 	public void addNewTask() {
         System.out.println("\nYou desided to add new task.");

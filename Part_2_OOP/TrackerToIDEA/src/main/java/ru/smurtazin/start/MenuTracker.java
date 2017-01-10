@@ -15,10 +15,19 @@ public class MenuTracker {
     private UserAction[] userActions = new UserAction[5];
 //    public ArrayList<UserAction> userActions = new ArrayList<UserAction>();
     private StartUI startUI;
+    private int key = 1;
 
     public MenuTracker(Input input, Tracker tracker) {
         this.input = input;
         this.tracker = tracker;
+    }
+
+    private int keyPlusPlus() {
+        return key++;
+    }
+
+    public int getUserActionSize() {
+        return this.userActions.length;
     }
 
     public void select(int key) {
@@ -28,7 +37,7 @@ public class MenuTracker {
     // TODO: Rename
     public void fillAction() {
         // TODO: make this with ArrayList
-        this.userActions[0] = new AddNewTask(input, tracker);
+        this.userActions[0] = new AddNewTask(this.input, this.tracker);
         this.userActions[1] = new EditTask(this.input, this.tracker);
         this.userActions[2] = new DeleteTask(this.input, this.tracker);
         this.userActions[3] = new ShowTasksList(this.input, this.tracker);
@@ -41,6 +50,7 @@ public class MenuTracker {
                 System.out.println(userAction.info());
             }
         }
+        System.out.println("E. Exit.");
     }
 
     private class AddNewTask implements UserAction {
@@ -51,7 +61,7 @@ public class MenuTracker {
         }
 
         public int key() {
-            return 0;
+            return keyPlusPlus();
         }
 
         public void execute(Input inputOutput, Tracker tracker) {
@@ -75,7 +85,7 @@ public class MenuTracker {
         }
 
         public int key() {
-            return 1;
+            return keyPlusPlus();
         }
 
         public void execute(Input inputOutput, Tracker tracker) {
@@ -97,7 +107,7 @@ public class MenuTracker {
         }
 
         public int key() {
-            return 2;
+            return keyPlusPlus();
         }
 
         public void execute(Input inputOutput, Tracker tracker) {
@@ -119,7 +129,7 @@ public class MenuTracker {
         }
 
         public int key() {
-            return 4;
+            return keyPlusPlus();
         }
 
         public void execute(Input inputOutput, Tracker tracker) {
@@ -133,7 +143,7 @@ public class MenuTracker {
         }
 
         public String info() {
-            return String.format("%s. %s", this.key(), "AShow All Tasks.");
+            return String.format("%s. %s", this.key(), "Show All Tasks.");
         }
     }
 
@@ -145,7 +155,7 @@ public class MenuTracker {
         }
 
         public int key() {
-            return 5;
+            return keyPlusPlus();
         }
 
         public void execute(Input inputOutput, Tracker tracker) {
