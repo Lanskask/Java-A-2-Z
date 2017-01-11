@@ -71,9 +71,8 @@ public class MenuTracker {
             String task_description = inputOutput.answerToQuestion("Print task's description: ");*/
 
 //            tracker.add(new Item(task_name, task_description, new Date())); // TODO: it works
-            MenuTracker.this.startUI.addNewTask(); // TODO: it doesn't work
             System.out.println("Log 1");
-            startUI.addNewTask(); // TODO: it doesn't work
+            MenuTracker.this.startUI.addNewTask(); // TODO: it doesn't work
             System.out.println("Log 2");
         }
 
