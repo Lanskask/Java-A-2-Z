@@ -15,6 +15,7 @@ import static org.junit.Assert.*;
 /**
  * Created by a1 on 21.12.16.
  */
+
 public class StartUITest {
 
     @Ignore

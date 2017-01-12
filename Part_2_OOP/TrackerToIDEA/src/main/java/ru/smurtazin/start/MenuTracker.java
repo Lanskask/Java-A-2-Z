@@ -14,12 +14,16 @@ public class MenuTracker {
     private Tracker tracker;
     private UserAction[] userActions = new UserAction[5];
 //    public ArrayList<UserAction> userActions = new ArrayList<UserAction>();
-    private StartUI startUI = new StartUI(input, tracker);
+
+//    private StartUI startUI = new StartUI(input, tracker);
+//    private StartUI startUI = new StartUI();
     private int key;
+    private StartUI startUI;
 
     public MenuTracker(Input input, Tracker tracker) {
         this.input = input;
         this.tracker = tracker;
+        this.startUI = new StartUI(input, tracker);
     }
 
     private int keyPlusPlus() {

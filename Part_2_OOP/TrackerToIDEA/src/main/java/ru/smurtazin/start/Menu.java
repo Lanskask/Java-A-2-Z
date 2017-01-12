@@ -21,12 +21,16 @@ public class Menu {
             this.menuTracker.showMenu();
             menuItemNumber = this.inputOutput.answerToQuestion("What do you want to do? ");
 
-            if ( Integer.parseInt(menuItemNumber) <= menuTracker.getUserActionSize() ) {
-                this.menuTracker.select( Integer.parseInt(menuItemNumber) - 1);
+            if ( !menuItemNumber.equalsIgnoreCase("e") ) {
+                if ( Integer.parseInt(menuItemNumber) <= menuTracker.getUserActionSize() ) {
+                    this.menuTracker.select( Integer.parseInt(menuItemNumber) - 1);
+                } else {
+                    System.out.println("You have printed a wrong Menu Item Number.\n" +
+                            "Please print the wrong one.");
+                    this.menuTracker.showMenu();
+                }
             } else {
-                System.out.println("You have printed a wrong Menu Item Number.\n" +
-                        "Please print the wrong one.");
-                this.menuTracker.showMenu();
+                System.out.println("\nYou decided to exit. Exit...");
             }
         }
     }

@@ -1,5 +1,6 @@
 package ru.smurtazin.start;
 
+import org.junit.*;
 import org.junit.Ignore;
 import ru.smurtazin.models.*;
 
