@@ -5,38 +5,26 @@ package ru.smurtazin.start;
  */
 public class Menu {
 
-//    StartUI startUi = new StartUI();
-    Input inputOutput = new ConsoleInput();
-//    Input inputOutput = startUi.getStartUiInputOutpus();
+    Input inputOutput = new ValidateInput();
     Tracker tracker = new Tracker();
-    MenuTracker menuTracker = new MenuTracker(inputOutput, tracker);
 
-//    Menu menu = new Menu();
-
-    public void askUserMenuTracker() {
-        this.menuTracker.fillActionsArray();
-        String menuItemNumber = "";
-
-        while(!menuItemNumber.equalsIgnoreCase("e")) {
-            this.menuTracker.showMenu();
-            menuItemNumber = this.inputOutput.answerToQuestion("What do you want to do? ");
-
-            if ( !menuItemNumber.equalsIgnoreCase("e") ) {
-                if ( Integer.parseInt(menuItemNumber) <= menuTracker.getUserActionSize() ) {
-                    this.menuTracker.select( Integer.parseInt(menuItemNumber) - 1);
-                } else {
-                    System.out.println("You have printed a wrong Menu Item Number.\n" +
-                            "Please print the wrong one.");
-                    this.menuTracker.showMenu();
-                }
-            } else {
-                System.out.println("\nYou decided to exit. Exit...");
-            }
-        }
+    public void init() {
+        Tracker tracker = new Tracker();
+        MenuTracker menuTracker = new MenuTracker(this.inputOutput, tracker);
+        menuTracker.fillActionsArray();
+        do {
+            menuTracker.show();
+            int numericAnswer = inputOutput.answerToQuestion(
+                    "Select: ", menuTracker.getUserActionSizeArray()
+            );
+            System.out.println("numericAnswer: " + numericAnswer);
+            menuTracker.select( numericAnswer );
+        } while (! "y".equals(this.inputOutput.answerToQuestion("Exit?(y): ")));
     }
 
     public static void main(String[] args) {
         Menu menu = new Menu();
-        menu.askUserMenuTracker();
+//        menu.askUserMenuTracker();
+        menu.init();
     }
 }

@@ -6,9 +6,11 @@ ru/smurtazin/models/Task.class
 ru/smurtazin/start/Tracker.class
 ru/smurtazin/start/MenuTracker.class
 ru/smurtazin/start/Menu.class
+ru/smurtazin/start/ValidateInput.class
 ru/smurtazin/start/MenuTracker$DeleteTask.class
 ru/smurtazin/start/StubInput.class
 ru/smurtazin/start/MenuTracker$ShowFilteredList.class
+ru/smurtazin/start/OutOfMenuException.class
 ru/smurtazin/start/Input.class
 ru/smurtazin/start/UserAction.class
 ru/smurtazin/start/MenuTracker$EditTask.class

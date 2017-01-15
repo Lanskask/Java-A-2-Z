@@ -34,6 +34,14 @@ public class MenuTracker {
         return this.userActions.length;
     }
 
+    public int[] getUserActionSizeArray() {
+        int[] getUserActionSizeArray = new int[this.userActions.length];
+        for (int i = 1; i <= this.userActions.length; i++) {
+            getUserActionSizeArray[i -1] = i;
+        }
+        return getUserActionSizeArray;
+    }
+
     public void select(int key) {
         this.userActions[key].execute(this.input, this.tracker);
     }
@@ -49,7 +57,7 @@ public class MenuTracker {
         this.userActions[4] = this.new ShowFilteredList(this.input, this.tracker);
     }
 
-    public void showMenu() { // showMenuItem
+    public void showMenu() {
         this.key = 1;
         for (UserAction userAction : this.userActions) {
             if (userAction != null) {
@@ -57,6 +65,15 @@ public class MenuTracker {
             }
         }
         System.out.println("\nE. Exit.");
+    }
+
+    public void show() {
+        this.key = 1;
+        for (UserAction userAction : this.userActions) {
+            if (userAction != null) {
+                System.out.println(userAction.info());
+            }
+        }
     }
 
     private class AddNewTask implements UserAction {
