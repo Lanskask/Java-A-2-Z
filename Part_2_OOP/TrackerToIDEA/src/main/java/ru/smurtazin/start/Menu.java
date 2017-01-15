@@ -17,7 +17,6 @@ public class Menu {
             int numericAnswer = inputOutput.answerToQuestion(
                     "Select: ", menuTracker.getUserActionSizeArray()
             );
-            System.out.println("numericAnswer: " + numericAnswer);
             menuTracker.select( numericAnswer );
         } while (! "y".equals(this.inputOutput.answerToQuestion("Exit?(y): ")));
     }
