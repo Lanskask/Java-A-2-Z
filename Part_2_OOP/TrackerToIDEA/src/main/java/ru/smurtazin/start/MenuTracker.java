@@ -12,13 +12,14 @@ public class MenuTracker {
 
     private Input input;
     private Tracker tracker;
-    private UserAction[] userActions = new UserAction[5];
+    private UserAction[] userActions = new UserAction[10];
+    private int position = 0;
 //    public ArrayList<UserAction> userActions = new ArrayList<UserAction>();
 
 //    private StartUI startUI = new StartUI(input, tracker);
 //    private StartUI startUI = new StartUI();
     private int key;
-    private StartUI startUI;
+    StartUI startUI; // TODO: Should I make it private as it was or add public or package?
 
     public MenuTracker(Input input, Tracker tracker) {
         this.input = input;
@@ -26,7 +27,7 @@ public class MenuTracker {
         this.startUI = new StartUI(input, tracker);
     }
 
-    private int keyPlusPlus() {
+    int keyPlusPlus() {
         return key++;
     }
 
@@ -50,11 +51,15 @@ public class MenuTracker {
     public void fillActionsArray() {
         // TODO: make this with ArrayList
         // TODO: Should I remove this. ?
-        this.userActions[0] = this.new AddNewTask(this.input, this.tracker);
-        this.userActions[1] = this.new EditTask(this.input, this.tracker);
-        this.userActions[2] = this.new DeleteTask(this.input, this.tracker);
-        this.userActions[3] = this.new ShowTasksList(this.input, this.tracker);
-        this.userActions[4] = this.new ShowFilteredList(this.input, this.tracker);
+        this.userActions[position++] = this.new AddNewTask(this.input, this.tracker);
+        this.userActions[position++] = this.new EditTask(this.input, this.tracker);
+        this.userActions[position++] = this.new DeleteTask(this.input, this.tracker);
+        this.userActions[position++] = this.new ShowTasksList(this.input, this.tracker);
+        this.userActions[position++] = this.new ShowFilteredList(this.input, this.tracker);
+    }
+
+    public void addAction(UserAction action) {
+        this.userActions[position++] = action;
     }
 
     public void showMenu() {
@@ -135,8 +140,7 @@ public class MenuTracker {
         }
 
         public void execute(Input inputOutput, Tracker tracker) {
-            // TODO: Here should be some user interface
-
+            // TODO: Here should be some user interface, or not?
             MenuTracker.this.startUI.deleteTask();
         }
 
