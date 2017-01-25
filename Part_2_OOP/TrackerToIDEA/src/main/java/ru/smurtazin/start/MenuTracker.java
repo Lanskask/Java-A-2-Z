@@ -1,9 +1,5 @@
 package ru.smurtazin.start;
 
-import ru.smurtazin.models.Item;
-
-import java.util.ArrayList;
-import java.util.Date;
 
 /**
  * Created by a1 on 28.12.16.
@@ -14,10 +10,7 @@ public class MenuTracker {
     private Tracker tracker;
     private UserAction[] userActions = new UserAction[10];
     private int position = 0;
-//    public ArrayList<UserAction> userActions = new ArrayList<UserAction>();
 
-//    private StartUI startUI = new StartUI(input, tracker);
-//    private StartUI startUI = new StartUI();
     private int key;
     StartUI startUI; // TODO: Should I make it private as it was or add public or package?
 
@@ -190,7 +183,6 @@ public class MenuTracker {
             String keyToFound = inputOutput.answerToQuestion("What sequence do you want to search between item's names? ");
             System.out.println("Founded items: ");
             MenuTracker.this.startUI.showTasksList( MenuTracker.this.tracker.findByName(keyToFound) );
-//            MenuTracker.this.startUI.showFilteredList();
         }
 
         public String info() {

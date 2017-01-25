@@ -6,23 +6,26 @@ package ru.smurtazin.chess.parts;
 //public interface Figure {
 public abstract class Figure {
 
+    public Figure() {}
+
     public Figure(FigureType figureType, Color color, Side figureSide) {
         this.figureType = figureType;
         this.color = color;
         this.figureSide = figureSide;
     }
 
-    enum Color {
-        WHITE, BLACK
+    public Figure(FigureType figureType, Color color) {
+        this.figureType = figureType;
+        this.color = color;
     }
 
-    enum FigureType {
-        PAWN, KING, QUEEN, ROOK, KNIGHT, BISHOP
+    public Figure(FigureType figureType) {
+        this.figureType = figureType;
     }
 
-    enum Side {
-        LEFT, RIGHT
-    }
+    enum Color { WHITE, BLACK }
+    enum FigureType { PAWN, KING, QUEEN, ROOK, KNIGHT, BISHOP }
+    enum Side { LEFT, RIGHT }
 
     private FigureType figureType;
     private Color color;
@@ -63,31 +66,37 @@ public abstract class Figure {
     }
 
     public void setInitialCoordinateBigFigure(Coordinate initialCoordinate) {
+        // YCoordinate
         if(color == Color.WHITE) {
-            if (figureType == FigureType.KING) {
-                initialCoordinate.xCoordinate = Coordinate.XCoordinate.D;
-            } else if (figureType == FigureType.QUEEN) {
-                initialCoordinate.xCoordinate = Coordinate.XCoordinate.E;
-            } else if (figureType == FigureType.ROOK) {
-
-            } else if (figureType == FigureType.KNIGHT) {
-                if(figureSide == Side.LEFT) {
-
-                } else {
-
-                }
-            } else if (figureType == FigureType.BISHOP) {
-                if(figureSide == Side.LEFT) {
-
-                } else {
-
-                }
-            } else {
-
-            }
-
+            initialCoordinate.yCoordinate = Coordinate.YCoordinate._1;
         } else {
-
+            initialCoordinate.yCoordinate = Coordinate.YCoordinate._8;
+        }
+        // XCoordinate
+        if (figureType == FigureType.KING) {
+            initialCoordinate.xCoordinate = Coordinate.XCoordinate.D;
+        } else if (figureType == FigureType.QUEEN) {
+            initialCoordinate.xCoordinate = Coordinate.XCoordinate.E;
+        } else if (figureType == FigureType.ROOK) {
+            // TODO: Side relative to the viewer or to, for example, the white figures user ?
+            // TODO: Side relative to the white figures user!
+            if(figureSide == Side.LEFT) {
+                initialCoordinate.xCoordinate = Coordinate.XCoordinate.A;
+            } else {
+                initialCoordinate.xCoordinate = Coordinate.XCoordinate.H;
+            }
+        } else if (figureType == FigureType.KNIGHT) {
+            if(figureSide == Side.LEFT) {
+                initialCoordinate.xCoordinate = Coordinate.XCoordinate.B;
+            } else {
+                initialCoordinate.xCoordinate = Coordinate.XCoordinate.G;
+            }
+        } else { //if (figureType == FigureType.BISHOP) {
+            if(figureSide == Side.LEFT) {
+                initialCoordinate.xCoordinate = Coordinate.XCoordinate.C;
+            } else {
+                initialCoordinate.xCoordinate = Coordinate.XCoordinate.F;
+            }
         }
         this.initialCoordinate = initialCoordinate;
     }
@@ -109,6 +118,6 @@ public abstract class Figure {
 
     public abstract void movement(Coordinate newCoordinate);
 
-    public abstract void eat(Coordinate newCoordinate);
+//    public abstract void eat(Coordinate newCoordinate);
 
 }
