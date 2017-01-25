@@ -10,6 +10,7 @@ public class ChessDesk {
     Figures figures;
 
     public ChessDesk() {
+        this.fillFiguresArray();
         // TODO: What should be here OR leave it empty?
     }
 
