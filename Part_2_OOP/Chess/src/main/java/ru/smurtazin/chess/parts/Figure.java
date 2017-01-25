@@ -6,12 +6,22 @@ package ru.smurtazin.chess.parts;
 //public interface Figure {
 public abstract class Figure {
 
+    enum Color { WHITE, BLACK }
+    enum FigureType { PAWN, KING, QUEEN, ROOK, KNIGHT, BISHOP }
+    enum Side { LEFT, RIGHT }
+
     public Figure() {}
 
     public Figure(FigureType figureType, Color color, Side figureSide) {
         this.figureType = figureType;
         this.color = color;
         this.figureSide = figureSide;
+    }
+
+    public Figure(FigureType figureType, Color color, Coordinate.XCoordinate initialXCoordinate) {
+        this.figureType = figureType;
+        this.color = color;
+        this.initialCoordinate.xCoordinate = initialXCoordinate;
     }
 
     public Figure(FigureType figureType, Color color) {
@@ -22,10 +32,6 @@ public abstract class Figure {
     public Figure(FigureType figureType) {
         this.figureType = figureType;
     }
-
-    enum Color { WHITE, BLACK }
-    enum FigureType { PAWN, KING, QUEEN, ROOK, KNIGHT, BISHOP }
-    enum Side { LEFT, RIGHT }
 
     private FigureType figureType;
     private Color color;
@@ -101,16 +107,24 @@ public abstract class Figure {
         this.initialCoordinate = initialCoordinate;
     }
 
-    public void setInitialCoordinatePaw(Color color) {
+    public void setInitialYCoordinatePaw(Color color) { // TODO: Will it work or not?
         if (color == Color.WHITE) {
-            for (Coordinate.YCoordinate yCoordinate : Coordinate.YCoordinate.values()) {
-
-            }
+            this.initialCoordinate.yCoordinate = Coordinate.YCoordinate._7;
         } else {
-
+            this.initialCoordinate.yCoordinate = Coordinate.YCoordinate._2;
         }
-
     }
+
+    /*public void setInitialCoordinatePaw(Color color) { // TODO: Will it work or not?
+        for (Coordinate.XCoordinate xCoordinate : Coordinate.XCoordinate.values()) {
+            this.initialCoordinate.xCoordinate = xCoordinate;
+        }
+        if (color == Color.WHITE) {
+            this.initialCoordinate.yCoordinate = Coordinate.YCoordinate._7;
+        } else {
+            this.initialCoordinate.yCoordinate = Coordinate.YCoordinate._2;
+        }
+    }*/
 
     public Coordinate getInitialCoordinate() {
         return initialCoordinate;
@@ -119,5 +133,4 @@ public abstract class Figure {
     public abstract void movement(Coordinate newCoordinate);
 
 //    public abstract void eat(Coordinate newCoordinate);
-
 }

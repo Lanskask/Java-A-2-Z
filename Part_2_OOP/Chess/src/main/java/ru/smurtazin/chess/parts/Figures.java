@@ -21,8 +21,8 @@ public class Figures {
     }
 
     class WhitePawn extends Figure { // from Up
-        WhitePawn() {
-            super(FigureType.PAWN, Color.WHITE);
+        WhitePawn(Coordinate.XCoordinate initialXCoordinate) {
+            super(FigureType.PAWN, Color.WHITE, initialXCoordinate);
         }
 
         @Override
@@ -56,8 +56,8 @@ public class Figures {
     }
 
     class BlackPawn extends Figure { // from Bottom
-        BlackPawn() {
-            super(FigureType.PAWN, Color.BLACK);
+        BlackPawn(Coordinate.XCoordinate initialXCoordinate) {
+            super(FigureType.PAWN, Color.BLACK, initialXCoordinate);
         }
 
         @Override
@@ -91,8 +91,8 @@ public class Figures {
     }
 
     class King extends Figure {
-        King() {
-            super(FigureType.KING);
+        King(Color color) {
+            super(FigureType.KING, color);
         }
 
         @Override
@@ -124,8 +124,8 @@ public class Figures {
     }
 
     class Queen extends Figure {
-        Queen() {
-            super(FigureType.QUEEN);
+        Queen(Color color) {
+            super(FigureType.QUEEN, color);
         }
 
         @Override
@@ -158,8 +158,8 @@ public class Figures {
     }
 
     class Rook extends Figure {
-        Rook() {
-            super(FigureType.ROOK);
+        Rook(Color color) {
+            super(FigureType.ROOK, color);
         }
 
         @Override
@@ -187,8 +187,8 @@ public class Figures {
     }
 
     class Knight extends Figure {
-        Knight() {
-            super(FigureType.KNIGHT);
+        Knight(Color color) {
+            super(FigureType.KNIGHT, color);
         }
 
         @Override
@@ -215,8 +215,8 @@ public class Figures {
     }
 
     class Bishop extends Figure {
-        Bishop() {
-            super(FigureType.BISHOP);
+        Bishop(Color color) {
+            super(FigureType.BISHOP, color);
         }
 
         @Override
