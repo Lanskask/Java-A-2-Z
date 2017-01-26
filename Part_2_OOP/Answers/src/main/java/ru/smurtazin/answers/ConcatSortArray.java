@@ -8,8 +8,6 @@ import java.util.Arrays;
  */
 public class ConcatSortArray {
 
-    ArrayList<Integer> newList = new ArrayList<Integer>();
-
     ArrayList<Integer> allArray = new ArrayList<Integer>();
     ArrayList<Integer> array1 = new ArrayList<Integer>(Arrays.asList(1, 3, 5, 7, 9));
     ArrayList<Integer> array2 = new ArrayList<Integer>(Arrays.asList(2, 4, 6, 8, 10));
@@ -31,15 +29,13 @@ public class ConcatSortArray {
     }
 
     void swMoRigh(int i, int j) { // Swap ar[j] and ar[i] and move all to the right of ar[i]
+
         int temp;
-        // allArray[j] -> temp
-        temp = this.allArray.get(j);
+        temp = this.allArray.get(j); // allArray[j] -> temp
         for(int k = 0; k <= j-i; k++ ) {
-            // allArray[j-k-1] -> allArray[j-k];
-            this.allArray.set(j-k, allArray.get(j-k-1) );
+            this.allArray.set(j-k, allArray.get(j-k-1) ); // allArray[j-k-1] -> allArray[j-k];
         }
-        // temp -> allArray[i];
-        this.allArray.set(i, temp );
+        this.allArray.set(i, temp ); // temp -> allArray[i];
     }
 
     void sortAllArray(){
@@ -54,46 +50,5 @@ public class ConcatSortArray {
             }
         }
     }
-
-    ArrayList<Integer> concatAndSortArrays(ArrayList<Integer> arrayList1, ArrayList<Integer> arrayList2) {
-//    void concatAndSortArrays(ArrayList<Integer> arrayList1, ArrayList<Integer> arrayList2) {
-        ArrayList<Integer> arrayToSort = new ArrayList<Integer>();
-        arrayToSort.addAll(arrayList1);
-        arrayToSort.addAll(arrayList2);
-        this.printArrayList(arrayToSort);
-
-        int temp;
-        int halfAr = arrayToSort.size() / 2;
-        for (int i = 0; i <= halfAr-1 ; i++) {
-            if (arrayToSort.get(i) < arrayToSort.get(i + halfAr )) { //&&
-                if (arrayToSort.get(i + 1) > arrayToSort.get(i + halfAr )) {
-
-                    temp = arrayToSort.get(i + 1);
-                    arrayToSort.set(i + 1, arrayToSort.get(i + halfAr));
-                    arrayToSort.set(i + halfAr, arrayToSort.get(i + 2));
-                    arrayToSort.set(i + 2, temp);
-
-                    this.printArrayList(arrayToSort);
-                }
-            }
-        }
-        return arrayToSort;
-    }
-
-    public static void main(String[] args) {
-        ConcatSortArray concatSortArray = new ConcatSortArray();
-
-        concatSortArray.sortAllArray();
-
-        concatSortArray.printArrayList(concatSortArray.allArray);
-
-        /*ArrayList<Integer> arrayList1 = new ArrayList<Integer>(Arrays.asList(1, 3, 5, 7, 9));
-        ArrayList<Integer> arrayList2 = new ArrayList<Integer>(Arrays.asList(2, 4, 6, 8, 10));
-
-        concatSortArray.printArrayList(
-                concatSortArray.concatAndSortArrays(arrayList1, arrayList2)
-        );*/
-    }
-
 
 }
