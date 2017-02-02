@@ -40,10 +40,7 @@ public class MenuTracker {
         this.userActions[key].execute(this.input, this.tracker);
     }
 
-    // TODO: Rename
     public void fillActionsArray() {
-        // TODO: make this with ArrayList
-        // TODO: Should I remove this. ?
         this.userActions[position++] = this.new AddNewTask(this.input, this.tracker);
         this.userActions[position++] = this.new EditTask(this.input, this.tracker);
         this.userActions[position++] = this.new DeleteTask(this.input, this.tracker);
@@ -158,7 +155,6 @@ public class MenuTracker {
             if (MenuTracker.this.tracker.items.isEmpty() ) {
                 System.out.println("There is no any task.");
             }
-//            MenuTracker.this.startUI.showTasksList(MenuTracker.this.tracker.findAll());
             System.out.println("Some log 1");
             MenuTracker.this.startUI.showAllTasks();
         }

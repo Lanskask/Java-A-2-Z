@@ -15,11 +15,6 @@ public class ConsoleInput implements Input {
         return sc.nextLine();
     }
 
-    /*@Override
-    public String answerToQuestion(String question) {
-        return System.console().readLine(question);
-    }*/
-
     public int answerToQuestionWithExit(String question, int[] range) {
         String answer = this.answerToQuestion(question);
         boolean exist = false;

@@ -5,9 +5,6 @@ package ru.smurtazin.start;
  */
 public class Menu {
 
-//    Input inputOutput = new ValidateInput();
-//    Tracker tracker = new Tracker();
-
     public void init() {
         Tracker tracker = new Tracker();
         Input inputOutput = new ValidateInput();
@@ -44,7 +41,6 @@ public class Menu {
 
     public static void main(String[] args) {
         Menu menu = new Menu();
-//        menu.askUserMenuTracker();
         menu.init();
     }
 }

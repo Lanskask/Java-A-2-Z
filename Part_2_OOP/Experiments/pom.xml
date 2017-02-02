@@ -7,8 +7,9 @@
   <groupId>ru.smurtazin</groupId>
   <artifactId>experiments</artifactId>
   <version>1.0</version>
+
   <name>tracker</name>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
   
   <build>
     <plugins>

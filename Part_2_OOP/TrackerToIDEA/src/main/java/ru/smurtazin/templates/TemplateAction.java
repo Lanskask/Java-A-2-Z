@@ -14,7 +14,6 @@ public abstract class TemplateAction {
     }
 
     public static void main(String[] args) {
-//        new TemplateAction();
         new CopyAction();
     }
 }
