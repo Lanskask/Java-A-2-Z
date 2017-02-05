@@ -1,8 +1,6 @@
 # Java-A-2-Z
 
-
-
-[Java-A-2-Z](https://github.com/Lanskask/Java-A-2-Z)
+## Table of Content
 
 1. [Part_1_BasicSyntax](https://github.com/Lanskask/Java-A-2-Z/tree/master/Part_1_BasicSyntax)
 
