@@ -19,31 +19,31 @@ public class StartUI {
 
 	public void addNewTask() {
         System.out.println("\nYou desided to add new task.");
-        String task_name = this.inputOutput.answerToQuestion("Print task's name: ");
-		String task_description = this.inputOutput.answerToQuestion("Print task's description: ");
+        String taskName = this.inputOutput.answerToQuestion("Print task's name: ");
+		String taskDescription = this.inputOutput.answerToQuestion("Print task's description: ");
 
-		this.tracker.add(new Item(task_name, task_description, new Date()));
+		this.tracker.add(new Item(taskName, taskDescription, new Date()));
 	}
 
 	public void editTask() {
-		String task_name = null;
-		String task_description = null;
+		String taskName = null;
+		String taskDescription = null;
 
 		System.out.println("\nYou desided to edit some task.");
-        String task_id = this.inputOutput.answerToQuestion("Choose task's id: ");
+        String taskId = this.inputOutput.answerToQuestion("Choose task's id: ");
 
-		String answer_toChName = this.inputOutput.answerToQuestion("Do you want to change task's name? (y/n): ");
-        if (answer_toChName.equals("y")) {
-			task_name = this.inputOutput.answerToQuestion("Print task's name: ");
+		String answerToChName = this.inputOutput.answerToQuestion("Do you want to change task's name? (y/n): ");
+        if (answerToChName.equals("y")) {
+			taskName = this.inputOutput.answerToQuestion("Print task's name: ");
 		}
 
-		String answer_toChDescr = this.inputOutput.answerToQuestion("Do you want to change task's description? (y/n): ");
-        if (answer_toChDescr.equals("y")) {
-			task_description = this.inputOutput.answerToQuestion("Print task's description: ");
+		String answerToChDescr = this.inputOutput.answerToQuestion("Do you want to change task's description? (y/n): ");
+        if (answerToChDescr.equals("y")) {
+			taskDescription = this.inputOutput.answerToQuestion("Print task's description: ");
         }
 
-        Item item = new Item(task_name, task_description, new Date());
-		item.setId(task_id);
+        Item item = new Item(taskName, taskDescription, new Date());
+		item.setId(taskId);
         this.tracker.update(item);
 	}
 
@@ -59,19 +59,19 @@ public class StartUI {
 
 	public void deleteTask() {
 		System.out.println("\nYou decided to delete some task.");
-		String task_id = this.inputOutput.answerToQuestion("Choose id of the task you want to delete: ");
-		Item item = this.tracker.findById(task_id);
+		String taskId = this.inputOutput.answerToQuestion("Choose id of the task you want to delete: ");
+		Item item = this.tracker.findById(taskId);
 
-        if (!checkIdExisting(task_id)) {
+        if (!checkIdExisting(taskId)) {
             System.out.println("There is NO such id in the list!");
             // TODO exit() -> back to Print Menu Class;
-            // TODO Make this if as a function and use it together with ask to print task_id
+            // TODO Make this if as a function and use it together with ask to print taskId
         }
 
-		String answer_toDeleteTask1 = this.inputOutput.answerToQuestion("Are you sure to delete this task? (y/n): ");
-		if( answer_toDeleteTask1.equals("y") ) {
-			String answer_toDeleteTask2 = this.inputOutput.answerToQuestion("Are you absolutely sure, that you want to detele this task? (y/n): ");
-			if( answer_toDeleteTask2.equals("y") ) {
+		String answerToDeleteTask1 = this.inputOutput.answerToQuestion("Are you sure to delete this task? (y/n): ");
+		if( answerToDeleteTask1.equals("y") ) {
+			String answerToDeleteTask2 = this.inputOutput.answerToQuestion("Are you absolutely sure, that you want to detele this task? (y/n): ");
+			if( answerToDeleteTask2.equals("y") ) {
 				this.tracker.delete(item);
 			}
 		}
