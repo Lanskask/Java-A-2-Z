@@ -1,11 +1,11 @@
-package ru.smurtazin.chess.parts;
+package ru.smurtazin.chess.figures;
 
 /**
  * Created by a1 on 23.01.17.
  */
 public class Figures {
 
-    int xAbsCoordDiff(Coordinate nowCoordinate, Coordinate newCoordinate) {
+/*    int xAbsCoordDiff(Coordinate nowCoordinate, Coordinate newCoordinate) {
         return Math.abs( newCoordinate.xCoordinate.getCoordValue()
                 - nowCoordinate.xCoordinate.getCoordValue() );
     }
@@ -18,7 +18,7 @@ public class Figures {
     int yCoordDiff(Coordinate nowCoordinate, Coordinate newCoordinate) {
         return ( newCoordinate.yCoordinate.getCoordValue()
                 - nowCoordinate.yCoordinate.getCoordValue() );
-    }
+    }*/
 
     class WhitePawn extends Figure { // from Up
         WhitePawn(Coordinate.XCoordinate initialXCoordinate) {

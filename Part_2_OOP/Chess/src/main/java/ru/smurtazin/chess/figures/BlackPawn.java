@@ -3,9 +3,9 @@ package ru.smurtazin.chess.figures;
 /**
  * Created by a1 on 05.02.17.
  */
-public class WhitePawn extends Figure { // from Up
-    WhitePawn(Coordinate.XCoordinate initialXCoordinate) {
-        super(FigureType.PAWN, Color.WHITE, initialXCoordinate);
+public class BlackPawn extends Figure { // from Bottom
+    BlackPawn(Coordinate.XCoordinate initialXCoordinate) {
+        super(FigureType.PAWN, Color.BLACK, initialXCoordinate);
     }
 
     @Override
@@ -14,7 +14,7 @@ public class WhitePawn extends Figure { // from Up
         if (nowCoordinate == newCoordinate) {
             System.out.println("You place your figure on the same place");
         } else if   (
-                yCoordDiff( nowCoordinate, newCoordinate) == -1
+                yCoordDiff( nowCoordinate, newCoordinate) == 1
                 )
         {
             this.setNowCoordinate(newCoordinate);
@@ -30,7 +30,7 @@ public class WhitePawn extends Figure { // from Up
                         ==
                         yAbsCoordDiff( nowCoordinate, newCoordinate )
                         &&
-                        yCoordDiff( nowCoordinate, newCoordinate ) == -1
+                        yCoordDiff( nowCoordinate, newCoordinate ) == 1
                 )
         {
             this.setNowCoordinate(newCoordinate);

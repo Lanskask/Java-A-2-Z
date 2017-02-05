@@ -1,4 +1,4 @@
-package ru.smurtazin.chess.parts;
+package ru.smurtazin.chess.figures;
 
 /**
  * Created by a1 on 23.01.17.
@@ -6,9 +6,9 @@ package ru.smurtazin.chess.parts;
 //public interface Figure {
 public abstract class Figure {
 
-    enum Color { WHITE, BLACK }
-    enum FigureType { PAWN, KING, QUEEN, ROOK, KNIGHT, BISHOP }
-    enum Side { LEFT, RIGHT }
+    public enum Color { WHITE, BLACK }
+    public enum FigureType { PAWN, KING, QUEEN, ROOK, KNIGHT, BISHOP }
+    public enum Side { LEFT, RIGHT }
 
     public Figure() {}
 
@@ -33,11 +33,27 @@ public abstract class Figure {
         this.figureType = figureType;
     }
 
+    // TODO: It isn't private becouse concrete figures are in the othe package
     private FigureType figureType;
     private Color color;
     private Side figureSide;
-    private Coordinate nowCoordinate;
-    private Coordinate initialCoordinate;
+    public Coordinate nowCoordinate; // TODO: Actuaaly it should be private
+    public Coordinate initialCoordinate; // TODO: Actuaaly it should be private
+
+    public int xAbsCoordDiff(Coordinate nowCoordinate, Coordinate newCoordinate) {
+        return Math.abs( newCoordinate.xCoordinate.getCoordValue()
+                - nowCoordinate.xCoordinate.getCoordValue() );
+    }
+
+    public int yAbsCoordDiff(Coordinate nowCoordinate, Coordinate newCoordinate) {
+        return Math.abs( newCoordinate.yCoordinate.getCoordValue()
+                - nowCoordinate.yCoordinate.getCoordValue() );
+    }
+
+    public int yCoordDiff(Coordinate nowCoordinate, Coordinate newCoordinate) {
+        return ( newCoordinate.yCoordinate.getCoordValue()
+                - nowCoordinate.yCoordinate.getCoordValue() );
+    }
 
     public void setFigureType(FigureType figureType) {
         this.figureType = figureType;
@@ -67,7 +83,7 @@ public abstract class Figure {
         this.nowCoordinate = nowCoordinate;
     }
 
-    Coordinate getNowCoordinate() {
+    public Coordinate getNowCoordinate() {
         return this.nowCoordinate;
     }
 
@@ -113,6 +129,10 @@ public abstract class Figure {
         } else {
             this.initialCoordinate.yCoordinate = Coordinate.YCoordinate._2;
         }
+    }
+
+    public void setInitialXCoordinatePaw(Coordinate.XCoordinate xCoordinatePaw) {
+        this.initialCoordinate.xCoordinate = xCoordinatePaw;
     }
 
     /*public void setInitialCoordinatePaw(Color color) { // TODO: Will it work or not?

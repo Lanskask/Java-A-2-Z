@@ -1,5 +1,10 @@
 package ru.smurtazin.chess.parts;
 
+import ru.smurtazin.chess.figures.Coordinate;
+/*import ru.smurtazin.chess.figures.Figure;
+import ru.smurtazin.chess.figures.Figures;*/
+import ru.smurtazin.chess.figures.*;
+
 import java.util.ArrayList;
 
 /**
@@ -43,31 +48,33 @@ public class ChessDesk {
         figuresArray.addAll(blackPawns);
     }
 
-    Figures.King whiteKing = figures.new King(Figure.Color.WHITE);
-    Figures.King blackKing = figures.new King(Figure.Color.BLACK);
+//    King whiteKing = new King(Figure.Color.WHITE);
+    King whiteKing = new King(Figure.Color.WHITE);
+    King blackKing = new King(Figure.Color.BLACK);
 
-    Figures.Queen whiteQueen = figures.new Queen(Figure.Color.WHITE);
-    Figures.Queen blackQueen = figures.new Queen(Figure.Color.BLACK);
+    Queen whiteQueen = new Queen(Figure.Color.WHITE);
+    Queen blackQueen = new Queen(Figure.Color.BLACK);
 
-    Figures.Rook whiteRook = figures.new Rook(Figure.Color.WHITE);
-    Figures.Rook blackRook = figures.new Rook(Figure.Color.BLACK);
+    Rook whiteRook = new Rook(Figure.Color.WHITE);
+    Rook blackRook = new Rook(Figure.Color.BLACK);
 
-    Figures.Knight whiteKnight = figures.new Knight(Figure.Color.WHITE);
-    Figures.Knight blackKnight = figures.new Knight(Figure.Color.BLACK);
+    Knight whiteKnight = new Knight(Figure.Color.WHITE);
+    Knight blackKnight = new Knight(Figure.Color.BLACK);
 
-    Figures.Bishop whiteBishop = figures.new Bishop(Figure.Color.WHITE);
-    Figures.Bishop blackBishop = figures.new Bishop(Figure.Color.BLACK);
+    Bishop whiteBishop = new Bishop(Figure.Color.WHITE);
+    Bishop blackBishop = new Bishop(Figure.Color.BLACK);
 
 
     void makeWhitePawnsArray() {
         for (Coordinate.XCoordinate xCoordinate : Coordinate.XCoordinate.values()) {
-            this.whitePawns.add(figures.new WhitePawn(xCoordinate));
+            this.whitePawns.add(new WhitePawn().setInitialXCoordinatePaw(xCoordinate));
         }
     }
 
     void makeBlackPawnsArray() {
         for (Coordinate.XCoordinate xCoordinate : Coordinate.XCoordinate.values()) {
-            this.blackPawns.add(figures.new BlackPawn(xCoordinate));
+//            this.blackPawns.add(new BlackPawn(xCoordinate)); // Previous variant
+            this.blackPawns.add(new BlackPawn().setInitialXCoordinatePaw(xCoordinate));
         }
     }
 
