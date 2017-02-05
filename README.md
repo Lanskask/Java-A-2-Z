@@ -9,7 +9,6 @@ A lot of some different java programs with tests and not, working and not.
     1. [Final_Exersize](https://github.com/Lanskask/Java-A-2-Z/tree/master/Part_1_BasicSyntax/Final_Exersize)
 
         * [**substringfinder**]() - _with tests_
-
             Find substring in given string.
     1. [Lesson_1](https://github.com/Lanskask/Java-A-2-Z/tree/master/Part_1_BasicSyntax/Lesson_1)
 
