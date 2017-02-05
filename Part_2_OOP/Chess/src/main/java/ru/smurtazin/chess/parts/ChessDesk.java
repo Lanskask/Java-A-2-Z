@@ -63,8 +63,7 @@ public class ChessDesk {
 
     Bishop whiteBishop = new Bishop(Figure.Color.WHITE);
     Bishop blackBishop = new Bishop(Figure.Color.BLACK);
-
-
+    
     void makeWhitePawnsArray() {
         for (Coordinate.XCoordinate xCoordinate : Coordinate.XCoordinate.values()) {
             this.whitePawns.add(new WhitePawn().setInitialXCoordinatePaw(xCoordinate));
