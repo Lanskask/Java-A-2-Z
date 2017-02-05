@@ -45,13 +45,13 @@ public class Tracker {
     }
 
 	public ArrayList<Item> findByName(String key) {
-        ArrayList<Item> result_array = new ArrayList<>();
+        ArrayList<Item> resultArray = new ArrayList<>();
 		for (Item item : this.items) {
             if (item.getName().contains(key)) {
-                result_array.add(item);
+                resultArray.add(item);
             }
         }
-		return result_array;
+		return resultArray;
 	}
 
 }
