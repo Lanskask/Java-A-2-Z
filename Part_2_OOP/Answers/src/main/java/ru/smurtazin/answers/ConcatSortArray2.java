@@ -9,8 +9,6 @@ import java.util.Arrays;
 public class ConcatSortArray2 {
     ArrayList<Integer> allArray =
             new ArrayList<Integer>(10);
-    /*ArrayList<Integer> array1 = new ArrayList<Integer>(Arrays.asList(1, 2, 5));
-    ArrayList<Integer> array2 = new ArrayList<Integer>(Arrays.asList(3, 4, 6));*/
     ArrayList<Integer> array1 = new ArrayList<Integer>();
     ArrayList<Integer> array2 = new ArrayList<Integer>();
 
@@ -47,17 +45,5 @@ public class ConcatSortArray2 {
             System.out.print(arVal + ", ");
         }
         System.out.println();
-    }
-
-    public static void main(String[] args) {
-        ArrayList<Integer> array1 = new ArrayList<Integer>(Arrays.asList(1, 2, 5));
-        ArrayList<Integer> array2 = new ArrayList<Integer>(Arrays.asList(3, 4, 6));
-
-        ConcatSortArray2 concatSortArray2 = new ConcatSortArray2(array1, array2);
-
-        concatSortArray2.concatSortArray();
-        concatSortArray2.getAllArray();
-
-        concatSortArray2.printArrayList(concatSortArray2.allArray);
     }
 }

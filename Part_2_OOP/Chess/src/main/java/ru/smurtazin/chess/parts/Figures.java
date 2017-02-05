@@ -108,7 +108,7 @@ public class Figures {
                                     nowCoordinate.xCoordinate.getCoordValue()
                                 ) == 1
                             )
-                            || 
+                            ||
                             (
                                 Math.abs(
                                     newCoordinate.yCoordinate.getCoordValue()

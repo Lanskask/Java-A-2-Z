@@ -18,7 +18,10 @@ public class ConcatSortArray2Test {
 
     @Test
     public void concatSortArray() throws Exception {
-        ConcatSortArray2 concatSortArray2 = new ConcatSortArray2();
+        ArrayList<Integer> array1 = new ArrayList<Integer>(Arrays.asList(1, 2, 5));
+        ArrayList<Integer> array2 = new ArrayList<Integer>(Arrays.asList(3, 4, 6));
+
+        ConcatSortArray2 concatSortArray2 = new ConcatSortArray2(array1, array2);
 
         concatSortArray2.concatSortArray();
 
