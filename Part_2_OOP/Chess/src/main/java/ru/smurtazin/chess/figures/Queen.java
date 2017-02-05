@@ -4,7 +4,7 @@ package ru.smurtazin.chess.figures;
  * Created by a1 on 05.02.17.
  */
 public class Queen extends Figure {
-    Queen(Color color) {
+    public Queen(Color color) {
         super(FigureType.QUEEN, color);
     }
 

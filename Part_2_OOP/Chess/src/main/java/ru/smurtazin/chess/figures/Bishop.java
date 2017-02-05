@@ -4,10 +4,7 @@ package ru.smurtazin.chess.figures;
  * Created by a1 on 05.02.17.
  */
 public class Bishop extends Figure {
-    public FigureType figureType;
-    public Color color;
-
-    Bishop(Color color) {
+    public Bishop(Color color) {
         super(FigureType.BISHOP, color);
     }
 

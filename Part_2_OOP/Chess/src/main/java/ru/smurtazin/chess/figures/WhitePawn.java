@@ -4,7 +4,7 @@ package ru.smurtazin.chess.figures;
  * Created by a1 on 05.02.17.
  */
 public class WhitePawn extends Figure { // from Up
-    WhitePawn(Coordinate.XCoordinate initialXCoordinate) {
+    public WhitePawn(Coordinate.XCoordinate initialXCoordinate) {
         super(FigureType.PAWN, Color.WHITE, initialXCoordinate);
     }
 

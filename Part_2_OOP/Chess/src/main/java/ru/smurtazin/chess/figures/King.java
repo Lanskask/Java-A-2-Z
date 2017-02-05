@@ -4,10 +4,10 @@ package ru.smurtazin.chess.figures;
  * Created by a1 on 05.02.17.
  */
 public class King extends Figure {
-    King(Color color) {
-//        super(FigureType.KING, color);
-        this.setColor(color);
-        this.setFigureType(FigureType.KING);
+    public King(Color color) {
+        super(FigureType.KING, color);
+        /*this.setColor(color);
+        this.setFigureType(FigureType.KING);*/
     }
 
     public King() {

@@ -4,7 +4,7 @@ package ru.smurtazin.chess.figures;
  * Created by a1 on 05.02.17.
  */
 public class BlackPawn extends Figure { // from Bottom
-    BlackPawn(Coordinate.XCoordinate initialXCoordinate) {
+    public BlackPawn(Coordinate.XCoordinate initialXCoordinate) {
         super(FigureType.PAWN, Color.BLACK, initialXCoordinate);
     }
 
