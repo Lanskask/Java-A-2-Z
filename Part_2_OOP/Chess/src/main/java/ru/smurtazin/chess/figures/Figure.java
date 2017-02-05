@@ -33,7 +33,6 @@ public abstract class Figure {
         this.figureType = figureType;
     }
 
-    // TODO: It isn't private becouse concrete figures are in the othe package
     private FigureType figureType;
     private Color color;
     private Side figureSide;

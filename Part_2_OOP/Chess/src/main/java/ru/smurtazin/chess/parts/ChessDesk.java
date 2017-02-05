@@ -12,8 +12,6 @@ import java.util.ArrayList;
  */
 public class ChessDesk {
 
-    Figures figures;
-
     public ChessDesk() {
         this.fillFiguresArray();
         // TODO: What should be here OR leave it empty?
@@ -24,19 +22,29 @@ public class ChessDesk {
     ArrayList<Figure> blackPawns = new ArrayList<Figure>();
 
     public void fillFiguresArray() {
+        this.whiteKing.setColor(Figure.Color.WHITE);
         figuresArray.add(this.whiteKing);
+        this.blackKing.setColor(Figure.Color.BLACK);
         figuresArray.add(this.blackKing);
 
+        this.whiteQueen.setColor(Figure.Color.WHITE);
         figuresArray.add(this.whiteQueen);
+        this.blackQueen.setColor(Figure.Color.BLACK);
         figuresArray.add(this.blackQueen);
 
+        this.whiteRook.setColor(Figure.Color.WHITE);
         figuresArray.add(this.whiteRook);
+        this.blackRook.setColor(Figure.Color.BLACK);
         figuresArray.add(this.blackRook);
 
+        this.whiteKnight.setColor(Figure.Color.WHITE);
         figuresArray.add(this.whiteKnight);
+        this.blackKnight.setColor(Figure.Color.BLACK);
         figuresArray.add(this.blackKnight);
 
+        this.whiteBishop.setColor(Figure.Color.WHITE);
         figuresArray.add(this.whiteBishop);
+        this.blackBishop.setColor(Figure.Color.BLACK);
         figuresArray.add(this.blackBishop);
 
         // TODO: Is it right or not?:
@@ -49,21 +57,21 @@ public class ChessDesk {
     }
 
 //    King whiteKing = new King(Figure.Color.WHITE);
-    King whiteKing = new King(Figure.Color.WHITE);
-    King blackKing = new King(Figure.Color.BLACK);
+    King whiteKing = new King();
+    King blackKing = new King();
 
-    Queen whiteQueen = new Queen(Figure.Color.WHITE);
-    Queen blackQueen = new Queen(Figure.Color.BLACK);
+    Queen whiteQueen = new Queen();
+    Queen blackQueen = new Queen();
 
-    Rook whiteRook = new Rook(Figure.Color.WHITE);
-    Rook blackRook = new Rook(Figure.Color.BLACK);
+    Rook whiteRook = new Rook();
+    Rook blackRook = new Rook();
 
     Knight whiteKnight = new Knight(Figure.Color.WHITE);
-    Knight blackKnight = new Knight(Figure.Color.BLACK);
+    Knight blackKnight = new Knight();
 
-    Bishop whiteBishop = new Bishop(Figure.Color.WHITE);
-    Bishop blackBishop = new Bishop(Figure.Color.BLACK);
-    
+    Bishop whiteBishop = new Bishop();
+    Bishop blackBishop = new Bishop();
+
     void makeWhitePawnsArray() {
         for (Coordinate.XCoordinate xCoordinate : Coordinate.XCoordinate.values()) {
             this.whitePawns.add(new WhitePawn().setInitialXCoordinatePaw(xCoordinate));

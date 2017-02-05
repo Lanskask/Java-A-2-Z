@@ -5,7 +5,12 @@ package ru.smurtazin.chess.figures;
  */
 public class King extends Figure {
     King(Color color) {
-        super(FigureType.KING, color);
+//        super(FigureType.KING, color);
+        this.setColor(color);
+        this.setFigureType(FigureType.KING);
+    }
+
+    public King() {
     }
 
     @Override
