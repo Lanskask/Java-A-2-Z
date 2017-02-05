@@ -1,77 +1,113 @@
 # Java-A-2-Z
 
+A lot of some different java programs with tests and not, working and not.
+
 ## Table of Content
 
 1. [Part_1_BasicSyntax](https://github.com/Lanskask/Java-A-2-Z/tree/master/Part_1_BasicSyntax)
 
     1. [Final_Exersize](https://github.com/Lanskask/Java-A-2-Z/tree/master/Part_1_BasicSyntax/Final_Exersize)
 
-        * [substringfinder]() - with tests
+        * [**substringfinder**]() - _with tests_
+
+            Find substring in given string.
 
     1. [Lesson_1](https://github.com/Lanskask/Java-A-2-Z/tree/master/Part_1_BasicSyntax/Lesson_1)
 
-        * rali
+        * **rali**
 
-        * smurtazin
+            Just some basics.
 
-    1. [Lesson_2_DataTypes](https://github.com/Lanskask/Java-A-2-Z/tree/master/Part_1_BasicSyntax/Lesson_2_DataTypes) - with tests
+        * **smurtazin**
+    
+            Hello, World!
 
-        * calculator
+    1. [Lesson_2_DataTypes](https://github.com/Lanskask/Java-A-2-Z/tree/master/Part_1_BasicSyntax/Lesson_2_DataTypes) - _with tests_
 
-        * calculator2big
+        * **calculator**  - _with tests_
 
-    1. [Lesson_3_IfOperator](https://github.com/Lanskask/Java-A-2-Z/tree/master/Part_1_BasicSyntax/Lesson_3_IfOperator) - with tests
+        * **calculator2big**  - _with tests_
 
-        * figuresquare
+    1. [Lesson_3_IfOperator](https://github.com/Lanskask/Java-A-2-Z/tree/master/Part_1_BasicSyntax/Lesson_3_IfOperator) - _with tests_
 
-    1. [Lesson_4_Cycle](https://github.com/Lanskask/Java-A-2-Z/tree/master/Part_1_BasicSyntax/Lesson_4_Cycle) - with tests
+        * **figuresquare** - _with tests_
+            
+            Calculate the triangle square.
 
-        * factorial
+    1. [Lesson_4_Cycle](https://github.com/Lanskask/Java-A-2-Z/tree/master/Part_1_BasicSyntax/Lesson_4_Cycle) - _with tests_
 
-        * squareecuationroots
+        * **factorial** - _with tests_
+        
+            Calculate the factorial.
 
-        * squareequationnew
+        * **squareecuationroots** - _with tests_
 
-    1. [Lesson_5_Arrays](https://github.com/Lanskask/Java-A-2-Z/tree/master/Part_1_BasicSyntax/Lesson_5_Arrays) - with tests
+            Calculate roots of square equations. 
 
-        * bublesort
+        * **squareequationnew** - _with tests_
 
-        * matrixnew
+            Calculate roots of square equations. 
 
-        * matrixrotating
+    1. [Lesson_5_Arrays](https://github.com/Lanskask/Java-A-2-Z/tree/master/Part_1_BasicSyntax/Lesson_5_Arrays) - _with tests_
 
-        * removeduplicatesint
+        * **bublesort** - _with tests_
+            
+            Sorting array with bubble sorting. 
 
-        * removeduplicatesold
+        * **matrixnew** - _with tests_
+            
+            Rotate matrix clockwise.
 
-        * removeduplicatesstring
+        * **matrixrotating** - _with tests_
+
+            Rotate matrix clockwise.
+
+        * **removeduplicatesint** - _with tests_
+
+            Remove duplicates from int array.
+
+        * **removeduplicatesold** - _with tests_
+
+            Remove duplicates from int array.
+
+        * **removeduplicatesstring** - _with tests_
+
+            Remove duplicates from String.
 
 1. [Part_2_OOP](https://github.com/Lanskask/Java-A-2-Z/tree/master/Part_2_OOP)
 
     1. [Answers](https://github.com/Lanskask/Java-A-2-Z/tree/master/Part_2_OOP/Answers)
 
-        * answers  - with tests
+        * **answers**  - _with tests_
+
+            Concat and sort two sorted arrays.
+
+            And concat two sorted arrays two one sorted.
 
     1. [Chess](https://github.com/Lanskask/Java-A-2-Z/tree/master/Part_2_OOP/Chess)
 
-        * chess
+        * **chess**
+
+        Chess project. 
 
     1. [Experiments](https://github.com/Lanskask/Java-A-2-Z/tree/master/Part_2_OOP/Experiments)
 
-        * experiments2
+        * **experiments2**
 
-        * experiments
+        * **experiments**
 
-    1. [TrackerToIDEA](https://github.com/Lanskask/Java-A-2-Z/tree/master/Part_2_OOP/TrackerToIDEA)
+    1. [TrackerToIDEA](https://github.com/Lanskask/Java-A-2-Z/tree/master/Part_2_OOP/TrackerToIDEA) - doesn't work right. (There are errors) Some classes are tested.
 
-        * models
+        TaskTracker project. 
 
-        * start
+        * **models**
 
-        * templates
+        * **start**
 
-        * OtherFiles
+        * **templates**
 
+        * **OtherFiles** - Some UML diagrams (Made with Plant UML).
+        
             1. ActivityDiagramm
 
             1. ClassDiagramm
@@ -80,9 +116,13 @@
 
     1. [Hello](https://github.com/Lanskask/Java-A-2-Z/tree/master/Spring/Hello)
 
-        * hello
+        * **hello**
+        
+            Hello, World! with Spring.
 
-    1. [RESTService](https://github.com/Lanskask/Java-A-2-Z/tree/master/Spring/RESTService)
+    1. [RESTService](https://github.com/Lanskask/Java-A-2-Z/tree/master/Spring/RESTService) - not finished yet.
 
-        * rest
+        * **rest**
+
+            Some RESTService with Spring. 
 
