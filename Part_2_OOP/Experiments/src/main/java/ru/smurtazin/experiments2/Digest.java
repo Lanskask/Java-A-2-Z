@@ -1,4 +1,4 @@
-package experiments2;
+package ru.smurtazin.experiments2;
 
 import java.util.HashMap;
 import java.util.Map;

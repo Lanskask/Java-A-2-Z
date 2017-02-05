@@ -1,4 +1,4 @@
-package experiments2;
+package ru.smurtazin.experiments2;
 
 /**
  * Created by a1 on 22.01.17.
