@@ -11,6 +11,7 @@ public class Menu {
 
         MenuTracker menuTracker = new MenuTracker(inputOutput, tracker);
         menuTracker.fillActionsArray();
+
         UserAction deleteAction = new UserAction() {
             @Override
             public int key() {

@@ -6,10 +6,12 @@ package ru.smurtazin.chess.figures;
 //public interface Figure {
 public abstract class Figure {
 
+    // ------- Enums ---------------
     public enum Color { WHITE, BLACK }
     public enum FigureType { PAWN, KING, QUEEN, ROOK, KNIGHT, BISHOP }
     public enum Side { LEFT, RIGHT }
 
+    // ------- Constructors ---------------
     public Figure() {}
 
     public Figure(FigureType figureType, Color color, Side figureSide) {
@@ -18,6 +20,7 @@ public abstract class Figure {
         this.figureSide = figureSide;
     }
 
+    // need for Paws
     public Figure(FigureType figureType, Color color, Coordinate.XCoordinate initialXCoordinate) {
         this.figureType = figureType;
         this.color = color;
@@ -33,12 +36,14 @@ public abstract class Figure {
         this.figureType = figureType;
     }
 
+    // ------- Fields ---------------
     private FigureType figureType;
     private Color color;
     private Side figureSide;
-    public Coordinate nowCoordinate; // TODO: Actuaaly it should be private
+    public Coordinate nowCoordinate; // TODO: Actuaaly it should be private; Should it be final? How?
     public Coordinate initialCoordinate; // TODO: Actuaaly it should be private
 
+    // ------- For coordinate diffs ---------------
     public int xAbsCoordDiff(Coordinate nowCoordinate, Coordinate newCoordinate) {
         return Math.abs( newCoordinate.xCoordinate.getCoordValue()
                 - nowCoordinate.xCoordinate.getCoordValue() );
@@ -54,6 +59,12 @@ public abstract class Figure {
                 - nowCoordinate.yCoordinate.getCoordValue() );
     }
 
+    // ------- Abstract Methods ---------------
+    public abstract void movement(Coordinate newCoordinate);
+
+    //    public abstract void eat(Coordinate newCoordinate);
+
+    // ------- Just Setters and Getters ---------------
     public void setFigureType(FigureType figureType) {
         this.figureType = figureType;
     }
@@ -149,7 +160,4 @@ public abstract class Figure {
         return initialCoordinate;
     }
 
-    public abstract void movement(Coordinate newCoordinate);
-
-//    public abstract void eat(Coordinate newCoordinate);
 }
