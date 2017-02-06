@@ -10,9 +10,12 @@ ru/smurtazin/start/ValidateInput.class
 ru/smurtazin/start/MenuTracker$DeleteTask.class
 ru/smurtazin/start/StubInput.class
 ru/smurtazin/start/MenuTracker$ShowFilteredList.class
+ru/smurtazin/templates/CopyAction.class
 ru/smurtazin/start/OutOfMenuException.class
 ru/smurtazin/start/Input.class
+ru/smurtazin/start/Menu$1.class
 ru/smurtazin/start/UserAction.class
+ru/smurtazin/templates/TemplateAction.class
 ru/smurtazin/start/MenuTracker$EditTask.class
 ru/smurtazin/start/MenuTracker$AddNewTask.class
 ru/smurtazin/models/Item.class

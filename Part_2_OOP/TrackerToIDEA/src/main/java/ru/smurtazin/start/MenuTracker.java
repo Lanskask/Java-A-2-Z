@@ -37,7 +37,7 @@ public class MenuTracker {
     }
 
     public void select(int key) {
-        this.userActions[key].execute(this.input, this.tracker);
+        this.userActions[key - 1].execute(this.input, this.tracker);
     }
 
     public void fillActionsArray() {
