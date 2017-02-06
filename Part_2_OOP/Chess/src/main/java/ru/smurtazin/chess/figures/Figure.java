@@ -1,5 +1,7 @@
 package ru.smurtazin.chess.figures;
 
+import java.util.ArrayList;
+
 /**
  * Created by a1 on 23.01.17.
  */
@@ -60,7 +62,10 @@ public abstract class Figure {
     }
 
     // ------- Abstract Methods ---------------
-    public abstract void movement(Coordinate newCoordinate);
+    public abstract ArrayList<Coordinate> track(Coordinate newCoordinate);
+
+    public abstract void movement(Coordinate newCoordinate) throws
+            ImpossibleMovementException;
 
     //    public abstract void eat(Coordinate newCoordinate);
 

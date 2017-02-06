@@ -8,5 +8,4 @@ public class ImpossibleMovementException extends RuntimeException {
     public ImpossibleMovementException(String msg) {
         super(msg);
     }
-
 }

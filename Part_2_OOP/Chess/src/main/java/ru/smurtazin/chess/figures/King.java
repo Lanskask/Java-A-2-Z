@@ -1,5 +1,7 @@
 package ru.smurtazin.chess.figures;
 
+import java.util.ArrayList;
+
 /**
  * Created by a1 on 05.02.17.
  */
@@ -11,6 +13,11 @@ public class King extends Figure {
     }
 
     public King() {
+    }
+
+    @Override
+    public ArrayList<Coordinate> track(Coordinate newCoordinate) {
+        return null;
     }
 
     @Override

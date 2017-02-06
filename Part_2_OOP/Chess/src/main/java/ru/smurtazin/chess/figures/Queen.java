@@ -1,5 +1,7 @@
 package ru.smurtazin.chess.figures;
 
+import java.util.ArrayList;
+
 /**
  * Created by a1 on 05.02.17.
  */
@@ -9,31 +11,40 @@ public class Queen extends Figure {
     }
 
     @Override
+    public ArrayList<Coordinate> track(Coordinate newCoordinate) {
+        return null;
+    }
+
+    @Override
     public void movement(Coordinate newCoordinate) {
         Coordinate nowCoordinate = this.getNowCoordinate(); // TODO: What this points to?
-        if (nowCoordinate  == newCoordinate) {
-            System.out.println("You place your figure on the same place");
-        } else if   (
-                        (
-                            xAbsCoordDiff(this.getNowCoordinate(), newCoordinate)
-                            ==
-                            yAbsCoordDiff(this.getNowCoordinate(), newCoordinate)
+        try {
+            if (nowCoordinate  == newCoordinate) {
+                System.out.println("You place your figure on the same place");
+            } else if   (
+                           (
+                               xAbsCoordDiff(this.getNowCoordinate(), newCoordinate)
+                               ==
+                               yAbsCoordDiff(this.getNowCoordinate(), newCoordinate)
+                           )
+                           ||
+                           (
+                                ( xAbsCoordDiff(this.getNowCoordinate(), newCoordinate) != 0)
+                                &&
+                                ( yAbsCoordDiff(this.getNowCoordinate(), newCoordinate) == 0 )
+                           )
+                           ||
+                           (
+                                ( yAbsCoordDiff(this.getNowCoordinate(), newCoordinate) != 0 )
+                                &&
+                                ( xAbsCoordDiff(this.getNowCoordinate(), newCoordinate) == 0 )
+                           )
                         )
-                        ||
-                        (
-                            ( xAbsCoordDiff(this.getNowCoordinate(), newCoordinate) != 0)
-                            &&
-                            ( yAbsCoordDiff(this.getNowCoordinate(), newCoordinate) == 0 )
-                        )
-                        ||
-                        (
-                            ( yAbsCoordDiff(this.getNowCoordinate(), newCoordinate) != 0 )
-                            &&
-                            ( xAbsCoordDiff(this.getNowCoordinate(), newCoordinate) == 0 )
-                        )
-                    )
-        {
-            this.setNowCoordinate(newCoordinate);
+            {
+                this.setNowCoordinate(newCoordinate);
+            }
+        } catch (ImpossibleMovementException ime) {
+            throw ime;
         }
     }
 }

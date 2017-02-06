@@ -1,11 +1,18 @@
 package ru.smurtazin.chess.figures;
 
+import java.util.ArrayList;
+
 /**
  * Created by a1 on 05.02.17.
  */
 public class WhitePawn extends Figure { // from Up
     public WhitePawn(Coordinate.XCoordinate initialXCoordinate) {
         super(FigureType.PAWN, Color.WHITE, initialXCoordinate);
+    }
+
+    @Override
+    public ArrayList<Coordinate> track(Coordinate newCoordinate) {
+        return null;
     }
 
     @Override

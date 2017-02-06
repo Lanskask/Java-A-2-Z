@@ -73,4 +73,51 @@ public class ChessDesk {
         }
     }
 
+    // --------- Methods to work with figuresArray ---------------
+    // TODO: Is this method needed or not?
+//    Coordinate getConcreteFigureCoorditanes(Figure.FigureType figureType, Figure.Color color) {
+    Coordinate getConcreteFigureCoorditanes(Figure figure) {
+        Coordinate coordinateOfNeededFigure = null;
+        for(Figure figureFromArray : this.figuresArray) {
+            if(figureFromArray == figure) {
+                coordinateOfNeededFigure = figure.getNowCoordinate();
+            }
+        }
+        return coordinateOfNeededFigure;
+    }
+
+    // TODO: Is this method needed or not?
+    Figure findConcreteFigure(Figure.FigureType figureType, Figure.Color color) {
+        Figure neededFigure = null;
+        for(Figure figure : this.figuresArray) {
+            if(figure.getFigureType() == figureType &&
+                    figure.getColor() == color  ) {
+                neededFigure = figure;
+            }
+        }
+        return neededFigure;
+    }
+
+    // ------- To solve task 3 ------------
+    boolean thereNoFiguresOnTheWay(Figure figure, Coordinate newCoordinate)
+      throws ImpossibleMovementException {
+        boolean possibleToMakeSuchMovement = false;
+        for(Coordinate coordinate : figure.track(newCoordinate)) {
+            if(coordinate == getConcreteFigureCoorditanes(figure)) {
+                possibleToMakeSuchMovement = true;
+            } else {
+                throw new ImpossibleMovementException("There is a figure on the way of your movment");
+            }
+        }
+        return possibleToMakeSuchMovement;
+    }
+
+    void moveSomeConcreteFigure(Figure figure, Coordinate newCoordinate)
+            throws OccupiedWayException {
+        try {
+            figure.movement(newCoordinate);
+        } catch (OccupiedWayException owe) {
+            throw owe;
+        }
+    }
 }
