@@ -11,22 +11,12 @@ public class IteratorArray implements Iterator {
     private final int[] values;
     private int index = 0;
 
-    // TODO: Shoul remove it cause it's my function?
-    private int[] resultArray;
-
     public IteratorArray(final int[] values) {
         this.values = values;
     }
 
-    // TODO: Shoul remove it cause it's my function?
-    public void remove() {
+    public void remove() {} // TODO: Needed cause of implemention
 
-    }
-
-    // TODO: Shoul remove it cause it's my function?
-    public int[] getResultArray() {
-        return resultArray;
-    }
 
     public boolean hasNext() {
         return values.length > index+1;
@@ -36,7 +26,6 @@ public class IteratorArray implements Iterator {
         return values[index++];
     }
 
-    // TODO: Redone right
     public Object nextOdd() {
         int answer = 0;
         for (int hereIndex = this.index; hereIndex <= this.values.length; hereIndex++) {
@@ -51,7 +40,6 @@ public class IteratorArray implements Iterator {
         return answer;
     }
 
-    // TODO: Redone right
     public Object nextSimple() {
         int answer = 0;
         int toDevide = 2;
