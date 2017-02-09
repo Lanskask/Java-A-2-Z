@@ -27,9 +27,9 @@ public class ChessBoard {
     }
 
     public void printEmptyChessBoard() {
-        String topRaw = "                    |";
-        String devidingRaw = "    +---+---+---+---+---+---+---+---+";
-        String downRaw = "      A   B   C   D | E   F   G   H";
+        String topRaw       = "                    |";
+        String devidingRaw  = "    +---+---+---+---+---+---+---+---+";
+        String downRaw      = "      A   B   C   D | E   F   G   H";
 
         // TODO: With figers and real chess
         /*for (Figure figure : figuresArray) {
