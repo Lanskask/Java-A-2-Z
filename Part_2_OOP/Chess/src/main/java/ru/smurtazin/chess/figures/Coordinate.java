@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * Created by a1 on 23.01.17.
  */
 public class Coordinate {
+
     public enum XCoordinate {
         A(1), B(2), C(3), D(4), E(5), F(6), G(7), H(8);
 
@@ -37,10 +38,15 @@ public class Coordinate {
             }
             return null;
         }
-    };
+    }
 
     XCoordinate xCoordinate;
     YCoordinate yCoordinate;
+
+    public Coordinate(XCoordinate xCoordinate, YCoordinate yCoordinate) {
+        this.xCoordinate = xCoordinate;
+        this.yCoordinate = yCoordinate;
+    }
 
     public XCoordinate getXCoordValueToName(int value) { // value to name
         for(XCoordinate e : XCoordinate.values()){
@@ -58,11 +64,6 @@ public class Coordinate {
 
     // TODO: ?
 //    public Coordinate() {}
-
-    Coordinate(XCoordinate xCoordinate, YCoordinate yCoordinate) {
-        this.xCoordinate = xCoordinate;
-        this.yCoordinate = yCoordinate;
-    }
 
 /*    // TODO: ?
     Coordinate getCoordinatesNamesByValue(int xCoordValue, int yCoordValue) {

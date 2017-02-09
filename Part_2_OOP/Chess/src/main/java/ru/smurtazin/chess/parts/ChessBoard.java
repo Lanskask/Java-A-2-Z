@@ -1,5 +1,6 @@
 package ru.smurtazin.chess.parts;
 
+import ru.smurtazin.chess.figures.Coordinate;
 import ru.smurtazin.chess.figures.Figure;
 
 /**
@@ -54,10 +55,53 @@ public class ChessBoard {
         System.out.println(downRaw);
     }
 
+    public void printCurrentMatchChessBoard() {
+        // TODO: Is this needed to get allFiguresArray ? or not?
+        ChessDesk chessDesk = new ChessDesk();
+
+        String topRaw       = "                    |";
+        String devidingRaw  = "    +---+---+---+---+---+---+---+---+";
+        String downRaw      = "      A   B   C   D | E   F   G   H";
+
+        // TODO: With figures and real chess
+        /*for (Figure figure : figuresArray) {
+        }*/
+
+        System.out.println(topRaw);
+        System.out.println(devidingRaw);
+        int i = 8;
+        for(Coordinate.YCoordinate yCoordinate : Coordinate.YCoordinate.values()) {
+//      for(int i = 8; i>0; i--) { // yCoord : up - down
+            System.out.printf("  %s |", i--);
+            for(Coordinate.XCoordinate xCoordinate : Coordinate.XCoordinate.values()) {
+//            for(int j = 0; j<8; j++) { // xCoord : left - right
+                // TODO: Realize going throw allFiguresArray()
+                for (Figure figure : chessDesk.getFiguresArray() ) {
+                    if( figure.getNowCoordinate() == new Coordinate(xCoordinate, yCoordinate)) {
+                        System.out.print(" " + figure.getFigureSign() + " |");
+                    } else {
+                        System.out.print("   |");
+                    }
+                }
+            }
+            System.out.println();
+            if(i==4) {
+                System.out.println(" ---+---+---+---+---+---+---+---+---+---");
+            } else {
+                System.out.println(devidingRaw);
+            }
+        }
+        System.out.println(downRaw);
+    }
+
     public static void main(String[] args) {
         ChessBoard chessBoard = new ChessBoard();
 
         chessBoard.printEmptyChessBoard();
         chessBoard.printAllFiguresSignes();
+
+        // TODO: Don't run this method - it doesn't work
+        // TODO:    cause of NullPointException some where in Coordinates for Y
+//        chessBoard.printCurrentMatchChessBoard();
     }
 }

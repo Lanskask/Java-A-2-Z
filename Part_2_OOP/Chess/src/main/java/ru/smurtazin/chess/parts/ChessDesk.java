@@ -12,14 +12,14 @@ import java.util.ArrayList;
  */
 public class ChessDesk {
 
+    ArrayList<Figure> figuresArray = new ArrayList<Figure>();
+    ArrayList<Figure> whitePawns = new ArrayList<Figure>();
+    ArrayList<Figure> blackPawns = new ArrayList<Figure>();
+
     public ChessDesk() {
         this.fillFiguresArray();
         // TODO: What should be here OR leave it empty?
     }
-
-    ArrayList<Figure> figuresArray = new ArrayList<Figure>();
-    ArrayList<Figure> whitePawns = new ArrayList<Figure>();
-    ArrayList<Figure> blackPawns = new ArrayList<Figure>();
 
     public void fillFiguresArray() {
         figuresArray.add(this.whiteKing);
@@ -74,6 +74,10 @@ public class ChessDesk {
     }
 
     // --------- Methods to work with figuresArray ---------------
+    public ArrayList<Figure> getFiguresArray() {
+        return figuresArray;
+    }
+
     // TODO: Is this method needed or not?
 //    Coordinate getConcreteFigureCoorditanes(Figure.FigureType figureType, Figure.Color color) {
     Coordinate getConcreteFigureCoorditanes(Figure figure) {

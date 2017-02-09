@@ -144,6 +144,10 @@ public abstract class Figure {
         }
     }
 
+    public String getFigureSign() {
+        return figureSign;
+    }
+
     // ------- Coordinates --------
     public void setNowCoordinate(Coordinate nowCoordinate) {
         this.nowCoordinate = nowCoordinate;
