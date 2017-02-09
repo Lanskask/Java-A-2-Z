@@ -8,6 +8,8 @@ import java.util.ArrayList;
 //public interface Figure {
 public abstract class Figure {
 
+
+
     // ------- Enums ---------------
     public enum Color { WHITE, BLACK }
     public enum FigureType { PAWN, KING, QUEEN, ROOK, KNIGHT, BISHOP }
@@ -20,6 +22,7 @@ public abstract class Figure {
         this.figureType = figureType;
         this.color = color;
         this.figureSide = figureSide;
+        this.setFigureSign();
     }
 
     // need for Paws
@@ -27,21 +30,36 @@ public abstract class Figure {
         this.figureType = figureType;
         this.color = color;
         this.initialCoordinate.xCoordinate = initialXCoordinate;
+
+        this.setFigureSign();
+        if(figureType != FigureType.PAWN) {
+            this.setInitialCoordinateBigFigure();
+        } else {
+            this.setInitialXCoordinatePaw(initialXCoordinate);
+            this.setInitialYCoordinatePaw(color);
+        }
     }
 
     public Figure(FigureType figureType, Color color) {
         this.figureType = figureType;
         this.color = color;
+
+        this.setFigureSign();
+        if(figureType != FigureType.PAWN) {
+            this.setInitialCoordinateBigFigure();
+        }
     }
 
     public Figure(FigureType figureType) {
         this.figureType = figureType;
+        this.setFigureSign();
     }
 
     // ------- Fields ---------------
     private FigureType figureType;
     private Color color;
     private Side figureSide;
+    private String figureSign;
     public Coordinate nowCoordinate; // TODO: Actuaaly it should be private; Should it be final? How?
     public Coordinate initialCoordinate; // TODO: Actuaaly it should be private
 
@@ -94,6 +112,39 @@ public abstract class Figure {
         return figureSide;
     }
 
+    public void setFigureSign() {
+        if(this.color == Color.BLACK) {
+            if (this.figureType == FigureType.KING) {
+                this.figureSign = "\u265A";
+            } else if (figureType == FigureType.QUEEN) {
+                this.figureSign = "\u265B";
+            } else if (figureType == FigureType.ROOK) {
+                this.figureSign = "\u265C";
+            } else if (figureType == FigureType.KNIGHT) {
+                this.figureSign = "\u265E";
+            } else if (figureType == FigureType.BISHOP) {
+                this.figureSign = "\u265D";
+            } else { //if (figureType == FigureType.PAW) {
+                this.figureSign = "\u265F";
+            }
+        } else { // if (FigureColor == Color.WHITE) {
+            if (this.figureType == FigureType.KING) {
+                this.figureSign = "\u2654";
+            } else if (figureType == FigureType.QUEEN) {
+                this.figureSign = "\u2655";
+            } else if (figureType == FigureType.ROOK) {
+                this.figureSign = "\u2656";
+            } else if (figureType == FigureType.KNIGHT) {
+                this.figureSign = "\u2658";
+            } else if (figureType == FigureType.BISHOP) {
+                this.figureSign = "\u2657";
+            } else { //if (figureType == FigureType.PAW) {
+                this.figureSign = "\u2659";
+            }
+        }
+    }
+
+    // ------- Coordinates --------
     public void setNowCoordinate(Coordinate nowCoordinate) {
         this.nowCoordinate = nowCoordinate;
     }
@@ -102,7 +153,9 @@ public abstract class Figure {
         return this.nowCoordinate;
     }
 
-    public void setInitialCoordinateBigFigure(Coordinate initialCoordinate) {
+    // TODO: Should it be like this?:
+    // TODO:    public void setInitialCoordinateBigFigure(Coordinate initialCoordinate) {
+    public void setInitialCoordinateBigFigure() {
         // YCoordinate
         if(color == Color.WHITE) {
             initialCoordinate.yCoordinate = Coordinate.YCoordinate._1;

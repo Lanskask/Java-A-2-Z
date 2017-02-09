@@ -12,9 +12,6 @@ public class King extends Figure {
         this.setFigureType(FigureType.KING);*/
     }
 
-    public King() {
-    }
-
     @Override
     public ArrayList<Coordinate> track(Coordinate newCoordinate) {
         return null;
