@@ -20,14 +20,15 @@ public class King extends Figure {
     @Override
     public void movement(Coordinate newCoordinate) {
         Coordinate nowCoordinate = this.getNowCoordinate(); // TODO: What this points to?
-        if (nowCoordinate  == newCoordinate) {
-            System.out.println("You place your figure on the same place");
-        } else if   (
+        try {
+            if (nowCoordinate == newCoordinate) {
+                System.out.println("You place your figure on the same place");
+            } else if (
                         (
                             Math.abs(
                                 newCoordinate.xCoordinate.getCoordValue()
-                                        -
-                                        nowCoordinate.xCoordinate.getCoordValue()
+                                -
+                                nowCoordinate.xCoordinate.getCoordValue()
                             ) == 1
                         )
                         ||
@@ -38,9 +39,13 @@ public class King extends Figure {
                                 nowCoordinate.yCoordinate.getCoordValue()
                             ) == 1
                         )
-                    )
-        {
-            this.setNowCoordinate(newCoordinate);
+                    ) {
+                this.setNowCoordinate(newCoordinate);
+            } else {
+                throw new ImpossibleMovementException("Impossible movement");
+            }
+        } catch (ImpossibleMovementException ime) {
+            throw ime;
         }
     }
 }

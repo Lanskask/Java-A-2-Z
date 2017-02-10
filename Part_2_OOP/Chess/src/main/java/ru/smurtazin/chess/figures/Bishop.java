@@ -44,7 +44,7 @@ public class Bishop extends Figure {
     }
 
     @Override
-    public void movement(Coordinate newCoordinate) {
+    public void movement(Coordinate newCoordinate) throws ImpossibleMovementException {
         Coordinate nowCoordinate = this.getNowCoordinate(); // TODO: What this points to?
         try {
             if (nowCoordinate == newCoordinate) {
@@ -58,9 +58,12 @@ public class Bishop extends Figure {
                         )
             {
                 this.setNowCoordinate(newCoordinate);
+            } else {
+                throw new ImpossibleMovementException("Impossible movement");
             }
         } catch (ImpossibleMovementException ime) {
             throw ime;
         }
     }
+
 }

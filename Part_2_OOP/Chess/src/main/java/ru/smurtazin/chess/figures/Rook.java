@@ -78,9 +78,12 @@ public class Rook extends Figure {
                         )
             {
                 this.setNowCoordinate(newCoordinate);
+            } else {
+                throw new ImpossibleMovementException("Impossible movement");
             }
         } catch (ImpossibleMovementException ime) {
             throw ime;
         }
     }
+
 }

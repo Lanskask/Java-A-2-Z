@@ -48,6 +48,8 @@ public class Coordinate {
         this.yCoordinate = yCoordinate;
     }
 
+    public Coordinate() {}
+
     public XCoordinate getXCoordValueToName(int value) { // value to name
         for(XCoordinate e : XCoordinate.values()){
             if(value == e.getCoordValue()) return e;

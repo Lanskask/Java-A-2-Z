@@ -8,8 +8,6 @@ import java.util.ArrayList;
 //public interface Figure {
 public abstract class Figure {
 
-
-
     // ------- Enums ---------------
     public enum Color { WHITE, BLACK }
     public enum FigureType { PAWN, KING, QUEEN, ROOK, KNIGHT, BISHOP }
@@ -60,8 +58,8 @@ public abstract class Figure {
     private Color color;
     private Side figureSide;
     private String figureSign;
-    public Coordinate nowCoordinate; // TODO: Actuaaly it should be private; Should it be final? How?
-    public Coordinate initialCoordinate; // TODO: Actuaaly it should be private
+    public Coordinate nowCoordinate = new Coordinate(); // TODO: Actuaaly it should be private; Should it be final? How?
+    public Coordinate initialCoordinate = new Coordinate(); // TODO: Actuaaly it should be private
 
     // ------- For coordinate diffs ---------------
     public int xAbsCoordDiff(Coordinate nowCoordinate, Coordinate newCoordinate) {
@@ -161,38 +159,38 @@ public abstract class Figure {
     // TODO:    public void setInitialCoordinateBigFigure(Coordinate initialCoordinate) {
     public void setInitialCoordinateBigFigure() {
         // YCoordinate
-        if(color == Color.WHITE) {
-            initialCoordinate.yCoordinate = Coordinate.YCoordinate._1;
+        if(this.color == Color.WHITE) {
+            this.initialCoordinate.yCoordinate = Coordinate.YCoordinate._1;
         } else {
-            initialCoordinate.yCoordinate = Coordinate.YCoordinate._8;
+            this.initialCoordinate.yCoordinate = Coordinate.YCoordinate._8;
         }
         // XCoordinate
-        if (figureType == FigureType.KING) {
-            initialCoordinate.xCoordinate = Coordinate.XCoordinate.D;
-        } else if (figureType == FigureType.QUEEN) {
-            initialCoordinate.xCoordinate = Coordinate.XCoordinate.E;
-        } else if (figureType == FigureType.ROOK) {
+        if (this.figureType == FigureType.KING) {
+            this.initialCoordinate.xCoordinate = Coordinate.XCoordinate.D;
+        } else if (this.figureType == FigureType.QUEEN) {
+            this.initialCoordinate.xCoordinate = Coordinate.XCoordinate.E;
+        } else if (this.figureType == FigureType.ROOK) {
             // TODO: Side relative to the viewer or to, for example, the white figures user ?
             // TODO: Side relative to the white figures user!
-            if(figureSide == Side.LEFT) {
-                initialCoordinate.xCoordinate = Coordinate.XCoordinate.A;
+            if(this.figureSide == Side.LEFT) {
+                this.initialCoordinate.xCoordinate = Coordinate.XCoordinate.A;
             } else {
-                initialCoordinate.xCoordinate = Coordinate.XCoordinate.H;
+                this.initialCoordinate.xCoordinate = Coordinate.XCoordinate.H;
             }
-        } else if (figureType == FigureType.KNIGHT) {
-            if(figureSide == Side.LEFT) {
-                initialCoordinate.xCoordinate = Coordinate.XCoordinate.B;
+        } else if (this.figureType == FigureType.KNIGHT) {
+            if(this.figureSide == Side.LEFT) {
+                this.initialCoordinate.xCoordinate = Coordinate.XCoordinate.B;
             } else {
-                initialCoordinate.xCoordinate = Coordinate.XCoordinate.G;
+                this.initialCoordinate.xCoordinate = Coordinate.XCoordinate.G;
             }
         } else { //if (figureType == FigureType.BISHOP) {
-            if(figureSide == Side.LEFT) {
-                initialCoordinate.xCoordinate = Coordinate.XCoordinate.C;
+            if(this.figureSide == Side.LEFT) {
+                this.initialCoordinate.xCoordinate = Coordinate.XCoordinate.C;
             } else {
-                initialCoordinate.xCoordinate = Coordinate.XCoordinate.F;
+                this.initialCoordinate.xCoordinate = Coordinate.XCoordinate.F;
             }
         }
-        this.initialCoordinate = initialCoordinate;
+//        this.initialCoordinate = initialCoordinate;
     }
 
     public void setInitialYCoordinatePaw(Color color) { // TODO: Will it work or not?
