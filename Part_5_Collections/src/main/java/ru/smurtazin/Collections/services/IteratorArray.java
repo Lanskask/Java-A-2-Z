@@ -17,7 +17,7 @@ public class IteratorArray implements Iterator {
 
     public void remove() {} // TODO: Needed cause of implemention
 
-
+    // ------ Realization -----------
     public boolean hasNext() {
         return values.length > index+1;
     }

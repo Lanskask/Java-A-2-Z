@@ -82,12 +82,8 @@ public abstract class Figure {
     // ------- Abstract Methods ---------------
     public abstract ArrayList<Coordinate> track(Coordinate newCoordinate);
 
-    public abstract boolean possibleMovement(Coordinate newCoordinate);
-
     public abstract void movement(Coordinate newCoordinate) throws
             ImpossibleMovementException;
-
-    //    public abstract void eat(Coordinate newCoordinate);
 
     // ------- Just Setters and Getters ---------------
     public void setFigureType(FigureType figureType) {
@@ -196,7 +192,7 @@ public abstract class Figure {
 //        this.initialCoordinate = initialCoordinate;
     }
 
-    public void setInitialYCoordinatePaw(Color color) { // TODO: Will it work or not?
+    public void setInitialYCoordinatePaw(Color color) {
         if (color == Color.WHITE) {
             this.initialCoordinate.yCoordinate = Coordinate.YCoordinate._7;
         } else {

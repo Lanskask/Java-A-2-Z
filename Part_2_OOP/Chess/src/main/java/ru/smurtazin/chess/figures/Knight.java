@@ -16,13 +16,8 @@ public class Knight extends Figure {
     }
 
     @Override
-    public boolean possibleMovement(Coordinate newCoordinate) {
-        return false;
-    }
-
-    @Override
     public void movement(Coordinate newCoordinate) {
-        Coordinate nowCoordinate = this.getNowCoordinate(); // TODO: What this points to?
+        Coordinate nowCoordinate = this.getNowCoordinate();
         try {
             if (nowCoordinate == newCoordinate) {
                 System.out.println("You place your figure on the same place");

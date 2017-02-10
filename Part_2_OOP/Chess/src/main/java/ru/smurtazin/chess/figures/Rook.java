@@ -10,7 +10,6 @@ public class Rook extends Figure {
         super(FigureType.ROOK, color);
     }
 
-    // TODO: I hope I print this method right
     @Override
     public ArrayList<Coordinate> track(Coordinate newCoordinate) {
         ArrayList<Coordinate> trackPointArray = new ArrayList<Coordinate>();
@@ -58,13 +57,8 @@ public class Rook extends Figure {
     }
 
     @Override
-    public boolean possibleMovement(Coordinate newCoordinate) {
-        return false;
-    }
-
-    @Override
     public void movement(Coordinate newCoordinate) {
-        Coordinate nowCoordinate = this.getNowCoordinate(); // TODO: What this points to?
+        Coordinate nowCoordinate = this.getNowCoordinate();
         try {
             if (nowCoordinate == newCoordinate) {
                 System.out.println("You place your figure on the same place");

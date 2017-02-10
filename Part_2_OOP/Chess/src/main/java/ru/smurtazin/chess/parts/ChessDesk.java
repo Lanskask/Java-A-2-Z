@@ -1,8 +1,6 @@
 package ru.smurtazin.chess.parts;
 
 import ru.smurtazin.chess.figures.Coordinate;
-/*import ru.smurtazin.chess.figures.Figure;
-import ru.smurtazin.chess.figures.Figures;*/
 import ru.smurtazin.chess.figures.*;
 
 import java.util.ArrayList;
@@ -18,7 +16,6 @@ public class ChessDesk {
 
     public ChessDesk() {
         this.fillFiguresArray();
-        // TODO: What should be here OR leave it empty?
     }
 
     public void fillFiguresArray() {
@@ -46,6 +43,7 @@ public class ChessDesk {
         figuresArray.addAll(blackPawns);
     }
 
+    // ---- Figures --------
     King whiteKing = new King(Figure.Color.WHITE);
     King blackKing = new King(Figure.Color.BLACK);
 
@@ -78,8 +76,6 @@ public class ChessDesk {
         return figuresArray;
     }
 
-    // TODO: Is this method needed or not?
-//    Coordinate getConcreteFigureCoorditanes(Figure.FigureType figureType, Figure.Color color) {
     Coordinate getConcreteFigureCoorditanes(Figure figure) {
         Coordinate coordinateOfNeededFigure = null;
         for(Figure figureFromArray : this.figuresArray) {
@@ -90,7 +86,6 @@ public class ChessDesk {
         return coordinateOfNeededFigure;
     }
 
-    // TODO: Is this method needed or not?
     Figure findConcreteFigure(Figure.FigureType figureType, Figure.Color color) {
         Figure neededFigure = null;
         for(Figure figure : this.figuresArray) {

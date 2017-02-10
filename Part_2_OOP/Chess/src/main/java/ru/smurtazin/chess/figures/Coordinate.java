@@ -70,9 +70,6 @@ public class Coordinate {
         return null;
     }
 
-    // TODO: ?
-//    public Coordinate() {}
-
 /*    // TODO: ?
     Coordinate getCoordinatesNamesByValue(int xCoordValue, int yCoordValue) {
         // point.getCoordinatesNamesByValue(4, 5) -> Coordinate point

@@ -8,8 +8,6 @@ import java.util.ArrayList;
 public class King extends Figure {
     public King(Color color) {
         super(FigureType.KING, color);
-        /*this.setColor(color);
-        this.setFigureType(FigureType.KING);*/
     }
 
     @Override
@@ -18,13 +16,8 @@ public class King extends Figure {
     }
 
     @Override
-    public boolean possibleMovement(Coordinate newCoordinate) {
-        return false;
-    }
-
-    @Override
     public void movement(Coordinate newCoordinate) {
-        Coordinate nowCoordinate = this.getNowCoordinate(); // TODO: What this points to?
+        Coordinate nowCoordinate = this.getNowCoordinate();
         try {
             if (nowCoordinate == newCoordinate) {
                 System.out.println("You place your figure on the same place");

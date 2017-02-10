@@ -16,13 +16,8 @@ public class BlackPawn extends Figure { // from Bottom - from Down
     }
 
     @Override
-    public boolean possibleMovement(Coordinate newCoordinate) {
-        return false;
-    }
-
-    @Override
     public void movement(Coordinate newCoordinate) {
-        Coordinate nowCoordinate = this.getNowCoordinate(); // TODO: What this points to?
+        Coordinate nowCoordinate = this.getNowCoordinate();
         try {
             if (nowCoordinate == newCoordinate) {
                 System.out.println("You place your figure on the same place");
@@ -40,7 +35,7 @@ public class BlackPawn extends Figure { // from Bottom - from Down
     }
 
     public void eat(Coordinate newCoordinate) {
-        Coordinate nowCoordinate = this.getNowCoordinate(); // TODO: What this points to?
+        Coordinate nowCoordinate = this.getNowCoordinate();
         if (nowCoordinate == newCoordinate) {
             System.out.println("You place your figure on the same place");
         } else if   (
