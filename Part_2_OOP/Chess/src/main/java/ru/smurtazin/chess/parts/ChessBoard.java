@@ -46,7 +46,7 @@ public class ChessBoard {
                 System.out.print("   |");
             }
             System.out.println();
-            if(i==4) {
+            if(i==5) {
                 System.out.println(" ---+---+---+---+---+---+---+---+---+---");
             } else {
                 System.out.println(devidingRaw);

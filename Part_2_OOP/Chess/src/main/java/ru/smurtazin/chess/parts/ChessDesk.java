@@ -118,10 +118,15 @@ public class ChessDesk {
 
     void moveSomeConcreteFigure(Figure figure, Coordinate newCoordinate)
             throws OccupiedWayException {
-        try {
-            figure.movement(newCoordinate);
-        } catch (OccupiedWayException owe) {
-            throw owe;
+        if(this.thereNoFiguresOnTheWay(figure, newCoordinate) == true ) {
+            try {
+                figure.movement(newCoordinate);
+            } catch (OccupiedWayException owe) {
+                throw owe;
+            }
+        } else {
+            throw new OccupiedWayException("Impossible movement");
         }
+
     }
 }

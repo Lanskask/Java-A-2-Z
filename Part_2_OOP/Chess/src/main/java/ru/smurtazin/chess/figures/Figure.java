@@ -46,6 +46,8 @@ public abstract class Figure {
         if(figureType != FigureType.PAWN) {
             this.setInitialCoordinateBigFigure();
         }
+
+        this.nowCoordinate = this.initialCoordinate;
     }
 
     public Figure(FigureType figureType) {
@@ -58,8 +60,8 @@ public abstract class Figure {
     private Color color;
     private Side figureSide;
     private String figureSign;
-    public Coordinate nowCoordinate = new Coordinate(); // TODO: Actuaaly it should be private; Should it be final? How?
-    public Coordinate initialCoordinate = new Coordinate(); // TODO: Actuaaly it should be private
+    public Coordinate nowCoordinate = new Coordinate();
+    public Coordinate initialCoordinate = new Coordinate();
 
     // ------- For coordinate diffs ---------------
     public int xAbsCoordDiff(Coordinate nowCoordinate, Coordinate newCoordinate) {
@@ -79,6 +81,8 @@ public abstract class Figure {
 
     // ------- Abstract Methods ---------------
     public abstract ArrayList<Coordinate> track(Coordinate newCoordinate);
+
+    public abstract boolean possibleMovement(Coordinate newCoordinate);
 
     public abstract void movement(Coordinate newCoordinate) throws
             ImpossibleMovementException;
@@ -155,22 +159,21 @@ public abstract class Figure {
         return this.nowCoordinate;
     }
 
-    // TODO: Should it be like this?:
-    // TODO:    public void setInitialCoordinateBigFigure(Coordinate initialCoordinate) {
     public void setInitialCoordinateBigFigure() {
+
         // YCoordinate
         if(this.color == Color.WHITE) {
             this.initialCoordinate.yCoordinate = Coordinate.YCoordinate._1;
         } else {
             this.initialCoordinate.yCoordinate = Coordinate.YCoordinate._8;
         }
+
         // XCoordinate
         if (this.figureType == FigureType.KING) {
             this.initialCoordinate.xCoordinate = Coordinate.XCoordinate.D;
         } else if (this.figureType == FigureType.QUEEN) {
             this.initialCoordinate.xCoordinate = Coordinate.XCoordinate.E;
         } else if (this.figureType == FigureType.ROOK) {
-            // TODO: Side relative to the viewer or to, for example, the white figures user ?
             // TODO: Side relative to the white figures user!
             if(this.figureSide == Side.LEFT) {
                 this.initialCoordinate.xCoordinate = Coordinate.XCoordinate.A;
@@ -205,16 +208,9 @@ public abstract class Figure {
         this.initialCoordinate.xCoordinate = xCoordinatePaw;
     }
 
-    /*public void setInitialCoordinatePaw(Color color) { // TODO: Will it work or not?
-        for (Coordinate.XCoordinate xCoordinate : Coordinate.XCoordinate.values()) {
-            this.initialCoordinate.xCoordinate = xCoordinate;
-        }
-        if (color == Color.WHITE) {
-            this.initialCoordinate.yCoordinate = Coordinate.YCoordinate._7;
-        } else {
-            this.initialCoordinate.yCoordinate = Coordinate.YCoordinate._2;
-        }
-    }*/
+    public void setInitialCoordinate(Coordinate initialCoordinate) {
+        this.initialCoordinate = initialCoordinate;
+    }
 
     public Coordinate getInitialCoordinate() {
         return initialCoordinate;

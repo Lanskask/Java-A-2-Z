@@ -18,6 +18,11 @@ public class King extends Figure {
     }
 
     @Override
+    public boolean possibleMovement(Coordinate newCoordinate) {
+        return false;
+    }
+
+    @Override
     public void movement(Coordinate newCoordinate) {
         Coordinate nowCoordinate = this.getNowCoordinate(); // TODO: What this points to?
         try {

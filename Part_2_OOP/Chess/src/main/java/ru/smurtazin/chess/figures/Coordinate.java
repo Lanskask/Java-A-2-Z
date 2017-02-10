@@ -50,6 +50,12 @@ public class Coordinate {
 
     public Coordinate() {}
 
+    @Override
+    public String toString() {
+        return "xCoord: " + this.xCoordinate +
+                "; yCoord: " + this.yCoordinate;
+    }
+
     public XCoordinate getXCoordValueToName(int value) { // value to name
         for(XCoordinate e : XCoordinate.values()){
             if(value == e.getCoordValue()) return e;

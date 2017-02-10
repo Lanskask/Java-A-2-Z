@@ -44,6 +44,13 @@ public class Bishop extends Figure {
     }
 
     @Override
+    public boolean possibleMovement(Coordinate newCoordinate) {
+        boolean possible = true;
+//        for()
+        return possible;
+    }
+
+    @Override
     public void movement(Coordinate newCoordinate) throws ImpossibleMovementException {
         Coordinate nowCoordinate = this.getNowCoordinate(); // TODO: What this points to?
         try {
