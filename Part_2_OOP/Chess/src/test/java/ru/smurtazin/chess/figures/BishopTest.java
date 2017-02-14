@@ -1,9 +1,6 @@
 package ru.smurtazin.chess.figures;
 
-import org.junit.Ignore;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by a1 on 10.02.17.

@@ -70,11 +70,4 @@ public class Coordinate {
         return null;
     }
 
-/*    // TODO: ?
-    Coordinate getCoordinatesNamesByValue(int xCoordValue, int yCoordValue) {
-        // point.getCoordinatesNamesByValue(4, 5) -> Coordinate point
-        Coordinate pointCoordinates = new Coordinate();
-
-        return pointCoordinates; // .(xCoordinate, yCoordinate)
-    }*/
 }

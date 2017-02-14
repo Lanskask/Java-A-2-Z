@@ -18,32 +18,29 @@ public class King extends Figure {
     @Override
     public void movement(Coordinate newCoordinate) {
         Coordinate nowCoordinate = this.getNowCoordinate();
-        try {
-            if (nowCoordinate == newCoordinate) {
-                System.out.println("You place your figure on the same place");
-            } else if (
-                        (
-                            Math.abs(
-                                newCoordinate.xCoordinate.getCoordValue()
-                                -
-                                nowCoordinate.xCoordinate.getCoordValue()
-                            ) == 1
-                        )
-                        ||
-                        (
-                            Math.abs(
-                                newCoordinate.yCoordinate.getCoordValue()
-                                -
-                                nowCoordinate.yCoordinate.getCoordValue()
-                            ) == 1
-                        )
-                    ) {
-                this.setNowCoordinate(newCoordinate);
-            } else {
-                throw new ImpossibleMovementException("Impossible movement");
-            }
-        } catch (ImpossibleMovementException ime) {
-            throw ime;
+
+        if (nowCoordinate == newCoordinate) {
+            System.out.println("You place your figure on the same place");
+        } else if (
+                    (
+                        Math.abs(
+                            newCoordinate.xCoordinate.getCoordValue()
+                            -
+                            nowCoordinate.xCoordinate.getCoordValue()
+                        ) == 1
+                    )
+                    ||
+                    (
+                        Math.abs(
+                            newCoordinate.yCoordinate.getCoordValue()
+                            -
+                            nowCoordinate.yCoordinate.getCoordValue()
+                        ) == 1
+                    )
+                ) {
+            this.setNowCoordinate(newCoordinate);
+        } else {
+            throw new ImpossibleMovementException("Impossible movement");
         }
     }
 }

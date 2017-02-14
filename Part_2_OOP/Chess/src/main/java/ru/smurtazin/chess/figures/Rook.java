@@ -59,29 +59,25 @@ public class Rook extends Figure {
     @Override
     public void movement(Coordinate newCoordinate) {
         Coordinate nowCoordinate = this.getNowCoordinate();
-        try {
-            if (nowCoordinate == newCoordinate) {
-                System.out.println("You place your figure on the same place");
-            } else if   (
-                            (
-                                ( xAbsCoordDiff(this.getNowCoordinate(), newCoordinate) != 0 )
-                                &&
-                                ( yAbsCoordDiff(this.getNowCoordinate(), newCoordinate) == 0 )
-                            )
-                            ||
-                            (
-                                ( yAbsCoordDiff(this.getNowCoordinate(), newCoordinate) != 0 )
-                                &&
-                                ( xAbsCoordDiff(this.getNowCoordinate(), newCoordinate) == 0 )
-                            )
+        if (nowCoordinate == newCoordinate) {
+            System.out.println("You place your figure on the same place");
+        } else if   (
+                        (
+                            ( xAbsCoordDiff(this.getNowCoordinate(), newCoordinate) != 0 )
+                            &&
+                            ( yAbsCoordDiff(this.getNowCoordinate(), newCoordinate) == 0 )
                         )
-            {
-                this.setNowCoordinate(newCoordinate);
-            } else {
-                throw new ImpossibleMovementException("Impossible movement");
-            }
-        } catch (ImpossibleMovementException ime) {
-            throw ime;
+                        ||
+                        (
+                            ( yAbsCoordDiff(this.getNowCoordinate(), newCoordinate) != 0 )
+                            &&
+                            ( xAbsCoordDiff(this.getNowCoordinate(), newCoordinate) == 0 )
+                        )
+                    )
+        {
+            this.setNowCoordinate(newCoordinate);
+        } else {
+            throw new ImpossibleMovementException("Impossible movement");
         }
     }
 

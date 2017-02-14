@@ -5,6 +5,7 @@ import ru.smurtazin.chess.figures.Figure;
 
 /**
  * Created by a1 on 09.02.17.
+ * This class just print an empty chess desk and that's all.
  */
 public class ChessBoard {
 
@@ -42,7 +43,6 @@ public class ChessBoard {
             System.out.printf("  %s |", i);
             for(int j = 0; j<8; j++) { // xCoord : left - right
                 // TODO: Use it when doing With figers and real chess
-                // System.out.print(" " + figure.figureSign + " |");
                 System.out.print("   |");
             }
             System.out.println();

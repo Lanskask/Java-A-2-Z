@@ -18,29 +18,25 @@ public class Knight extends Figure {
     @Override
     public void movement(Coordinate newCoordinate) {
         Coordinate nowCoordinate = this.getNowCoordinate();
-        try {
-            if (nowCoordinate == newCoordinate) {
-                System.out.println("You place your figure on the same place");
-            } else if   (
-                            (
-                                xAbsCoordDiff(this.getNowCoordinate(), newCoordinate) == 3
-                                &&
-                                yAbsCoordDiff(this.getNowCoordinate(), newCoordinate) == 1
-                            )
-                            ||
-                            (
-                                xAbsCoordDiff(this.getNowCoordinate(), newCoordinate) == 1
-                                &&
-                                yAbsCoordDiff(this.getNowCoordinate(), newCoordinate) == 3
-                            )
+        if (nowCoordinate == newCoordinate) {
+            System.out.println("You place your figure on the same place");
+        } else if   (
+                        (
+                            xAbsCoordDiff(this.getNowCoordinate(), newCoordinate) == 3
+                            &&
+                            yAbsCoordDiff(this.getNowCoordinate(), newCoordinate) == 1
                         )
-            {
-                this.setNowCoordinate(newCoordinate);
-            } else {
-                throw new ImpossibleMovementException("Impossible movement");
-            }
-        } catch (ImpossibleMovementException ime) {
-            throw ime;
+                        ||
+                        (
+                            xAbsCoordDiff(this.getNowCoordinate(), newCoordinate) == 1
+                            &&
+                            yAbsCoordDiff(this.getNowCoordinate(), newCoordinate) == 3
+                        )
+                    )
+        {
+            this.setNowCoordinate(newCoordinate);
+        } else {
+            throw new ImpossibleMovementException("Impossible movement");
         }
     }
 

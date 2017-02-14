@@ -5,7 +5,6 @@ import java.util.ArrayList;
 /**
  * Created by a1 on 23.01.17.
  */
-//public interface Figure {
 public abstract class Figure {
 
     // ------- Enums ---------------
