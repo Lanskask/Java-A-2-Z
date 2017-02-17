@@ -1,0 +1,56 @@
+@startuml
+
+' hide methods
+' !define primary_key(x) <u>x</u>
+!define TABLE (T,#FFAAAA) 
+sprite $primary [17x12/16z] bOqv3e1030CJRzPn9Fx_NWY7n4eqJ3TJs6OVa5pTpD-5tl3YyFHG-4DsqAOnWgawWp0r0KGagDuGMYMJxbMrBxzLPJ_O0G00
+' hide empty methods
+' ----------------------'
+
+/'-- CONTENT:
+		-- role_rights
+		-- roles
+		-- users
+		-- tasks 
+		-- comments
+'/
+
+class role_rights <<TABLE>> {
+	<$primary> id serial
+  role_right varchar(10)
+}
+
+class roles <<TABLE>> {
+  <$primary> id serial
+  role varchar(10) unique
+  role_right int REFERENCES role_rights(id)
+}
+
+class users <<TABLE>> {
+	<$primary> id serial
+  name varchar(50)
+  role_id int REFERENCES roles(id)
+}
+
+class tasks <<TABLE>> {
+	<$primary> id serial
+  title varchar(200)
+  task_state varchar(200)
+  task_category varchar(200)
+  files bytea
+}
+
+class comments <<TABLE>>{
+  <$primary> id serial
+  title varchar(200)
+  comment_text text
+  user_id int REFERENCES users(id)
+  task_id int REFERENCES tasks(id)
+}
+
+users "*" -- "*" comments
+tasks "*" -- "*" comments
+role_rights "1" -- "*" roles
+users "1" -- "*" roles
+
+@enduml
