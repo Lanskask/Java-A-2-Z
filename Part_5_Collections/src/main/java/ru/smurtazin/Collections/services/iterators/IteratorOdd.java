@@ -1,4 +1,4 @@
-package ru.smurtazin.Collections.services;
+package ru.smurtazin.Collections.services.iterators;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;

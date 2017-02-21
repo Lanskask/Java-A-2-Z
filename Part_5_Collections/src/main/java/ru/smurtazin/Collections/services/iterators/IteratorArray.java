@@ -1,4 +1,4 @@
-package ru.smurtazin.Collections.services;
+package ru.smurtazin.Collections.services.iterators;
 
 import java.util.ArrayList;
 import java.util.Iterator;

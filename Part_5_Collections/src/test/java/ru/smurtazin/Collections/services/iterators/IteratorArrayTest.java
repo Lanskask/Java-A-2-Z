@@ -1,4 +1,4 @@
-package ru.smurtazin.Collections.services;
+package ru.smurtazin.Collections.services.iterators;
 
 import org.junit.Ignore;
 import org.junit.Test;
