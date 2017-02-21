@@ -3,6 +3,7 @@ package ru.smurtazin.Collections.services;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 import static org.hamcrest.core.Is.is;
@@ -15,7 +16,8 @@ public class IteratorOddTest {
 
     @Test
     public void hasNext__Should_True() throws Exception {
-        IteratorOdd iteratorOdd =
+        Iterator<Integer> iteratorOdd =
+//        IteratorOdd iteratorOdd =
                 new IteratorOdd(new int[] {2, 1, 3, 4, 5, 6, 7});
 
         boolean result = iteratorOdd.hasNext();

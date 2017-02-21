@@ -53,12 +53,24 @@ public class IteratorsIterator implements Iterator {
         return iteratorToReturn;
     }
 
+    public int[] convertArraysWValues() {
+        int[] iteratorToReturn = new int[this.fullArraySize(this.values)];
+
+        for (int[] bigArrayPart : this.values ){
+            for (int num : bigArrayPart  ){
+                iteratorToReturn[position++] = num;
+            }
+        }
+
+        return iteratorToReturn;
+    }
+
     // --------- For iterators ------------
-    public int size(Iterator iterator) {
-//        return Lists.newArrayList(iterator).size();
+    private int size(Iterator iterator) {
         int i = 0;
         for ( ; iterator.hasNext() ; ++i ) iterator.next();
 
+//        return Lists.newArrayList(iterator).size();
         return i + 1;
     }
 
