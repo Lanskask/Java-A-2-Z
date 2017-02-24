@@ -13,10 +13,16 @@ public class IteratorsIterator implements Iterator {
     private int[][] values;
     private int position = 0; // needed for arrays
     private int index = 0;
+    Iterator<Iterator<Integer>> iteratorsIterator;
+
 
     // --- Constructors -------
     public IteratorsIterator(int[][] values ) {
         this.values = values;
+    }
+
+    public IteratorsIterator(Iterator<Iterator<Integer>> iteratorsIterator) {
+        this.iteratorsIterator = iteratorsIterator;
     }
 
     public IteratorsIterator() {}
@@ -88,7 +94,22 @@ public class IteratorsIterator implements Iterator {
         return iteratorToReturn;
     }
 
-    public Iterator<Integer> convert2(Iterator<Iterator<Integer>> iterator) {
+    public Iterator<Integer> convertThis() {
+        ListIterator<Integer> iteratorToReturn = new ArrayList<Integer>().listIterator();
+
+        for (int i = 0; i < this.size(this.iteratorsIterator); i++) {
+            Iterator<Integer> bigIterPart = this.iteratorsIterator.next();
+            for (int j = 0; j < this.size(bigIterPart); j++) {
+                iteratorToReturn.add(bigIterPart.next());
+            }
+        }
+
+        return iteratorToReturn;
+    }
+
+
+
+    public Iterator<Integer> convertArray2(Iterator<Iterator<Integer>> iterator) {
         ListIterator<Integer> iteratorToReturn = new ArrayList<Integer>().listIterator();
 
         for (int i = 0; iterator.hasNext(); i++) {
@@ -100,5 +121,25 @@ public class IteratorsIterator implements Iterator {
         }
 
         return iteratorToReturn;
+    }
+
+    public void printIterator(Iterator<Iterator<Integer>> iteratorsIterator) {
+        for (int i = 0; iteratorsIterator.hasNext(); i++) {
+            Iterator<Integer> bigIterPart = iteratorsIterator.next();
+            for (int j = 0; bigIterPart.hasNext(); j++) {
+
+                System.out.println(bigIterPart.next());
+            }
+        }
+    }
+
+    public void printThisIterator() {
+        for (int i = 0; this.iteratorsIterator.hasNext(); i++) {
+            Iterator<Integer> bigIterPart = this.iteratorsIterator.next();
+            for (int j = 0; bigIterPart.hasNext(); j++) {
+                System.out.print(bigIterPart.next() + ", ");
+            }
+            System.out.println();
+        }
     }
 }
