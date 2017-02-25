@@ -12,6 +12,11 @@ public class RoleStore implements Store {
         this.roleStoreArray = new SimpleArray<Base>(size);
     }
 
+    public Base get(int index) {
+        return this.roleStoreArray.get(index);
+    }
+
+
     public void add(Base newValue) {
         this.roleStoreArray.add(newValue);
     }

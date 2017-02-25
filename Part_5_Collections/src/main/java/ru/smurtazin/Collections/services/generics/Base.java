@@ -5,6 +5,8 @@ package ru.smurtazin.Collections.services.generics;
  */
 public abstract class Base {
 
+    String id;
+
     abstract String getId();
 
     abstract void setId(String id);

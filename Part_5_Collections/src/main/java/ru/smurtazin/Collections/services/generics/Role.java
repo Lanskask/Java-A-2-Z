@@ -3,16 +3,15 @@ package ru.smurtazin.Collections.services.generics;
 /**
  * Created by a1 on 24.02.17.
  */
-//public class Role extends Store<> {
 public class Role extends Base {
 
     @Override
-    String getId() {
-        return null;
+    void setId(String id) {
+        this.id = id;
     }
 
     @Override
-    void setId(String id) {
-
+    String getId() {
+        return this.id;
     }
 }

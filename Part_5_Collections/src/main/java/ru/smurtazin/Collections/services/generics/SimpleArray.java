@@ -12,7 +12,8 @@ public class SimpleArray<T> { // extends Number
 
     public SimpleArray(int size) {
         this.objects = new Object[size];
-        Class<T> t = (Class<T>) (
+
+        /*Class<T> t = (Class<T>) (
                 (ParameterizedType)
                         getClass().getGenericSuperclass()
         ).getActualTypeArguments()[0]; //.getClass();
@@ -22,7 +23,7 @@ public class SimpleArray<T> { // extends Number
 //            System.out.printf("string " + value);
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
     public <K> K print(K value) {
