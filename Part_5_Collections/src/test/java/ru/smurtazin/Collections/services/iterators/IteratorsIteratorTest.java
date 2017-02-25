@@ -20,7 +20,9 @@ public class IteratorsIteratorTest {
     int[] intArray2 = {0, 9, 8, 7, 5}; // 5
     int[] intArray3 = {1, 3, 5, 6, 7, 0, 9, 8, 4}; // 9
     int[][] endBigArray = {intArray1, intArray2, intArray3}; // 21
-    IteratorsIterator myIteratorInst = new IteratorsIterator( endBigArray );
+//    Iterator<Iterator<Integer>> myIteratorInst =
+            IteratorsIterator myIteratorInst =
+            new IteratorsIterator( endBigArray );
     IteratorsIterator myIterator = new IteratorsIterator();
 
     // TODO: How to do?
@@ -74,25 +76,74 @@ public class IteratorsIteratorTest {
     @Ignore
     @Test
     public void wildTest_addToIterators() throws Exception {
+        // ------ Asign ------------
         // from http://www.codescream.com/ContentDisplay?targetContent=RoundRobinIterator
-        // Create 5 sample lists, some of which are empty for richer test cases.
+        // Create 5 sample lists
         List<Integer> a = new LinkedList<Integer>(Arrays.asList(4, 2, 0, 4, 6, 4, 9));
         List<Integer> b = new LinkedList<Integer>(Arrays.asList(0, 9, 8, 7, 5));
         List<Integer> c = new LinkedList<Integer>(Arrays.asList(1, 3, 5, 6, 7, 0, 9, 8, 4));
 
-        // Create a list of the iterators to each of the lists created above.
+        // Create a list of the iterators to each above
         List<Iterator<Integer>> iterators = new LinkedList< Iterator<Integer>>();
-
         iterators.add(a.iterator());
         iterators.add(b.iterator());
         iterators.add(c.iterator());
 
         // converting iterators list to iterator of iterators
+        // TODO: Couse it's just iterator which is made from 1 list,
+        // TODO:    that's why there is only one item in this iterator
         Iterator<Iterator<Integer>> iteratorsIterator = iterators.iterator();
 
+        List<Integer> listToCheck = new LinkedList<Integer>(Arrays.asList(
+                4, 2, 0, 4, 6, 4, 9,
+                0, 9, 8, 7, 5,
+                1, 3, 5, 6, 7, 0, 9, 8, 4
+        ));
+        Iterator<Integer> iteratorToCheck = listToCheck.iterator();
         IteratorsIterator myIteratorsIterator = new IteratorsIterator(iteratorsIterator);
+
+        // ------- Act -------- // Unneedn't
+        System.out.println("myIteratorsIterator.printThisIterator: ");
         myIteratorsIterator.printThisIterator();
+
+        // ------- Assert -------
+
+        myIteratorsIterator.printIterator(myIteratorsIterator.convert( iteratorsIterator ));
+//        assertThat(iteratorToCheck, is(myIteratorsIterator.convert( iteratorsIterator )));
+
     }
 
+    @Ignore
+    @Test
+    public void wildTest_ConvertFromArrayArray() throws Exception {
+        int[][] arrayArray = {
+                {4, 2, 0, 4, 6, 4, 9},
+                {0, 9, 8, 7, 5},
+                {1, 3, 5, 6, 7, 0, 9, 8, 4}
+        };
+
+//        Iterator<Iterator<Integer>> iteratorToTest =
+        IteratorsIterator iteratorToTest =
+                new IteratorsIterator(arrayArray );
+
+        Iterator<Integer> iterator1 = new IteratorArray( new int[]{4, 2, 0, 4, 6, 4, 9}); // 7
+        Iterator<Integer> iterator2 = new IteratorArray( new int[]{0, 9, 8, 7, 5}); // 5
+        Iterator<Integer> iterator3 = new IteratorArray( new int[]{1, 3, 5, 6, 7, 0, 9, 8, 4}); // 9
+
+        Iterator<Integer> bigIterator =
+                new IteratorArray( new int[]{
+                        4, 2, 0, 4, 6, 4, 9,
+                        0, 9, 8, 7, 5,
+                        1, 3, 5, 6, 7, 0, 9, 8, 4
+                });
+
+
+//        assertThat(iteratorToTest, is(iteratorToTest.convert( iterator3 )));
+
+//        convert( Iterator<Iterator<Integer>> iteratorofIterators) == Iterator<Integer> bigIterator
+//        assertThat(bigIterator, is(iteratorToTest.convert( iteratorToTest )));
+        assertThat(bigIterator, is(iteratorToTest.convertThis()));
+
+    }
 
 }

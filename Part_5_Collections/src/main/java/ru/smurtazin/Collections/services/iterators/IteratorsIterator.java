@@ -15,8 +15,9 @@ public class IteratorsIterator implements Iterator {
     private int index = 0;
     Iterator<Iterator<Integer>> iteratorsIterator;
 
-
     // --- Constructors -------
+    public IteratorsIterator() {}
+
     public IteratorsIterator(int[][] values ) {
         this.values = values;
     }
@@ -25,7 +26,6 @@ public class IteratorsIterator implements Iterator {
         this.iteratorsIterator = iteratorsIterator;
     }
 
-    public IteratorsIterator() {}
 
     // --- Little needed functions ----------
     public boolean hasNext() {
@@ -80,14 +80,20 @@ public class IteratorsIterator implements Iterator {
         return i + 1;
     }
 
-    // TODO: Test this
     public Iterator<Integer> convert(Iterator<Iterator<Integer>> iterator) {
         ListIterator<Integer> iteratorToReturn = new ArrayList<Integer>().listIterator();
 
+        System.out.println("In convert 1"); // TODO: Remove
+        System.out.println(this.size(iterator)); // TODO: Remove
+        System.out.println("iterator.next().getClass: " + iterator.next().getClass()); // TODO: Remove
+
         for (int i = 0; i < this.size(iterator); i++) {
-            Iterator<Integer> bigIterPart = iterator.next();
+            Iterator<Integer>
+                    bigIterPart = iterator.next();
+            System.out.println("In convert 2"); // TODO: Remove
             for (int j = 0; j < this.size(bigIterPart); j++) {
                 iteratorToReturn.add(bigIterPart.next());
+                System.out.println("In convert 3"); // TODO: Remove
             }
         }
 
@@ -123,7 +129,7 @@ public class IteratorsIterator implements Iterator {
         return iteratorToReturn;
     }
 
-    public void printIterator(Iterator<Iterator<Integer>> iteratorsIterator) {
+    public void printIteratorsIterator(Iterator<Iterator<Integer>> iteratorsIterator) {
         for (int i = 0; iteratorsIterator.hasNext(); i++) {
             Iterator<Integer> bigIterPart = iteratorsIterator.next();
             for (int j = 0; bigIterPart.hasNext(); j++) {
@@ -133,13 +139,20 @@ public class IteratorsIterator implements Iterator {
         }
     }
 
+    public void printIterator(Iterator<Integer> iterator) {
+        for (int i = 0; iterator.hasNext(); i++) {
+                System.out.print(iterator.next() + ", ");
+        }
+//        System.out.println(); // TODO: Uncomment
+    }
+
     public void printThisIterator() {
         for (int i = 0; this.iteratorsIterator.hasNext(); i++) {
             Iterator<Integer> bigIterPart = this.iteratorsIterator.next();
             for (int j = 0; bigIterPart.hasNext(); j++) {
                 System.out.print(bigIterPart.next() + ", ");
             }
-            System.out.println();
+//            System.out.println(); // TODO: Uncomment
         }
     }
 }
