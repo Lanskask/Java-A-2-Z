@@ -38,7 +38,7 @@ public class IteratorsIterator implements Iterator {
     public void remove() {} // Needed cause of implementation
 
     // ------ My Realisation ------------
-    private int fullArraySize(int[][] fullArray) {
+    public int fullArraySize(int[][] fullArray) {
         int fullArraySize = 0;
         for (int[] bigArrayPart : fullArray) {
             fullArraySize += bigArrayPart.length;
