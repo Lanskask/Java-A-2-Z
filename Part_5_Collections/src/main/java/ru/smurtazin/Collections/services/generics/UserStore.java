@@ -3,7 +3,7 @@ package ru.smurtazin.Collections.services.generics;
 /**
  * Created by a1 on 24.02.17.
  */
-public class UserStore implements Store {
+public class UserStore extends SomeStore {
 
     SimpleArray<Base> userStoreArray;
     int index = 0;

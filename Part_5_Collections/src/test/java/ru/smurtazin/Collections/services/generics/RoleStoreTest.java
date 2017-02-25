@@ -21,21 +21,21 @@ public class RoleStoreTest<T> {
         this.roleStoreArray.add(role1);
         this.roleStoreArray.add(user1);
 
-        assertThat(this.roleStoreArray.get(0), is(role1));
+        assertThat(this.roleStoreArray.get("0"), is(role1));
     }
 
     @Test
     public void update() throws Exception {
-        this.roleStoreArray.update(0, user1);
+        this.roleStoreArray.update("0", user1);
 
-        assertThat(this.roleStoreArray.get(0), is(user1));
+        assertThat(this.roleStoreArray.get("0"), is(user1));
     }
 
     @Test
     public void delete() throws Exception {
-        this.roleStoreArray.delete(0);
+        this.roleStoreArray.delete("0");
 
-        assertNull(this.roleStoreArray.get(0));
+        assertNull(this.roleStoreArray.get("0"));
     }
 
 }

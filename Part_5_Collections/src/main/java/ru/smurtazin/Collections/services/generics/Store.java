@@ -7,7 +7,7 @@ public interface Store<T extends Base> {
 
     void add(T newValue);
 
-    void update(int index, T newValue);
+    void update(String id, T newValue) throws Exception;
 
-    void delete(int index);
+    void delete(String id) throws Exception;
 }

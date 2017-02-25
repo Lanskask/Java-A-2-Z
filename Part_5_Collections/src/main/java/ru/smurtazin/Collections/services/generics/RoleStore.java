@@ -12,21 +12,55 @@ public class RoleStore implements Store {
         this.roleStoreArray = new SimpleArray<Base>(size);
     }
 
-    public Base get(int index) {
-        return this.roleStoreArray.get(index);
+    // ------- Service methods -----------
+    private String newId() {
+        return Integer.toString(index++);
     }
 
+    private int findIndexById(String id){
+        int index = -1;
+
+        for (int i = 0; i < this.roleStoreArray.objects.length; i++) {
+            if (this.roleStoreArray.get(i).getId() == id) {
+                index = i;
+            }
+        }
+
+        return index;
+    }
+
+    public void printIdsList() {
+        for (int i = 0; i < this.roleStoreArray.objects.length; i++) {
+            System.out.println(
+                    this.roleStoreArray.get(i).getId()
+            );
+        }
+
+    }
+
+    // ------- Realisation -----------
+    public Base get(String id) {
+        return this.roleStoreArray.get(
+                this.findIndexById(id)
+        );
+    }
 
     public void add(Base newValue) {
+        newValue.setId(this.newId());
         this.roleStoreArray.add(newValue);
     }
 
-    public void update(int index, Base newValue) {
-        this.roleStoreArray.update(index, newValue);
+    public void update(String id, Base newValue) {
+        this.roleStoreArray.update(
+                this.findIndexById(id),
+                newValue
+        );
     }
 
-    public void delete(int index) {
-        this.roleStoreArray.delete(index);
+    public void delete(String id) {
+        this.roleStoreArray.delete(
+                this.findIndexById(id)
+        );
     }
 
 }

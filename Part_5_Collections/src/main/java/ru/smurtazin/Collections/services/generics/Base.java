@@ -7,7 +7,10 @@ public abstract class Base {
 
     String id;
 
-    abstract String getId();
+//    abstract String getId();
+    String getId() {
+        return this.id;
+    }
 
     abstract void setId(String id);
 
