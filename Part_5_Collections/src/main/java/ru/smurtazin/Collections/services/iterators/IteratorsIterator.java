@@ -26,7 +26,6 @@ public class IteratorsIterator implements Iterator {
         this.iteratorsIterator = iteratorsIterator;
     }
 
-
     // --- Little needed functions ----------
     public boolean hasNext() {
         return values.length > index+1;

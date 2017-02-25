@@ -2,13 +2,15 @@ package ru.smurtazin.Collections.services.generics;
 
 import org.junit.Test;
 
+import java.lang.reflect.ParameterizedType;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
 /**
  * Created by a1 on 25.02.17.
  */
-public class RoleStoreTest {
+public class RoleStoreTest<T> {
 
     RoleStore roleStoreArray = new RoleStore(5);
     Base role1 = new Role();
