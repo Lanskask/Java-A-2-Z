@@ -3,6 +3,7 @@ package ru.smurtazin.Collections.services.iterators;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.ListIterator;
+import java.util.NoSuchElementException;
 
 /**
  * Created by a1 on 21.02.17.
@@ -13,6 +14,8 @@ public class IteratorsIterator implements Iterator {
     private int[][] values;
     private int position = 0; // needed for arrays
     private int index = 0;
+    private int littleArrayNumber = 0;
+    private int littleArrayPosition = 0;
     Iterator<Iterator<Integer>> iteratorsIterator;
 
     // --- Constructors -------
@@ -28,11 +31,31 @@ public class IteratorsIterator implements Iterator {
 
     // --- Little needed functions ----------
     public boolean hasNext() {
-        return values.length > index+1;
+        return this.fullThisArraySize() >
+                this.littleArrayNumber + this.littleArrayPosition + 1;
     }
 
-    public Object next() {
-        return values[index++];
+    public Object next() throws ArrayIndexOutOfBoundsException {
+        int answer;
+
+        if(this.values[littleArrayNumber].length > this.littleArrayPosition - 1 ) {
+            try {
+                if ( this.littleArrayPosition + 1 <= this.values[littleArrayNumber].length ) {
+                    answer = this.values[this.littleArrayNumber][this.littleArrayPosition];
+                    this.littleArrayPosition++;
+                } else {
+                    this.littleArrayNumber++;
+                    this.littleArrayPosition = 0;
+                    answer = this.values[this.littleArrayNumber][this.littleArrayPosition];
+                    this.littleArrayPosition++;
+                }
+            } catch (ArrayIndexOutOfBoundsException aioobe) {
+                throw aioobe;
+            }
+        } else {
+            throw new ArrayIndexOutOfBoundsException("Out of array.");
+        }
+        return answer;
     }
 
     public void remove() {} // Needed cause of implementation
@@ -44,6 +67,14 @@ public class IteratorsIterator implements Iterator {
             fullArraySize += bigArrayPart.length;
         }
         return fullArraySize ;
+    }
+
+    public int fullThisArraySize() {
+        int fullThisArraySize = 0;
+        for (int[] bigArrayPart : this.values) {
+            fullThisArraySize += bigArrayPart.length;
+        }
+        return fullThisArraySize;
     }
 
     public int[] convertArrays(int[][] fullArray) {
@@ -75,7 +106,6 @@ public class IteratorsIterator implements Iterator {
         int i = 0;
         for ( ; iterator.hasNext() ; ++i ) iterator.next();
 
-//        return Lists.newArrayList(iterator).size();
         return i + 1;
     }
 
@@ -111,8 +141,6 @@ public class IteratorsIterator implements Iterator {
 
         return iteratorToReturn;
     }
-
-
 
     public Iterator<Integer> convertArray2(Iterator<Iterator<Integer>> iterator) {
         ListIterator<Integer> iteratorToReturn = new ArrayList<Integer>().listIterator();

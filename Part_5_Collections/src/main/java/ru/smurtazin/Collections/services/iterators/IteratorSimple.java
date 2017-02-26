@@ -64,7 +64,7 @@ public class IteratorSimple implements Iterator {
                 throw nsee;
             }
         } else {
-            throw new NoSuchElementException("Impossible movement");
+            throw new NoSuchElementException("No such element in array.");
         }
         return answer;
     }

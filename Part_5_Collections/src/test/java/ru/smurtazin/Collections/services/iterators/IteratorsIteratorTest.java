@@ -19,45 +19,35 @@ public class IteratorsIteratorTest {
     int[] intArray1 = {4, 2, 0, 4, 6, 4, 9}; // 7
     int[] intArray2 = {0, 9, 8, 7, 5}; // 5
     int[] intArray3 = {1, 3, 5, 6, 7, 0, 9, 8, 4}; // 9
-    int[][] endBigArray = {intArray1, intArray2, intArray3}; // 21
-//    Iterator<Iterator<Integer>> myIteratorInst =
-            IteratorsIterator myIteratorInst =
-            new IteratorsIterator( endBigArray );
+    int[][] arrayOfArrays = {intArray1, intArray2, intArray3}; // 21
+
+    int[] arrayToCheck = { // don't delete. It is used
+            4, 2, 0, 4, 6, 4, 9,
+            0, 9, 8, 7, 5,
+            1, 3, 5, 6, 7, 0, 9, 8, 4
+    };
+
+    //    Iterator<Iterator<Integer>> myIteratorInst =
+        IteratorsIterator myIteratorInst = new IteratorsIterator(arrayOfArrays);
     IteratorsIterator myIterator = new IteratorsIterator();
 
-    // TODO: How to do?
-    /*Iterator<Iterator<Integer>> iterator = (
-        (4, 2, 0, 4, 6, 4, 9),
-        (0, 9, 8, 7, 5),
-        (1, 3, 5, 6, 7, 0, 9, 8, 4)
-    );*/
     Iterator<Integer> iterator1 = new IteratorArray( new int[]{4, 2, 0, 4, 6, 4, 9}); // 7
     Iterator<Integer> iterator2 = new IteratorArray( new int[]{0, 9, 8, 7, 5}); // 5
     Iterator<Integer> iterator3 = new IteratorArray( new int[]{1, 3, 5, 6, 7, 0, 9, 8, 4}); // 9
+
     // TODO: How to initialize Iterator of Iterators
 //    Iterator<Iterator<Integer>> iteratorsIterator = new IteratorArray(iterator1, iterator2, iterator3);
 //    Iterator<Iterator<Integer>> iteratorsIterator = {iterator1, iterator2, iterator3}.iterator();
 
-
     @Ignore
-    @Test // Works right
+    @Test // Tested
     public void convertArrays() throws Exception {
-        int[] arrayToCheck = {
-                4, 2, 0, 4, 6, 4, 9,
-                0, 9, 8, 7, 5,
-                1, 3, 5, 6, 7, 0, 9, 8, 4
-        };
-        assertThat(arrayToCheck, is(myIterator.convertArrays(endBigArray)));
+        assertThat(arrayToCheck, is(myIterator.convertArrays(arrayOfArrays)));
     }
 
     @Ignore
-    @Test // Works right
+    @Test // Tested
     public void convertArraysWValues() throws Exception {
-        int[] arrayToCheck = {
-                4, 2, 0, 4, 6, 4, 9,
-                0, 9, 8, 7, 5,
-                1, 3, 5, 6, 7, 0, 9, 8, 4
-        };
         assertThat(arrayToCheck, is(myIteratorInst.convertArraysWValues()));
     }
 
@@ -116,31 +106,14 @@ public class IteratorsIteratorTest {
     @Ignore
     @Test
     public void wildTest_ConvertFromArrayArray() throws Exception {
-        int[][] arrayArray = {
-                {4, 2, 0, 4, 6, 4, 9},
-                {0, 9, 8, 7, 5},
-                {1, 3, 5, 6, 7, 0, 9, 8, 4}
-        };
-
 //        Iterator<Iterator<Integer>> iteratorToTest =
-        IteratorsIterator iteratorToTest =
-                new IteratorsIterator(arrayArray );
+        IteratorsIterator iteratorToTest = new IteratorsIterator(arrayOfArrays);
 
-        Iterator<Integer> iterator1 = new IteratorArray( new int[]{4, 2, 0, 4, 6, 4, 9}); // 7
-        Iterator<Integer> iterator2 = new IteratorArray( new int[]{0, 9, 8, 7, 5}); // 5
-        Iterator<Integer> iterator3 = new IteratorArray( new int[]{1, 3, 5, 6, 7, 0, 9, 8, 4}); // 9
-
-        Iterator<Integer> bigIterator =
-                new IteratorArray( new int[]{
-                        4, 2, 0, 4, 6, 4, 9,
-                        0, 9, 8, 7, 5,
-                        1, 3, 5, 6, 7, 0, 9, 8, 4
-                });
-
+        Iterator<Integer> bigIterator = new IteratorArray(arrayToCheck);
 
 //        assertThat(iteratorToTest, is(iteratorToTest.convert( iterator3 )));
 
-//        convert( Iterator<Iterator<Integer>> iteratorofIterators) == Iterator<Integer> bigIterator
+//        convert( Iterator<Iterator<Integer>> iteratorOfIterators) == Iterator<Integer> bigIterator
 //        assertThat(bigIterator, is(iteratorToTest.convert( iteratorToTest )));
         assertThat(bigIterator, is(iteratorToTest.convertThis()));
 
