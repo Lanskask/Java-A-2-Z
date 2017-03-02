@@ -29,6 +29,9 @@ public class DynamicArrayTest {
         this.dynamicArray.add(5);
         this.dynamicArray.add(6);
         this.dynamicArray.printAll();
+        int[] arraytoCompare = {1, 2, 3, 4, 5, 6};
+//        assertThat( (Integer[]) this.dynamicArray.array, is(arraytoCompare));
+//        assertThat( (Integer) this.dynamicArray.get(5), is(6));
     }
 
     @Test
