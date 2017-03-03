@@ -7,7 +7,6 @@ import java.util.Iterator;
  */
 public class DynamicArray<T> implements SimpleContainer {
 
-//    Object[] array = new Object[10];
     Object[] array;
     Object[] newArray;
     int nowArraySize;
@@ -34,24 +33,19 @@ public class DynamicArray<T> implements SimpleContainer {
     }
 
     public void increaseArraySize() {
-        this.newArray = new Object[this.array.length + this.array.length / 2];
+        // TODO i'm not sure here sould be - 1
+        this.newArray = new Object[this.array.length + this.array.length / 2 - 1];
 
-        for (int i = 0; i < this.array.length - 1; i++) {
+        for (int i = 0; i < this.array.length; i++) {
             this.newArray[i] = this.array[i]; // Copping of all old array to the new one
         }
         this.array = this.newArray;
     }
 
     public void add(Object element) {
-        System.out.println("length: " + this.array.length + "; index: " + index + "; elem: " + element);
-
         if (this.array.length == this.index) {
             this.increaseArraySize();
-//            System.out.println("ArrLen In: " + this.array.length);
-            System.out.println("ind: " + this.index);
-//            this.index++;
             this.array[this.index++] = element;
-            System.out.println("length: " + this.array.length + "; index: " + index + "; elem: " + element);
         } else {
             this.array[index++] = element;
         }

@@ -9,7 +9,6 @@ import static org.hamcrest.core.Is.is;
  * Created by a1 on 02.03.17.
  */
 public class DynamicArrayTest {
-    //    DynamicArray dynamicArray = new DynamicArray(new Object[] {1, 2, 3, 4} );
     DynamicArray dynamicArray = new DynamicArray(5);
 
     @Test
@@ -28,15 +27,31 @@ public class DynamicArrayTest {
         this.dynamicArray.add(4);
         this.dynamicArray.add(5);
         this.dynamicArray.add(6);
-        this.dynamicArray.printAll();
+
         int[] arraytoCompare = {1, 2, 3, 4, 5, 6};
-//        assertThat( (Integer[]) this.dynamicArray.array, is(arraytoCompare));
-//        assertThat( (Integer) this.dynamicArray.get(5), is(6));
+        int[] newarray = new int[this.dynamicArray.numberOfEllements()];
+        for (int i = 0; i < this.dynamicArray.numberOfEllements(); i++) {
+            newarray[i] = ( (Integer) this.dynamicArray.array[i] ).intValue();
+        }
+
+        assertThat( newarray, is(arraytoCompare));
     }
 
     @Test
     public void increaseArraySize() throws Exception {
-
+        this.dynamicArray.add(1);
+        this.dynamicArray.add(2);
+        this.dynamicArray.add(3);
+        this.dynamicArray.add(4);
+        this.dynamicArray.add(5);
+        this.dynamicArray.add(6);
+        this.dynamicArray.add(1);
+        this.dynamicArray.add(2);
+        this.dynamicArray.add(3);
+        this.dynamicArray.add(4);
+        this.dynamicArray.add(5);
+        this.dynamicArray.add(6);
+        assertThat( this.dynamicArray.numberOfEllements(), is(12));
     }
 
     @Test
