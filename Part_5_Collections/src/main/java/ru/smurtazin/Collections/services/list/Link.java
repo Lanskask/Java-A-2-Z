@@ -20,6 +20,7 @@ public class Link {
     }
 
     public void displayLink() {
-        System.out.print("{" + this.index + ", " + this.element + "} ");
+        System.out.print(
+                "{" + this.index + ", " + this.element + "} ");
     }
 }
