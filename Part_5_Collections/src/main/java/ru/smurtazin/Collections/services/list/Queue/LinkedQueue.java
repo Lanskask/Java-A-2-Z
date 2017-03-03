@@ -89,7 +89,7 @@ public class LinkedQueue<Item> implements Iterable<Item> {
     }
 
     /**
-     * @author smurtazin
+     * Method by smurtazin 
      *
      * Returns the item least item in this queue.
      * @return the item least item in  this queue
