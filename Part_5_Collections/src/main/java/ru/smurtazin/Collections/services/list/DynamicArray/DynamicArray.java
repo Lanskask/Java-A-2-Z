@@ -1,4 +1,4 @@
-package ru.smurtazin.Collections.services.list;
+package ru.smurtazin.Collections.services.list.DynamicArray;
 
 import java.util.Iterator;
 
@@ -7,7 +7,7 @@ import java.util.Iterator;
  */
 public class DynamicArray<T> implements SimpleContainer {
 
-    Object[] array;
+    public Object[] array;
     Object[] newArray;
     int nowArraySize;
     int index = 0;

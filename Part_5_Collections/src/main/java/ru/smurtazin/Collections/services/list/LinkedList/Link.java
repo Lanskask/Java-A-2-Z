@@ -1,4 +1,4 @@
-package ru.smurtazin.Collections.services.list;
+package ru.smurtazin.Collections.services.list.LinkedList;
 
 /**
  * Created by a1 on 02.03.17.

@@ -1,6 +1,4 @@
-package ru.smurtazin.Collections.services.list;
-
-import java.util.List;
+package ru.smurtazin.Collections.services.list.DynamicArray;
 
 /**
  * Created by a1 on 26.02.17.

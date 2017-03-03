@@ -1,6 +1,7 @@
 package ru.smurtazin.Collections.services.list;
 
 import org.junit.Test;
+import ru.smurtazin.Collections.services.list.DynamicArray.DynamicArray;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.core.Is.is;
