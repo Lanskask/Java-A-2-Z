@@ -11,11 +11,8 @@
     <modules>
         <module>Part_1_BasicSyntax</module>
         <module>Part_2_OOP</module>
-        <module>spring</module>
-        <module>spring</module>
         <module>Part_5_Collections</module>
         <module>Part_8_SQL</module>
-        <!--<module>Part_2_OOP</module>-->
     </modules>
 
     <dependencies>
