@@ -70,15 +70,19 @@ public class Item {
     public String getId() {
 		return this.id;
 	}
+
 	public String getName() {
 		return this.name;
 	}
+
 	public String getDescription() {
 		return this.description;
 	}
+
 	public Date getCreationDate() {
 		return this.creationDate;
 	}
+
 	public String[] getCommentsList() {
 		return this.commentsList;
 	}
@@ -86,18 +90,23 @@ public class Item {
 	public void setId(String id) {
 		this.id = id;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
 	public void setCreationDate(Date creationDate) {
 		this.creationDate = creationDate;
 	}
+
 	public void setCommentsList(String[] commentsList) {
 		this.commentsList = commentsList;
 	}
+	
 	public void addComment(String comment) {
 		this.commentsList[comment_inList_position++] = comment;
 	}
