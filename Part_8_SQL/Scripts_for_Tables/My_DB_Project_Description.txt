@@ -51,6 +51,7 @@
 
 
 - MenuItems:
+
     addNewTask()
       name: "Add new task."
       .actions: 
@@ -81,7 +82,7 @@
     showTaskList()
       name: "Show all tasks."
       .actions: 
-        sql_query = String.format("SELECT * FROM Tasks\" - parse from database to console");
+        sql_query = String.format("SELECT * FROM Tasks\" - parse from database to console);
 
     showTaskListFiltered()
       name: "Show tasks by filter."
@@ -92,7 +93,7 @@
            task_id, task_name, task_description - ?, task_creationDate, task_commentsList 
            comment_id, comment_text - ?
         transtaleFilterToSQLQuery( filter );
-        sql_query = String.format("SELECT * FROM Tasks WHERE %s \" - parse from database to console", filter);
+        sql_query = String.format("SELECT * FROM Tasks WHERE %s ;", filter); // parse from database to console
 
     addCommentToTask()  
       name: "Add comment to a task."

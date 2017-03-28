@@ -2,53 +2,24 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <parent>
         <artifactId>java-a-2-z</artifactId>
         <groupId>ru.smurtazin</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>Part_8_SQL</artifactId>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/postgresql/postgresql -->
-        <!--<dependency>
-            <groupId>postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            &lt;!&ndash;<version>9.2-1002.jdbc4</version>&ndash;&gt;
-            <version>9.1-901-1.jdbc4</version>
-        </dependency>-->
-
         <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>9.4.1212</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/postgresql/postgresql -->
-        <!--<dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>9.4.1208</version>
-        </dependency>-->
     </dependencies>
 
-    <!--<repositories>
-        <repository>
-            <id>atlassian-public</id>
-            &lt;!&ndash;<url>https://maven.atlassian.com/repository/public</url>&ndash;&gt;
-            <url>https://mvnrepository.com/artifact/postgresql/postgresql</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>never</updatePolicy>
-                <checksumPolicy>warn</checksumPolicy>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-                <checksumPolicy>warn</checksumPolicy>
-            </releases>
-        </repository>
-    </repositories>-->
 </project>

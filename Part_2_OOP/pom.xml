@@ -13,11 +13,19 @@
     <packaging>pom</packaging>
     
     <modules>
-        <module>Experiments</module>
-        <module>TrackerToIDEA</module>
-        <module>Chess</module>
         <module>Answers</module>
+        <module>Chess</module>
+        <module>Experiments</module>
+        <module>Tracker</module>
     </modules>
 
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.4.1212</version>
+        </dependency>
+    </dependencies>
 
 </project>
