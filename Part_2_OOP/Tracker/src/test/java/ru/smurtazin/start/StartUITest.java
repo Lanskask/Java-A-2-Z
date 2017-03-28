@@ -1,6 +1,5 @@
 package ru.smurtazin.start;
 
-import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 import ru.smurtazin.models.Item;
@@ -21,13 +20,15 @@ public class StartUITest {
     @Ignore
     @Test
     public void addNewTask() throws Exception {
-        Tracker tracker = new Tracker();
+        CMDTracker tracker = new CMDTracker();
         Date thisDate = new Date();
         Item newItem1 = new Item("newItem1 name", "newItem1 description",  thisDate);
+
         Input inputOutput = new StubInput(new String[] {
                 "newItem1 name",
                 "newItem1 description"
         });
+
         StartUI startUI = new StartUI(inputOutput, tracker);
         startUI.addNewTask();
 
@@ -42,7 +43,7 @@ public class StartUITest {
     @Test
     public void editTask() throws Exception {
         Date thisDate = new Date();
-        Tracker tracker = new Tracker();
+        CMDTracker tracker = new CMDTracker();
 
         Item newItem1 = new Item("newItem1 name", "newItem1 description",  thisDate);
         Item newItem2 = new Item("newItem2 name2", "newItem2 description2", thisDate );
@@ -85,7 +86,7 @@ public class StartUITest {
     @Test
     public void deleteTask() throws Exception {
         Date thisDate = new Date();
-        Tracker tracker = new Tracker();
+        CMDTracker tracker = new CMDTracker();
         Item newItem1 = new Item("newItem1 name", "newItem1 description",  thisDate);
         Item newItem2 = new Item("newItem2 name2", "newItem2 description2", thisDate );
 
@@ -109,7 +110,7 @@ public class StartUITest {
     public void showFilteredList() throws Exception {
 
         Date thisDate = new Date();
-        Tracker tracker = new Tracker();
+        CMDTracker tracker = new CMDTracker();
         Item newItem1 = new Item("newItem1 name", "newItem1 description",  thisDate);
         Item newItem2 = new Item("newItem2 name2", "newItem2 description2", thisDate );
 
@@ -129,7 +130,7 @@ public class StartUITest {
     public void showAllTasks() throws Exception {
 
         Date thisDate = new Date();
-        Tracker tracker = new Tracker();
+        CMDTracker tracker = new CMDTracker();
         Item newItem1 = new Item("newItem1 name", "newItem1 description",  thisDate);
         Item newItem2 = new Item("newItem2 name2", "newItem2 description2", thisDate );
 

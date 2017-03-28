@@ -7,14 +7,14 @@ package ru.smurtazin.start;
 public class MenuTracker {
 
     private Input input;
-    private Tracker tracker;
+    private CMDTracker tracker;
     private UserAction[] userActions = new UserAction[10];
     private int position = 0;
 
     private int key;
     StartUI startUI; // TODO: Should I make it private as it was or add public or package?
 
-    public MenuTracker(Input input, Tracker tracker) {
+    public MenuTracker(Input input, CMDTracker tracker) {
         this.input = input;
         this.tracker = tracker;
         this.startUI = new StartUI(input, tracker);
@@ -73,7 +73,7 @@ public class MenuTracker {
 
     private class AddNewTask implements UserAction {
 
-        public AddNewTask(Input input, Tracker tracker) {
+        public AddNewTask(Input input, CMDTracker tracker) {
             MenuTracker.this.input = input;
             MenuTracker.this.tracker = tracker;
         }
@@ -82,7 +82,7 @@ public class MenuTracker {
             return keyPlusPlus();
         }
 
-        public void execute(Input inputOutput, Tracker tracker) {
+        public void execute(Input inputOutput, CMDTracker tracker) {
             /*String task_name = inputOutput.answerToQuestion("Print task's name: ");
             String task_description = inputOutput.answerToQuestion("Print task's description: ");*/
 
@@ -99,7 +99,7 @@ public class MenuTracker {
 
     private class EditTask implements UserAction {
 
-        public EditTask(Input input, Tracker tracker) {
+        public EditTask(Input input, CMDTracker tracker) {
             MenuTracker.this.input = input;
             MenuTracker.this.tracker = tracker;
         }
@@ -108,7 +108,7 @@ public class MenuTracker {
             return keyPlusPlus();
         }
 
-        public void execute(Input inputOutput, Tracker tracker) {
+        public void execute(Input inputOutput, CMDTracker tracker) {
             // TODO: Here should be some user interface
             MenuTracker.this.startUI.editTask();
         }
@@ -120,7 +120,7 @@ public class MenuTracker {
 
     private class DeleteTask implements UserAction {
 
-        public DeleteTask(Input input, Tracker tracker) {
+        public DeleteTask(Input input, CMDTracker tracker) {
             MenuTracker.this.input = input;
             MenuTracker.this.tracker = tracker;
         }
@@ -129,7 +129,7 @@ public class MenuTracker {
             return keyPlusPlus();
         }
 
-        public void execute(Input inputOutput, Tracker tracker) {
+        public void execute(Input inputOutput, CMDTracker tracker) {
             // TODO: Here should be some user interface, or not?
             MenuTracker.this.startUI.deleteTask();
         }
@@ -141,7 +141,7 @@ public class MenuTracker {
 
     private class ShowTasksList implements UserAction {
 
-        public ShowTasksList(Input input, Tracker tracker) {
+        public ShowTasksList(Input input, CMDTracker tracker) {
             MenuTracker.this.input = input;
             MenuTracker.this.tracker = tracker;
         }
@@ -150,7 +150,7 @@ public class MenuTracker {
             return keyPlusPlus();
         }
 
-        public void execute(Input inputOutput, Tracker tracker) {
+        public void execute(Input inputOutput, CMDTracker tracker) {
             System.out.println("\nAll tasks: ");
             if (MenuTracker.this.tracker.items.isEmpty() ) {
                 System.out.println("There is no any task.");
@@ -166,7 +166,7 @@ public class MenuTracker {
 
     private class ShowFilteredList implements UserAction {
 
-        public ShowFilteredList(Input input, Tracker tracker) {
+        public ShowFilteredList(Input input, CMDTracker tracker) {
             MenuTracker.this.input = input;
             MenuTracker.this.tracker = tracker;
         }
@@ -175,7 +175,7 @@ public class MenuTracker {
             return keyPlusPlus();
         }
 
-        public void execute(Input inputOutput, Tracker tracker) {
+        public void execute(Input inputOutput, CMDTracker tracker) {
             String keyToFound = inputOutput.answerToQuestion("What sequence do you want to search between item's names? ");
             System.out.println("Founded items: ");
             MenuTracker.this.startUI.showTasksList( MenuTracker.this.tracker.findByName(keyToFound) );

@@ -21,40 +21,50 @@ public class SQLStorage {
 
     public static final Logger Log = LoggerFactory.getLogger(SQLStorage.class);
 
-    public static void main(String[] args) {
-        String url = "jdbc:postgresql://localhost:5432/task_db";
-        String username = "postgres";
-        String password = "postgres";
-        Connection conn = null;
+    String url = "jdbc:postgresql://localhost:5432/task_db";
+    String username = "postgres";
+    String password = "postgres";
+    Connection conn = null;
+
+    void execute() {
 
         try {
-            conn = DriverManager.getConnection(url, username, password);
+            this.conn = DriverManager.getConnection(this.url, this.username, this.password);
 
-            Statement st = conn.createStatement();
+            Statement st = this.conn.createStatement();
+
+            // from here should be function
             ResultSet rs = st.executeQuery("SELECT * FROM users;");
 
             while (rs.next()) {
                 System.out.println(
-                    String.format(
-                        "%s %s", rs.getString("name"), rs.getInt("role_id")
-                    )
+                        String.format(
+                                "%s %s", rs.getString("name"), rs.getInt("role_id")
+                        )
                 );
             }
+            // till here should be function
+
             rs.close();
             st.close();
 
         } catch(Exception e) {
             Log.error(e.getMessage(), e);
         } finally {
-            if (conn != null ) {
+            if (this.conn != null ) {
                 try {
-                    conn.close();
+                    this.conn.close();
                 } catch(SQLException e) {
                     Log.error(e.getMessage(), e);
                 }
             }
         }
+    }
 
+    public static void main(String[] args) {
+        SQLStorage main = new SQLStorage();
+
+        main.execute();
     }
 
 

@@ -1,58 +1,18 @@
 package ru.smurtazin.start;
 
 import ru.smurtazin.models.Item;
-import java.util.Random;
+
 import java.util.ArrayList;
 
-public class Tracker {
+/**
+ * Created by a1 on 28.03.17.
+ */
+public interface Tracker {
 
-	public ArrayList<Item> items = new ArrayList<Item>();
-
-	private static final Random RN = new Random(System.currentTimeMillis());
-
-	public Item add(Item item) {
-		item.setId(this.generateId());
-		this.items.add(item);
-
-		return item;
-	}
-
-	protected Item findById(String id) {
-		Item result = null;
-		for (Item item : this.items) {
-			if (item != null && item.getId().equals(id)) {
-				result = item;
-				break;
-			}
-		}
-		return result;
-	}
-
-	private String generateId() {
-		return String.valueOf(RN.nextInt());
-	}
-
-	void update(Item item) {
-        Item itemToInsert = this.findById(item.getId());
-        this.items.set(items.indexOf(itemToInsert), item);
-	}
-
-	ArrayList<Item> findAll() {
-		return this.items;
-	}
-
-	void delete(Item item) {
-        this.items.remove( this.items.indexOf(item) );
-    }
-
-	public ArrayList<Item> findByName(String key) {
-        ArrayList<Item> resultArray = new ArrayList<>();
-		for (Item item : this.items) {
-            if (item.getName().contains(key)) {
-                resultArray.add(item);
-            }
-        }
-		return resultArray;
-	}
+    Item add(Item item);
+    void update(Item item);
+    void delete(String id);
+    ArrayList<Item> findAll();
+    ArrayList<Item> findByName(String key);
 
 }

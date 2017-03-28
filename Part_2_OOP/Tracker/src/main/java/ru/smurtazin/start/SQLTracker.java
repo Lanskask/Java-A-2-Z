@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import ru.smurtazin.models.Item;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Properties;
 
 /**
@@ -18,7 +19,7 @@ import java.util.Properties;
  * 5. Show Filtered List.
  * 6. Delete some Task.
  */
-public class SQLTracker {
+public class SQLTracker implements Tracker {
 
     public static final Logger Log = LoggerFactory.getLogger(SQLTracker.class);
 
@@ -28,17 +29,26 @@ public class SQLTracker {
     Connection conn = null;
     Statement st = null;
     ResultSet rs = null;
+    ArrayList<ResultSet> resultSets = null;
+
+    public static void main(String[] args) {
+        SQLTracker sqlTracker = new SQLTracker();
+
+        sqlTracker.connectExecute();
+    }
 
     public void connectExecute() {
 
         try {
             this.conn = DriverManager.getConnection(this.url, this.username, this.password);
-            this.st = this.conn.createStatement();
+//            this.st = this.conn.createStatement();
 
+            // from here should be function
             String query = "SELECT * FROM users;";
             this.rs = this.st.executeQuery(query);
 
             while (this.rs.next()) {
+//                this.resultSets.add(rs);
                 System.out.println(
                         String.format(
                                 "%s %s",
@@ -47,7 +57,16 @@ public class SQLTracker {
                         )
                 );
             }
-
+            // TODO: How to add result set to array?
+            /*for (ResultSet rs : this.resultSets) {
+                System.out.println(
+                    String.format(
+                        "%s %s",
+                        this.rs.getString("name"),
+                        this.rs.getInt("role_id")
+                    )
+                );
+            }*/
             this.rs.close();
             this.st.close();
 
@@ -64,27 +83,25 @@ public class SQLTracker {
         }
     }
 
-    public static void main(String[] args) {
-        SQLTracker sqlTracker = new SQLTracker();
-
-        sqlTracker.connectExecute();
-    }
-
     // Sql functions
     // add
     // update
     // delete
     // findAll
     // findByName
+    //
+    // executeUpdate for: INSERT, UPDATE, DELETE, CREATE TABLE, DROP TABLE
+    // executeQuery for: SELECT
+
     /**
      * 	tracker.add( new Item(taskName, taskDescription, new Date()) );
+     *
+     * 	TODO: Enter Timestamp or not?
      */
-    void add(Item item) {
-//        String name = "Add new task.";
-//        System.out.println("Make new task:");
+    public Item add(Item item) {
 
-        String task_name = item.getName(); //System.console().readLine("Print task's name:");
-        String task_description = item.getDescription(); // System.console().readLine("Print task's description:");
+        String task_name = item.getName();
+        String task_description = item.getDescription();
 
         String sql_query = String.format(
                 "INSERT INTO tasks " +
@@ -92,16 +109,37 @@ public class SQLTracker {
                         "VALUES (%s, %s);",
                         task_name, task_description
         );
+
+        try {
+            this.conn = DriverManager.getConnection(this.url, this.username, this.password);
+            this.st = this.conn.createStatement();
+
+            this.st.executeUpdate(sql_query);
+
+            this.st.close();
+
+        } catch(Exception e) {
+            Log.error(e.getMessage(), e);
+        } finally {
+            if (this.conn != null ) {
+                try {
+                    this.conn.close();
+                } catch(SQLException e) {
+                    Log.error(e.getMessage(), e);
+                }
+            }
+        }
+
+        return item;
     }
 
     /**
-     * 	tracker.update(item);
+     * 	TODO: DONE? or Add Timestamp for time of apdating
      */
-    void update() {
-        String name = "Edit a task.";
-        String task_id = System.console().readLine("Choose task's id:");
-        String task_name = System.console().readLine("Print task's name:");
-        String task_description = System.console().readLine("Print task's description:");
+    public void update(Item item) {
+        String task_id = item.getId();
+        String task_name = item.getName();
+        String task_description = item.getDescription();
 
         String sql_query = String.format(
                 "UPDATE tasks " +
@@ -109,44 +147,73 @@ public class SQLTracker {
                         "VALUES (%1$s, %2$s, %3$s);",
                         task_id, task_name, task_description
         );
+
+        if (this.conn != null ) { // TODO: Should it (if statement) be here or not? Let eat bee (Let it be)
+            try {
+                this.rs = this.st.executeQuery(sql_query);
+            } catch(SQLException e) {
+                Log.error(e.getMessage(), e);
+            }
+        }
     }
 
     /**
-     * 	tracker.delete(item);
+     * Delete item in tasks list
      */
-    void delete() {
-        String name = "Delete task.";
+    public void delete(String id) {
+        String sql_query = String.format(
+                "DELETE FROM tasks WHERE id = %s;", id);
 
-        String task_id = System.console().readLine("Choose task's id:");
-        String task_name = System.console().readLine("Print task's name:");
-        String task_description = System.console().readLine("Print task's description:");
-
-        String sql_query = String.format("UPDATE tasks (task_id, task_name, task_description) VALUES (%1$s, %2$s, %3$s);", task_id, task_name, task_description);
+        if (this.conn != null ) { // TODO: Should it (if statement) be here or not? Let eat bee (Let it be)
+            try {
+                this.rs = this.st.executeQuery(sql_query);
+            } catch(SQLException e) {
+                Log.error(e.getMessage(), e);
+            }
+        }
     }
 
     /**
-     * 	tracker.findAll()
+     * TODO: realize back of result set!!!
      */
-    void findAll() {
-        String name = "Show all tasks.";
-        String sql_query = String.format("SELECT * FROM Tasks");
+    public ArrayList<Item> findAll() {
+        ArrayList<Item> result = new ArrayList<Item>();
+
+        String sql_query = String.format("SELECT * FROM tasks");
+        // TODO: sout result set
+
+        // TODO: realize back of result set!!!
+        if (this.conn != null ) { // TODO: Should it (if statement) be here or not? Let eat bee (Let it be)
+            try {
+                this.rs = this.st.executeQuery(sql_query);
+            } catch(SQLException e) {
+                Log.error(e.getMessage(), e);
+            }
+        }
+
+        return result;
     }
 
     /**
-     * EXAMPLE: "where task_id > 3 and task_name CONTAINS 'abr' "
-     * task_id, task_name, task_description - ?,
-     * task_creationDate, task_commentsList
-     * comment_id, comment_text - ?
-     *
-     * 	tracker.findByName(key);
+     *  // TODO: realize back of result set!!!
      */
-    void findByName() {
-        String name = "Show tasks by filter.";
-        String filter = System.console().readLine("Print filter: ");
-        System.out.println("Filter parameters:\n... \n");
+    public ArrayList<Item> findByName(String key) {
+        ArrayList<Item> result = new ArrayList<Item>();
 
-        //   transtaleFilterToSQLQuery(filter);
-        String sql_query = String.format("SELECT * FROM Tasks WHERE %s ;", filter); // parse from database to console
+        String sql_query = String.format(
+                "SELECT * FROM tasks WHERE title LIKE %%%s%%;", key
+        );
+
+        // TODO: realize back of result set!!!
+        if (this.conn != null ) { // TODO: Should it (if statement) be here or not? Let eat bee (Let it be)
+            try {
+                this.rs = this.st.executeQuery(sql_query);
+            } catch(SQLException e) {
+                Log.error(e.getMessage(), e);
+            }
+        }
+
+        return result;
     }
 
 }

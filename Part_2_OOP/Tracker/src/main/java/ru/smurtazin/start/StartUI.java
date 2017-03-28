@@ -8,11 +8,11 @@ import java.util.Date;
 public class StartUI {
 
 	private Input inputOutput;
-    private Tracker tracker;
+    private CMDTracker tracker;
 
     public StartUI() {}
 
-    public StartUI(Input inputOutput, Tracker tracker) {
+    public StartUI(Input inputOutput, CMDTracker tracker) {
         this.inputOutput = inputOutput;
         this.tracker = tracker;
     }
@@ -72,7 +72,7 @@ public class StartUI {
 		if( answerToDeleteTask1.equals("y") ) {
 			String answerToDeleteTask2 = this.inputOutput.answerToQuestion("Are you absolutely sure, that you want to detele this task? (y/n): ");
 			if( answerToDeleteTask2.equals("y") ) {
-				this.tracker.delete(item);
+				this.tracker.delete(item.getId());
 			}
 		}
 	}
