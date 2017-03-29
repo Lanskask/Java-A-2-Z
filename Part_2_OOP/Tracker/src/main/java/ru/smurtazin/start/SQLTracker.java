@@ -94,8 +94,6 @@ public class SQLTracker implements Tracker {
     // executeQuery for: SELECT
 
     /**
-     * 	tracker.add( new Item(taskName, taskDescription, new Date()) );
-     *
      * 	TODO: Enter Timestamp or not?
      */
     public Item add(Item item) {
@@ -142,15 +140,15 @@ public class SQLTracker implements Tracker {
         String task_description = item.getDescription();
 
         String sql_query = String.format(
-                "UPDATE tasks " +
-                        "(task_id, task_name, task_description) " +
-                        "VALUES (%1$s, %2$s, %3$s);",
-                        task_id, task_name, task_description
+            "UPDATE tasks " +
+                "SET task_name = %1$s, task_description = %2$s " +
+                "WHERE task_id = %3$s);",
+                task_name, task_description, task_id
         );
 
         if (this.conn != null ) { // TODO: Should it (if statement) be here or not? Let eat bee (Let it be)
             try {
-                this.rs = this.st.executeQuery(sql_query);
+                this.st.executeUpdate(sql_query);
             } catch(SQLException e) {
                 Log.error(e.getMessage(), e);
             }
@@ -166,7 +164,7 @@ public class SQLTracker implements Tracker {
 
         if (this.conn != null ) { // TODO: Should it (if statement) be here or not? Let eat bee (Let it be)
             try {
-                this.rs = this.st.executeQuery(sql_query);
+                this.st.executeUpdate(sql_query);
             } catch(SQLException e) {
                 Log.error(e.getMessage(), e);
             }

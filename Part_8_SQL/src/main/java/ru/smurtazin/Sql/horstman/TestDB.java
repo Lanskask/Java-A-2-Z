@@ -1,5 +1,6 @@
 package ru.smurtazin.Sql.horstman;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.*;
@@ -12,7 +13,6 @@ public class TestDB {
 
     public static void main(String[] args) {
         TestDB main = new TestDB();
-
         main.run();
     }
 
@@ -48,7 +48,7 @@ public class TestDB {
             result.close();
 
             String dropTableQuery = "DROP TABLE Greeting";
-            stat.executeQuery(dropTableQuery);
+            stat.executeUpdate(dropTableQuery);
         } finally {
             conn.close();
         }
@@ -56,7 +56,10 @@ public class TestDB {
 
     public Connection getConnection() throws SQLException, IOException {
         Properties props = new Properties();
-        FileInputStream in = new FileInputStream("database.properties");
+
+        ClassLoader classLoader = getClass().getClassLoader();
+        File file = new File(classLoader.getResource("database.properties").getFile());
+        FileInputStream in = new FileInputStream(file);
         props.load(in);
         in.close();
 
