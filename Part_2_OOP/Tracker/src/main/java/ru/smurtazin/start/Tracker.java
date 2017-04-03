@@ -14,8 +14,6 @@ public interface Tracker {
 
     Item add(Item item);
     void update(Item item);
-//    void update(String items_id, String items_name, String items_description);
-//    void update(String items_id, String items_name);
     void delete(String id);
     ArrayList<Item> findAll();
     ArrayList<Item> findByName(String key);
