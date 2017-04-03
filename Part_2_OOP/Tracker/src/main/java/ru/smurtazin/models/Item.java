@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.HashMap;
 
 public class Item {
+
 	private String id;
 	private String name;
 	private String description;
@@ -11,8 +12,7 @@ public class Item {
 	private String[] commentsList = new String[10];
 	private int comment_inList_position = 0;
 
-	public Item() {
-	}
+	public Item() {}
 
 	public Item(String name, String description, Date creationDate) {
 		this.name = name;

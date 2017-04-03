@@ -17,6 +17,14 @@ Now using Postgres.
 - Show all tasks
 - Show filtered list
 
+
+## SQL Tracker functions:
+- add
+- update
+- delete
+- findAll
+- findByName
+
 ## SQL Methods to make queries
 - executeUpdate for:
     - INSERT
@@ -31,21 +39,27 @@ Now using Postgres.
     - для интерактивного создания запросов
     
 ## TODO
+### Realy important TODO
+
 ### Little important TODO
 - [ ] Properties throw property file
-- [ ] Add timestamp to java prog, and to sql table tasks
-- [ ] check Sql query for update task
-
-### Realy important TODO
-- [ ] prepeared statements всё равно сделать для безопасности.
-- [ ] 2 !!! How to add result set to ArrayList<Item> ?
 
 ### DONE
-#### Not important
-- [ ] ~~*CANCELED* Change update(Item item) to  
+#### Since 03.04.2017
+- Important
+- [x] ~~prepeared statements всё равно сделать для безопасности.~~
+- [x] ~~2 !!! How to add result set to ArrayList<Item> ?~~
+
+- Not important
+- [x] ~~Add  all close to finally~~ 
+- [x] ~~Add timestamp to java prog, and to sql table tasks~~
+- [x] ~~check Sql query for update task~~
+
+#### Before 03.04.2017
+- Not important
+- [x] ~~*CANCELED* Change update(Item item) to  
         update(String items_id, String items_name, String items_description)  
         update(String items_id, String items_name)~~  
-- [x] **ПРОВЕРИТЬ** (to test): переписать что нужно с executeUpdate, executeQuery
 - [x] ~~*CANCELED* переписать методы SQLTracker без повтора кода 
         (с минимумов повторов) - Возможно ли это (это же не АОП)?~~
 
@@ -55,10 +69,10 @@ Now using Postgres.
     - [x] ~~rename Tracker.class to TrackerCMD.class~~
 - [x] ~~Sql query for delete from tasks~~
 
-#### Important
+- Important
 - [x] ~~*CANCELED* 3 !!! Realize result sets for all commands in SQLTracker~~
 - [x] ~~*CANCELED* 1 !!! Plase to each mecthod all connection process(es)~~ 
-
+- [x] ~~**ПРОВЕРИТЬ** (to test): переписать что нужно с executeUpdate, executeQuery~~
 - [x] ~~What to do with find item by id in StartUI delete function
         - REMOVE IT~~
 - [x] ~~remake all methods in tracker from (Item item) to (String id)  

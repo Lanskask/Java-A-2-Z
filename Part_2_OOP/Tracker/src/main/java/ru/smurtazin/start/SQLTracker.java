@@ -48,6 +48,17 @@ public class SQLTracker implements Tracker {
         return new java.sql.Timestamp(today.getTime());
     }
 
+    void ifConnAndPrStementOpenClose() {
+        if (this.conn != null ) {
+            try {
+                this.conn.close();
+                this.preparedStatement.close(); // TODO: Is it needed to add?
+            } catch(SQLException e) {
+                Log.error("SQLException: " + e.getMessage(), e);
+            }
+        }
+    }
+
     // TODO: What is this?
     public void connectExecute() {
         ArrayList<Item> result = new ArrayList<>();
@@ -93,16 +104,7 @@ public class SQLTracker implements Tracker {
         }
     }
 
-    // Sql functions:
-    //      add
-    //      update
-    //      delete
-    //      findAll
-    //      findByName
-    // executeUpdate for:
-    //      INSERT, UPDATE, DELETE, CREATE TABLE, DROP TABLE
-    // executeQuery for:
-    //      SELECT
+
 
     /**
      * 	TODO: Enter Timestamp or not?
@@ -125,13 +127,7 @@ public class SQLTracker implements Tracker {
         } catch(Exception e) {
             Log.error(e.getMessage(), e);
         } finally {
-            if (this.conn != null ) {
-                try {
-                    this.conn.close();
-                } catch(SQLException e) {
-                    Log.error(e.getMessage(), e);
-                }
-            }
+            this.ifConnAndPrStementOpenClose();
         }
 
         return item;
@@ -155,9 +151,10 @@ public class SQLTracker implements Tracker {
             this.preparedStatement.setString(3, item.getId());
 
             this.preparedStatement.executeUpdate();
-            this.preparedStatement.close();
         } catch(SQLException e) {
             Log.error("SQLException: " + e.getMessage(), e);
+        } finally {
+            this.ifConnAndPrStementOpenClose();
         }
     }
 
@@ -174,9 +171,10 @@ public class SQLTracker implements Tracker {
             this.preparedStatement.setString(1, id);
 
             this.preparedStatement.executeUpdate();
-            this.preparedStatement.close();
         } catch(SQLException e) {
             Log.error("SQLException" + e.getMessage(), e);
+        } finally {
+            this.ifConnAndPrStementOpenClose();
         }
     }
 
@@ -204,6 +202,8 @@ public class SQLTracker implements Tracker {
             this.preparedStatement.close();
         } catch(SQLException e) {
             Log.error("SQLException: " + e.getMessage(), e);
+        } finally {
+            this.ifConnAndPrStementOpenClose();
         }
 
         return result;
@@ -236,6 +236,8 @@ public class SQLTracker implements Tracker {
             this.preparedStatement.close();
         } catch(SQLException e) {
             Log.error("SQLException: " + e.getMessage(), e);
+        } finally {
+            this.ifConnAndPrStementOpenClose();
         }
 
         return result;
