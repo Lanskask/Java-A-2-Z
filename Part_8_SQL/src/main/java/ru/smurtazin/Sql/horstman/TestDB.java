@@ -54,6 +54,12 @@ public class TestDB {
         }
     }
 
+    /**
+     * Read property file and back connection with setted properties
+     * @return Connection
+     * @throws SQLException
+     * @throws IOException
+     */
     public Connection getConnection() throws SQLException, IOException {
         Properties props = new Properties();
 

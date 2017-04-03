@@ -32,9 +32,19 @@ Now using Postgres.
     
 ## TODO
 ### Little important TODO
-- [ ] Change update(Item item) to  
+- [ ] Properties throw property file
+- [ ] Add timestamp to java prog, and to sql table tasks
+- [ ] check Sql query for update task
+
+### Realy important TODO
+- [ ] prepeared statements всё равно сделать для безопасности.
+- [ ] 2 !!! How to add result set to ArrayList<Item> ?
+
+### DONE
+#### Not important
+- [ ] ~~*CANCELED* Change update(Item item) to  
         update(String items_id, String items_name, String items_description)  
-        update(String items_id, String items_name)  
+        update(String items_id, String items_name)~~  
 - [x] **ПРОВЕРИТЬ** (to test): переписать что нужно с executeUpdate, executeQuery
 - [x] ~~*CANCELED* переписать методы SQLTracker без повтора кода 
         (с минимумов повторов) - Возможно ли это (это же не АОП)?~~
@@ -43,15 +53,9 @@ Now using Postgres.
 - [x] ~~*CANCELED* Одно соединение на все запросы. - Как сделать? Делать ли это?~~
 - [x] ~~make Tracker interface~~
     - [x] ~~rename Tracker.class to TrackerCMD.class~~
-- [ ] Add timestamp to java prog, and to sql table tasks
 - [x] ~~Sql query for delete from tasks~~
-- [ ] check Sql query for update task
 
-### Realy important TODO
-- [ ] add prepeared statements
-        Ненужно т.к. запросы в этой программе не повторяются. 
-        Может только в filterByName
-- [ ] 2 !!! How to add result set to ArrayList<Item> ?
+#### Important
 - [x] ~~*CANCELED* 3 !!! Realize result sets for all commands in SQLTracker~~
 - [x] ~~*CANCELED* 1 !!! Plase to each mecthod all connection process(es)~~ 
 

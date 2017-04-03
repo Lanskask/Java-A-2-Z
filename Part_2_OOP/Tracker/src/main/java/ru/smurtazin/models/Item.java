@@ -20,6 +20,18 @@ public class Item {
 		this.creationDate = creationDate;
 	}
 
+	public Item(String id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
+	public Item(String id, String name, String description, Date creationDate) {
+		this.id = id;
+		this.name = name;
+		this.description = description;
+		this.creationDate = creationDate;
+	}
+
 	public Item(String name, String description, Date creationDate, String[] commentsList) {
 		this.name = name;
 		this.description = description;
@@ -27,7 +39,17 @@ public class Item {
 		this.commentsList = commentsList;
 	}
 
-    /**
+	@Override
+	public String toString() {
+		return "Item{" +
+				"id='" + id + '\'' +
+				", name='" + name + '\'' +
+				", description='" + description + '\'' +
+				", creationDate=" + creationDate +
+				'}';
+	}
+
+	/**
      * @return a hash code value for this object.
      */
     @Override

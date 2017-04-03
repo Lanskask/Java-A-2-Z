@@ -25,7 +25,7 @@ insert into users(name, role_id)
 
 insert into tasks(title, task_state) 
 	values
-		('Fridge doesnt work', 'Havnt started yet')
+		('Fridge doesnt work', 'Havnt started yet'),
 		('TV is broken', 'Started'), 
 		('Roland', 'Finished')
 ;

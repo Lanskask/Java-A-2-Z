@@ -1,6 +1,7 @@
 package ru.smurtazin.start;
 
 import com.sun.rmi.rmid.ExecPermission;
+import org.jetbrains.annotations.Contract;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.smurtazin.models.Item;
@@ -23,10 +24,11 @@ public class SQLTracker implements Tracker {
 
     public static final Logger Log = LoggerFactory.getLogger(SQLTracker.class);
 
-    String url = "jdbc:postgresql://localhost:5432/task_db";
+    String url = "jdbc:postgresql://localhost:5432/java_a_2_z";
     String username = "postgres";
     String password = "postgres";
     Connection conn = null;
+    PreparedStatement preparedStatement = null;
     Statement st = null;
     ResultSet rs = null;
     ArrayList<ResultSet> resultSets = null;
@@ -37,49 +39,55 @@ public class SQLTracker implements Tracker {
         sqlTracker.connectExecute();
     }
 
+    @Contract(" -> !null") // TODO: What is this?
+    private static java.sql.Timestamp getCurrentTimeStamp() {
+        java.util.Date today = new java.util.Date();
+        return new java.sql.Timestamp(today.getTime());
+    }
+
     public void connectExecute() {
+        ArrayList<Item> result = new ArrayList<>();
 
         try {
             this.conn = DriverManager.getConnection(this.url, this.username, this.password);
 //            this.st = this.conn.createStatement();
 
-            // from here should be function
-            String query = "SELECT * FROM users;";
-            this.rs = this.st.executeQuery(query);
+            String sql_query = "SELECT * FROM tasks;";
+//            this.rs = this.st.executeQuery(sql_query);
+
+            this.preparedStatement = this.conn.prepareStatement(sql_query); //
+            this.rs = this.preparedStatement.executeQuery();
 
             while (this.rs.next()) {
-//                this.resultSets.add(rs);
                 System.out.println(
                         String.format(
                                 "%s %s",
-                                this.rs.getString("name"),
-                                this.rs.getInt("role_id")
+                                this.rs.getInt("id"),
+                                this.rs.getString("title")
                         )
                 );
+
+                result.add(new Item(this.rs.getString("id"), this.rs.getString("title")));
             }
-            // TODO: How to add result set to array?
-            /*for (ResultSet rs : this.resultSets) {
-                System.out.println(
-                    String.format(
-                        "%s %s",
-                        this.rs.getString("name"),
-                        this.rs.getInt("role_id")
-                    )
-                );
-            }*/
             this.rs.close();
             this.st.close();
 
         } catch(Exception e) {
-            Log.error(e.getMessage(), e);
+            Log.error("Log 3: " + e.getMessage(), e);
         } finally {
             if (this.conn != null ) {
                 try {
                     this.conn.close();
+                    System.out.println("Log 1");
                 } catch(SQLException e) {
                     Log.error(e.getMessage(), e);
+                    System.out.println("Log 2");
                 }
             }
+        }
+
+        for (Item it : result) {
+            System.out.println(it.toString());
         }
     }
 
@@ -97,25 +105,20 @@ public class SQLTracker implements Tracker {
      * 	TODO: Enter Timestamp or not?
      */
     public Item add(Item item) {
-
-        String task_name = item.getName();
-        String task_description = item.getDescription();
-
-        String sql_query = String.format(
+        String sql_query =
                 "INSERT INTO tasks " +
                         "(task_name, task_description, task_creationDate) " +
-                        "VALUES (%s, %s);",
-                        task_name, task_description
-        );
-
+                        "VALUES (?, ?, ?)";
         try {
             this.conn = DriverManager.getConnection(this.url, this.username, this.password);
-            this.st = this.conn.createStatement();
 
-            this.st.executeUpdate(sql_query);
+            this.preparedStatement = this.conn.prepareStatement(sql_query);
+            this.preparedStatement.setString(1, item.getName());
+            this.preparedStatement.setString(2, item.getDescription());
+            this.preparedStatement.setTimestamp(3, getCurrentTimeStamp());
 
-            this.st.close();
-
+            this.preparedStatement.executeUpdate();
+            this.preparedStatement.close();
         } catch(Exception e) {
             Log.error(e.getMessage(), e);
         } finally {
@@ -135,23 +138,23 @@ public class SQLTracker implements Tracker {
      * 	TODO: DONE? or Add Timestamp for time of apdating
      */
     public void update(Item item) {
-        String task_id = item.getId();
-        String task_name = item.getName();
-        String task_description = item.getDescription();
 
-        String sql_query = String.format(
-            "UPDATE tasks " +
-                "SET task_name = %1$s, task_description = %2$s " +
-                "WHERE task_id = %3$s);",
-                task_name, task_description, task_id
-        );
+        String sql_query = "UPDATE tasks " +
+                "SET task_name = ?, task_description = ? " +
+                "WHERE task_id = ?);";
 
-        if (this.conn != null ) { // TODO: Should it (if statement) be here or not? Let eat bee (Let it be)
-            try {
-                this.st.executeUpdate(sql_query);
-            } catch(SQLException e) {
-                Log.error(e.getMessage(), e);
-            }
+        try {
+            this.conn = DriverManager.getConnection(this.url, this.username, this.password);
+
+            this.preparedStatement = this.conn.prepareStatement(sql_query);
+            this.preparedStatement.setString(1, item.getName());
+            this.preparedStatement.setString(2, item.getDescription());
+            this.preparedStatement.setString(3, item.getId());
+
+            this.preparedStatement.executeUpdate();
+            this.preparedStatement.close();
+        } catch(SQLException e) {
+            Log.error(e.getMessage(), e);
         }
     }
 
@@ -159,15 +162,18 @@ public class SQLTracker implements Tracker {
      * Delete item in tasks list
      */
     public void delete(String id) {
-        String sql_query = String.format(
-                "DELETE FROM tasks WHERE id = %s;", id);
+        String sql_query = "DELETE FROM tasks WHERE id = ?;";
 
-        if (this.conn != null ) { // TODO: Should it (if statement) be here or not? Let eat bee (Let it be)
-            try {
-                this.st.executeUpdate(sql_query);
-            } catch(SQLException e) {
-                Log.error(e.getMessage(), e);
-            }
+        try {
+            this.conn = DriverManager.getConnection(this.url, this.username, this.password);
+
+            this.preparedStatement = this.conn.prepareStatement(sql_query);
+            this.preparedStatement.setString(1, id);
+
+            this.preparedStatement.executeUpdate();
+            this.preparedStatement.close();
+        } catch(SQLException e) {
+            Log.error(e.getMessage(), e);
         }
     }
 
@@ -176,39 +182,58 @@ public class SQLTracker implements Tracker {
      */
     public ArrayList<Item> findAll() {
         ArrayList<Item> result = new ArrayList<Item>();
+        String sql_query = "SELECT * FROM tasks";
 
-        String sql_query = String.format("SELECT * FROM tasks");
-        // TODO: sout result set
+        try {
+            this.conn = DriverManager.getConnection(this.url, this.username, this.password);
+            this.preparedStatement = this.conn.prepareStatement(sql_query);
+            this.rs = this.preparedStatement.executeQuery();
 
-        // TODO: realize back of result set!!!
-        if (this.conn != null ) { // TODO: Should it (if statement) be here or not? Let eat bee (Let it be)
-            try {
-                this.rs = this.st.executeQuery(sql_query);
-            } catch(SQLException e) {
-                Log.error(e.getMessage(), e);
+            while (this.rs.next()) {
+                result.add(new Item(
+                    this.rs.getString("id"),
+                    this.rs.getString("name"),
+                    this.rs.getString("description"),
+                    this.rs.getTimestamp("creationDate")
+                ));
             }
+
+            this.preparedStatement.close();
+        } catch(SQLException e) {
+            Log.error(e.getMessage(), e);
         }
 
+        System.out.println("Find All done"); // TODO: remove - need to log
         return result;
     }
 
     /**
-     *  // TODO: realize back of result set!!!
+     * Get some pattern in name need to found, back ArrayList of matched Items
+     * @param key
+     * @return ArrayList<Item> result
      */
     public ArrayList<Item> findByName(String key) {
         ArrayList<Item> result = new ArrayList<Item>();
+        String sql_query = "SELECT * FROM tasks WHERE title LIKE ?;";
 
-        String sql_query = String.format(
-                "SELECT * FROM tasks WHERE title LIKE %%%s%%;", key
-        );
+        try {
+            this.conn = DriverManager.getConnection(this.url, this.username, this.password);
+            this.preparedStatement = this.conn.prepareStatement(sql_query);
+            this.preparedStatement.setString(1, "%" + key + "%");
+            this.rs = this.preparedStatement.executeQuery();
 
-        // TODO: realize back of result set!!!
-        if (this.conn != null ) { // TODO: Should it (if statement) be here or not? Let eat bee (Let it be)
-            try {
-                this.rs = this.st.executeQuery(sql_query);
-            } catch(SQLException e) {
-                Log.error(e.getMessage(), e);
+            while (this.rs.next()) {
+                result.add(new Item(
+                        this.rs.getString("id"),
+                        this.rs.getString("title"), // name
+                        this.rs.getString("description"),
+                        this.rs.getTimestamp("creationDate")
+                ));
             }
+
+            this.preparedStatement.close();
+        } catch(SQLException e) {
+            Log.error(e.getMessage(), e);
         }
 
         return result;

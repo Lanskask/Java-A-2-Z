@@ -49,6 +49,11 @@
      task_id INT NOT NULL,
    PRIMARY KEY (comment_id));
 
+addNewTask
+editTask
+deleteTask
+showAllTasks
+showFilteredList
 
 - MenuItems:
 
@@ -103,4 +108,42 @@
           sql_query = String.format( sqlQueryToCreateCommentTable(task_id) );
         }
 
-    
+==================================
+
+Item
+  private String id;
+  private String name;
+  private String description;
+  private Date creationDate;
+  private String[] commentsList = new String[10];
+
+CURRENT_TIMESTAMP
+
+tracker.add
+tracker.update
+tracker.delete
+tracker.findAll
+tracker.findByName
+
+addNewTask
+  tracker.add( new Item(taskName, taskDescription, new Date()) );
+editTask
+  tracker.update(item);
+deleteTask
+  tracker.delete(item);
+showAllTasks
+  tracker.findAll()
+showFilteredList
+  tracker.findByName(key);
+
+add
+update
+delete
+findAll
+findByName
+
+addNewTask
+editTask
+deleteTask
+showAllTasks
+showFilteredList

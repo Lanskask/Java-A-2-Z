@@ -1,3 +1,4 @@
+-- noinspection SqlNoDataSourceInspectionForFile
 ---------
 -- Создать SQL скрипт инициализирующий создание новой базы данных.
 ---------
@@ -107,9 +108,10 @@ insert into users(name, role_id)
 		('Lilit', 3)
 ;
 
-insert into tasks(title, task_state) 
+-- noinspection SqlNoDataSourceInspection
+insert into tasks(title, task_state)
 	values
-		('Fridge doesnt work', 'Havnt started yet')
+		('Fridge doesnt work', "Haven't started yet"),
 		('TV is broken', 'Started'), 
 		('Roland', 'Finished')
 ;
