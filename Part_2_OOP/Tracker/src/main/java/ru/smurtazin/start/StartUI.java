@@ -8,10 +8,12 @@ import java.util.Date;
 public class StartUI {
 
 	private Input inputOutput;
+//    private Tracker tracker; // TODO: If it works - remove comment down.
     private CMDTracker tracker;
 
     public StartUI() {}
 
+//    public StartUI(Input inputOutput, Tracker tracker) {
     public StartUI(Input inputOutput, CMDTracker tracker) {
         this.inputOutput = inputOutput;
         this.tracker = tracker;

@@ -34,9 +34,12 @@ public class SQLTracker implements Tracker {
     ArrayList<ResultSet> resultSets = null;
 
     public static void main(String[] args) {
-        SQLTracker sqlTracker = new SQLTracker();
+        Tracker tracker = new SQLTracker();
 
-        sqlTracker.connectExecute();
+//        for (Item it : tracker.findAll()) {
+        for (Item it : tracker.findByName("TV")) {
+            System.out.println(it.toString());
+        }
     }
 
     @Contract(" -> !null") // TODO: What is this?
@@ -45,15 +48,14 @@ public class SQLTracker implements Tracker {
         return new java.sql.Timestamp(today.getTime());
     }
 
+    // TODO: What is this?
     public void connectExecute() {
         ArrayList<Item> result = new ArrayList<>();
 
         try {
             this.conn = DriverManager.getConnection(this.url, this.username, this.password);
-//            this.st = this.conn.createStatement();
 
             String sql_query = "SELECT * FROM tasks;";
-//            this.rs = this.st.executeQuery(sql_query);
 
             this.preparedStatement = this.conn.prepareStatement(sql_query); //
             this.rs = this.preparedStatement.executeQuery();
@@ -91,15 +93,16 @@ public class SQLTracker implements Tracker {
         }
     }
 
-    // Sql functions
-    // add
-    // update
-    // delete
-    // findAll
-    // findByName
-    //
-    // executeUpdate for: INSERT, UPDATE, DELETE, CREATE TABLE, DROP TABLE
-    // executeQuery for: SELECT
+    // Sql functions:
+    //      add
+    //      update
+    //      delete
+    //      findAll
+    //      findByName
+    // executeUpdate for:
+    //      INSERT, UPDATE, DELETE, CREATE TABLE, DROP TABLE
+    // executeQuery for:
+    //      SELECT
 
     /**
      * 	TODO: Enter Timestamp or not?
@@ -107,7 +110,7 @@ public class SQLTracker implements Tracker {
     public Item add(Item item) {
         String sql_query =
                 "INSERT INTO tasks " +
-                        "(task_name, task_description, task_creationDate) " +
+                        "(title, description, creationDate) " +
                         "VALUES (?, ?, ?)";
         try {
             this.conn = DriverManager.getConnection(this.url, this.username, this.password);
@@ -140,8 +143,8 @@ public class SQLTracker implements Tracker {
     public void update(Item item) {
 
         String sql_query = "UPDATE tasks " +
-                "SET task_name = ?, task_description = ? " +
-                "WHERE task_id = ?);";
+                "SET title = ?, description = ? " +
+                "WHERE id = ?);";
 
         try {
             this.conn = DriverManager.getConnection(this.url, this.username, this.password);
@@ -154,7 +157,7 @@ public class SQLTracker implements Tracker {
             this.preparedStatement.executeUpdate();
             this.preparedStatement.close();
         } catch(SQLException e) {
-            Log.error(e.getMessage(), e);
+            Log.error("SQLException: " + e.getMessage(), e);
         }
     }
 
@@ -173,7 +176,7 @@ public class SQLTracker implements Tracker {
             this.preparedStatement.executeUpdate();
             this.preparedStatement.close();
         } catch(SQLException e) {
-            Log.error(e.getMessage(), e);
+            Log.error("SQLException" + e.getMessage(), e);
         }
     }
 
@@ -192,7 +195,7 @@ public class SQLTracker implements Tracker {
             while (this.rs.next()) {
                 result.add(new Item(
                     this.rs.getString("id"),
-                    this.rs.getString("name"),
+                    this.rs.getString("title"),
                     this.rs.getString("description"),
                     this.rs.getTimestamp("creationDate")
                 ));
@@ -200,10 +203,9 @@ public class SQLTracker implements Tracker {
 
             this.preparedStatement.close();
         } catch(SQLException e) {
-            Log.error(e.getMessage(), e);
+            Log.error("SQLException: " + e.getMessage(), e);
         }
 
-        System.out.println("Find All done"); // TODO: remove - need to log
         return result;
     }
 
@@ -225,7 +227,7 @@ public class SQLTracker implements Tracker {
             while (this.rs.next()) {
                 result.add(new Item(
                         this.rs.getString("id"),
-                        this.rs.getString("title"), // name
+                        this.rs.getString("title"),
                         this.rs.getString("description"),
                         this.rs.getTimestamp("creationDate")
                 ));
@@ -233,7 +235,7 @@ public class SQLTracker implements Tracker {
 
             this.preparedStatement.close();
         } catch(SQLException e) {
-            Log.error(e.getMessage(), e);
+            Log.error("SQLException: " + e.getMessage(), e);
         }
 
         return result;

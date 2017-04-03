@@ -9,6 +9,9 @@ import java.util.ArrayList;
  */
 public interface Tracker {
 
+    // TODO: What to do with it? Is it works?
+    ArrayList<Item> items = new ArrayList<Item>();
+
     Item add(Item item);
     void update(Item item);
 //    void update(String items_id, String items_name, String items_description);
