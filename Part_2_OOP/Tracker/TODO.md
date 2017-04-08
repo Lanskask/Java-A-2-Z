@@ -1,5 +1,7 @@
 # TODO
 ## Realy important TODO
+- [ ] !!! close with resources 
+- [ ] Натренеровать ```select``` из некольких таблиц
 - [ ] Add 
     ```public ArrayList<Item> items = new ArrayList<Item>();```
     to Tracker Interface and realize it in SQLTracker class.

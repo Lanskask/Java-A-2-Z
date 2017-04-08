@@ -41,6 +41,14 @@ CREATE TABLE car (
   engine_id int REFERENCES engine(id)
 );
 
+CREATE TABLE car (
+  id serial primary key,
+  name varchar(200),
+  transmissions_id int REFERENCES transmissions(id),
+  car_body_id int REFERENCES car_bodies(id),
+  engine_id int REFERENCES engine(id)
+);
+
 -----------
 -- Вставка данных
 -----------
