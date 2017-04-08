@@ -15,8 +15,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 /**
  * Created by a1 on 08.04.17.
  */
-public class EchoServlet extends HttpServlet {
-    public static final Logger log = LoggerFactory.getLogger(EchoServlet.class);
+public class UsersController extends HttpServlet {
+    public static final Logger log = LoggerFactory.getLogger(UsersController.class);
 
     private List<String> users = new CopyOnWriteArrayList<String>();
 
@@ -71,7 +71,7 @@ public class EchoServlet extends HttpServlet {
         UserStorage.getInstance().add(new User(req.getParameter("login"), req.getParameter("email")));
 //        this.users.add(req.getParameter("login"));
 //        this.doGet(req, resp);
-        resp.sendRedirect(String.format("%s/index.jsp", req.getContextPath()));
+        resp.sendRedirect(String.format("%s/UsersView.jsp", req.getContextPath()));
     }
 
     @Override
