@@ -1,6 +1,5 @@
 package ru.smurtazin.start;
 
-import com.sun.rmi.rmid.ExecPermission;
 import org.jetbrains.annotations.Contract;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,7 +7,6 @@ import ru.smurtazin.models.Item;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Properties;
 
 /**
  * Created by a1 on 24.03.17.
@@ -32,6 +30,7 @@ public class SQLTracker implements Tracker {
     ResultSet rs = null;
     ArrayList<ResultSet> resultSets = null;
 
+    // TODO: remove couse it's unneedn't
     public static void main(String[] args) {
         Tracker tracker = new SQLTracker();
 
@@ -56,6 +55,17 @@ public class SQLTracker implements Tracker {
                 Log.error("SQLException: " + e.getMessage(), e);
             }
         }
+    }
+
+    public Item findById(String id) {
+        Item result = null;
+        for (Item item : this.items) {
+            if (item != null && item.getId().equals(id)) {
+                result = item;
+                break;
+            }
+        }
+        return result;
     }
 
     // TODO: What is this?

@@ -6,7 +6,7 @@ package ru.smurtazin.start;
 public class Menu {
 
     public void init() {
-        CMDTracker tracker = new CMDTracker();
+        Tracker tracker = new SQLTracker();
         Input inputOutput = new ValidateInput();
 
         MenuTracker menuTracker = new MenuTracker(inputOutput, tracker);
@@ -19,7 +19,7 @@ public class Menu {
             }
 
             @Override
-            public void execute(Input input, CMDTracker tracker) {
+            public void execute(Input input, Tracker tracker) {
                 menuTracker.startUI.deleteTask();
             }
 

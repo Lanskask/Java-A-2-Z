@@ -7,7 +7,7 @@ public interface UserAction {
 
     int key();
 
-    void execute(Input input, CMDTracker tracker);
+    void execute(Input input, Tracker tracker);
 
     String info();
 }

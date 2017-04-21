@@ -1,6 +1,5 @@
 # TODO
 ## Realy important TODO
-- [ ] !!! close with resources 
 - [ ] Натренеровать ```select``` из некольких таблиц
 - [ ] Add 
     ```public ArrayList<Item> items = new ArrayList<Item>();```
@@ -10,6 +9,10 @@
 - [ ] Properties throw property file
 
 ## DONE
+### Since 21.04.2017
+- Important
+- [x] ~~!!! try with resources~~ 
+
 ### Since 03.04.2017
 - Important
 - [x] ~~prepeared statements всё равно сделать для безопасности.~~

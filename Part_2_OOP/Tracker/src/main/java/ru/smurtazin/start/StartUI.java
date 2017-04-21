@@ -8,13 +8,13 @@ import java.util.Date;
 public class StartUI {
 
 	private Input inputOutput;
-//    private Tracker tracker; // TODO: If it works - remove comment down.
-    private CMDTracker tracker;
+    private Tracker tracker; // TODO: If it works - remove comment down.
+//    private CMDTracker tracker;
 
     public StartUI() {}
 
 //    public StartUI(Input inputOutput, Tracker tracker) {
-    public StartUI(Input inputOutput, CMDTracker tracker) {
+    public StartUI(Input inputOutput, Tracker tracker) {
         this.inputOutput = inputOutput;
         this.tracker = tracker;
     }
@@ -97,7 +97,7 @@ public class StartUI {
 					"\tItem's description:\n\t\t%s\n ", item.getDescription()
 				);
 				System.out.printf(
-						"\tItem's Date:\n\t%s\n", item.getCreationDate()
+						"\tItem's Date:\n\t%s\n\t", item.getCreationDate()
 				);
 			}
 		}

@@ -27,7 +27,7 @@
         <% for (User user : UserStorage.getInstance().getUsers()) { %>
             <tr>
                 <td><%=user.getLogin()%></td>
-                <td><%=user.getEmale()%></td>
+                <td><%=user.getEmail()%></td>
             </tr>
         <% } %>
     </table>

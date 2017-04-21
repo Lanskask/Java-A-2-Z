@@ -10,11 +10,11 @@ import java.util.ArrayList;
  * Created by a1 on 21.04.17.
  *
  * CRUD - Create, Read, Update, Delete
- * 1. Add new task. - doPost или doPut
- * 2. Edit some Task. - doPost или doPut
- * 3. Delete some Task. - doDelete
- * 4. Show All Tasks. - doGet
- * 5. Show Filtered List. - doGet
+ * 1. Add new task. - doPost - CREATE
+ * 2. Edit some Task. - doPut - UPDATE
+ * 3. Delete some Task. - doDelete - DELETE
+ * 4. Show All Tasks. - doGet - READ
+ * 5. Show Filtered List. - doGet - READ
  *
  * add
  * update
@@ -33,6 +33,16 @@ public class DBService {
     Statement st = null;
     ResultSet rs = null;
     ArrayList<ResultSet> resultSets = null;
+
+    boolean isConnection() {
+        boolean isConnection = false;
+        try(Connection conn = DriverManager.getConnection(this.url, this.username, this.password)) {
+            isConnection = true;
+        } catch(Exception e) {
+            Log.error(e.getMessage(), e);
+        }
+        return isConnection;
+    }
 
     public User add(User user) {
         String sql_query =

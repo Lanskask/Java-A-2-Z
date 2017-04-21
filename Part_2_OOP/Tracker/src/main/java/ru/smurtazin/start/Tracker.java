@@ -18,4 +18,5 @@ public interface Tracker {
     ArrayList<Item> findAll();
     ArrayList<Item> findByName(String key);
 
+    Item findById(String id);
 }

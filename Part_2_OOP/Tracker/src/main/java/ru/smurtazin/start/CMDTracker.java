@@ -14,10 +14,10 @@ public class CMDTracker implements Tracker {
 		item.setId(this.generateId());
 		this.items.add(item);
 
-		return item; // Shouldit return item or not?
+		return item; // TODO: Shouldit return item or not?
 	}
 
-	protected Item findById(String id) {
+	public Item findById(String id) {
 		Item result = null;
 		for (Item item : this.items) {
 			if (item != null && item.getId().equals(id)) {
