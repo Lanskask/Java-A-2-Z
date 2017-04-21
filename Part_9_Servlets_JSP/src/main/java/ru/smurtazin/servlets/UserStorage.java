@@ -13,6 +13,7 @@ public class UserStorage {
     public static final Logger log = LoggerFactory.getLogger(UserStorage.class);
 
     public static final UserStorage instance = new UserStorage();
+
     private List<User> users = new CopyOnWriteArrayList<User>();
 
     public UserStorage() {

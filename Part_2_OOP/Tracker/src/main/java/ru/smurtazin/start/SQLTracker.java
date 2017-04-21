@@ -18,7 +18,6 @@ import java.util.Properties;
  * 3. Delete some Task.
  * 4. Show All Tasks.
  * 5. Show Filtered List.
- * 6. Delete some Task.
  */
 public class SQLTracker implements Tracker {
 
@@ -91,10 +90,8 @@ public class SQLTracker implements Tracker {
             if (this.conn != null ) {
                 try {
                     this.conn.close();
-                    System.out.println("Log 1");
                 } catch(SQLException e) {
                     Log.error(e.getMessage(), e);
-                    System.out.println("Log 2");
                 }
             }
         }
@@ -134,7 +131,7 @@ public class SQLTracker implements Tracker {
     }
 
     /**
-     * 	TODO: DONE? or Add Timestamp for time of apdating
+     * 	TODO: DONE? or Add Timestamp for time of updating
      */
     public void update(Item item) {
 
@@ -164,13 +161,13 @@ public class SQLTracker implements Tracker {
     public void delete(String id) {
         String sql_query = "DELETE FROM tasks WHERE id = ?;";
 
-        try {
-            this.conn = DriverManager.getConnection(this.url, this.username, this.password);
+        try (Connection conn = DriverManager.getConnection(this.url, this.username, this.password);
+            PreparedStatement preparedStatement = conn.prepareStatement(sql_query)) {
+//            this.conn = DriverManager.getConnection(this.url, this.username, this.password);
+//            this.preparedStatement = this.conn.prepareStatement(sql_query);
+            preparedStatement.setString(1, id);
 
-            this.preparedStatement = this.conn.prepareStatement(sql_query);
-            this.preparedStatement.setString(1, id);
-
-            this.preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
         } catch(SQLException e) {
             Log.error("SQLException" + e.getMessage(), e);
         } finally {
@@ -185,10 +182,12 @@ public class SQLTracker implements Tracker {
         ArrayList<Item> result = new ArrayList<Item>();
         String sql_query = "SELECT * FROM tasks";
 
-        try {
-            this.conn = DriverManager.getConnection(this.url, this.username, this.password);
-            this.preparedStatement = this.conn.prepareStatement(sql_query);
-            this.rs = this.preparedStatement.executeQuery();
+        try (Connection conn = DriverManager.getConnection(this.url, this.username, this.password);
+             PreparedStatement preparedStatement = conn.prepareStatement(sql_query)) {
+//        try {
+//            this.conn = DriverManager.getConnection(this.url, this.username, this.password);
+//            this.preparedStatement = this.conn.prepareStatement(sql_query);
+            this.rs = preparedStatement.executeQuery();
 
             while (this.rs.next()) {
                 result.add(new Item(
@@ -199,7 +198,7 @@ public class SQLTracker implements Tracker {
                 ));
             }
 
-            this.preparedStatement.close();
+//            this.preparedStatement.close();
         } catch(SQLException e) {
             Log.error("SQLException: " + e.getMessage(), e);
         } finally {

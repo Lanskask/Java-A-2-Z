@@ -16,53 +16,18 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * Created by a1 on 08.04.17.
  */
 public class UsersController extends HttpServlet {
+
+    public UsersController() {
+//        DBService dbService = new DBService();
+    }
+
     public static final Logger log = LoggerFactory.getLogger(UsersController.class);
 
     private List<String> users = new CopyOnWriteArrayList<String>();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html");
-        PrintWriter writer = new PrintWriter(resp.getOutputStream());
-
-        String login = req.getParameter("login");
-
-        StringBuilder sb = new StringBuilder("<table>");
-        for (String logn : this.users ){
-            sb.append("<tr><td>" + logn + "</td></tr>\n");
-        }
-        sb.append("</table>");
-
-        String form = String.format(
-                "\t<form action=\"%s/echo\" method=\"post\">\n" +
-                "\t\tName: <input type=\"text\" name=\"login\">\n" +
-                "\t\t<input type=\"submit\">\n" +
-                "\t</form>",
-                req.getContextPath()
-        );
-        writer.append(String.format("<!DOCTYPE html>\n" +
-                "<html lang=\"en\">\n" +
-                "<head>\n" +
-                "    <meta charset=\"UTF-8\">\n" +
-                "    <title>Servlet 1</title>\n" +
-                "</head>\n" +
-                "<body>\n" +
-                "   %s\n" +
-                "   %s\n" +
-                "   %s\n" +
-                "   %s\n" +
-                "</body>\n" +
-                "</html>\n",
-                form,
-                String.format("<p>Login: %s</p>", login),
-                String.format("<p>Users: %s</p>", this.users),
-                sb.toString()
-                )
-        );
-
-//        writer.append(String.format("<p>Login: %s</p>", login));
-//        writer.append("<p>Users: " + this.users + "</p>");
-        writer.flush();
+        req.getRequestDispatcher("/WEB-INF/views/UsersView.jsp").forward(req, resp);
     }
 
     @Override
