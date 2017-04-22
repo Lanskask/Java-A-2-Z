@@ -1,6 +1,8 @@
 package ru.smurtazin.servlets;
 
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 
 /**
  * Created by a1 on 08.04.17.
@@ -12,6 +14,13 @@ public class User {
     Timestamp createDate;
 
     public User(String login, String email) {
+        this.login = login;
+        this.email = email;
+    }
+
+    public User(int id, String name, String login, String email) {
+        this.id = id;
+        this.name = name;
         this.login = login;
         this.email = email;
     }
@@ -38,7 +47,7 @@ public class User {
                 ", name='" + name + '\'' +
                 ", login='" + login + '\'' +
                 ", email='" + email + '\'' +
-                ", createDate=" + createDate +
+                ", createDate=" + createDate + //.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) +
                 '}';
     }
 

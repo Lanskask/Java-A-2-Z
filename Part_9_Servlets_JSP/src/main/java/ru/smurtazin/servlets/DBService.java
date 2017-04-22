@@ -72,7 +72,7 @@ public class DBService {
                 "WHERE id = ?;";
 
         try (Connection conn = DriverManager.getConnection(this.url, this.username, this.password);
-             PreparedStatement preparedStatement = this.conn.prepareStatement(sql_query)) {
+             PreparedStatement preparedStatement = conn.prepareStatement(sql_query)) {
 
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getLogin());
@@ -131,16 +131,16 @@ public class DBService {
 
     /**
      * Get some pattern in name need to found, back ArrayList of matched Items
-     * @param key
+     * @param name
      * @return ArrayList<Item> result
      */
-    public ArrayList<User> findByName(String key) {
+    public ArrayList<User> findByName(String name) {
         ArrayList<User> result = new ArrayList<User>();
         String sql_query = "SELECT * FROM users WHERE user_name LIKE ?;";
 
         try(Connection conn = DriverManager.getConnection(this.url, this.username, this.password);
             PreparedStatement preparedStatement = this.conn.prepareStatement(sql_query)) {
-            this.preparedStatement.setString(1, "%" + key + "%");
+            this.preparedStatement.setString(1, "%" + name + "%");
             this.rs = this.preparedStatement.executeQuery();
 
             while (this.rs.next()) {

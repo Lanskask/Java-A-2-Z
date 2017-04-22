@@ -1,6 +1,7 @@
 package ru.smurtazin.servlets;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.sql.Time;
@@ -33,40 +34,52 @@ public class DBServiceTest {
         return arrayToCheckWith;
     }
 
+//    @Ignore
     @Test
     public void isConnection() throws Exception {
         assertTrue(dbService.isConnection());
     }
 
-    @org.junit.Test
+    @Ignore
+    @Test
     public void add() throws Exception {
-
+        dbService.add(new User("Marsedy", "mars@mail.mr"));
+        assertThat(dbService.findAll().size(), is(5));
     }
 
-    @org.junit.Test
+    @Ignore
+    @Test
     public void update() throws Exception {
-
+        dbService.update(new User(5, "Marsedy2", "Mars2", "mars22@mail.mr"));
+        assertThat(dbService.findAll().size(), is(5));
     }
 
-    @org.junit.Test
+    @Ignore
+    @Test
     public void delete() throws Exception {
 
     }
 
-    @org.junit.Test
+    @Ignore
+    @Test
     public void findAll() throws Exception {
         DBService dbService = new DBService();
-        for (User user :
+        /*for (User user :
                 dbService.findAll()) {
             System.out.println(user);
         }
-        assertThat(dbService.findAll(), is(this.createUsersArray()));
-//        dbService.findAll();
+        assertThat(dbService.findAll(), is(this.createUsersArray()));*/
+        assertThat(dbService.findAll().size(), is(4));
     }
 
-    @org.junit.Test
+    @Ignore
+    @Test
     public void findByName() throws Exception {
+        new User(4, "Michael", "Micha", "mich@mail.jh",
+                new Timestamp(2017, 7, 30, 18, 12, 8, 000005764));
 
+        dbService.findByName("Marsedy2");
+        assertThat(dbService.findAll().size(), is(5));
     }
 
 }
