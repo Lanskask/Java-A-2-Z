@@ -20,6 +20,7 @@
         <module>Part_5_Collections</module>
         <module>Part_8_SQL</module>
         <module>Part_9_Servlets_JSP</module>
+        <module>someExperiments</module>
     </modules>
 
     <dependencies>
