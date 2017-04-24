@@ -1,0 +1,14 @@
+
+CREATE TABLE users (
+  id    SERIAL NOT NULL,
+  login CHARACTER VARYING(200),
+  password CHARACTER VARYING(200),
+  create_date TIMESTAMP WITHOUT TIME ZONE,
+  CONSTRAINT users_pkey PRIMARY KEY (id)
+)
+
+WITH (
+  OIDS = FALSE
+);
+
+ALTER TABLE users OWNER TO postgres;
