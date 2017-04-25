@@ -20,6 +20,8 @@
         <module>Part_5_Collections</module>
         <module>Part_8_SQL</module>
         <module>Part_9_Servlets_JSP</module>
+        <module>Part_10_Hibernate_2</module>
+        <module>Part_11_Spring</module>
         <module>someExperiments</module>
     </modules>
 
