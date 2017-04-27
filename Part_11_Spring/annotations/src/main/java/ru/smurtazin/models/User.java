@@ -1,7 +1,7 @@
 package ru.smurtazin.models;
 
 /**
- * Created by a1 on 26.04.17.
+ * Created by a1 on 27.04.17.
  */
 public class User {
     private String name;
