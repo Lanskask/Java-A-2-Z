@@ -1,5 +1,5 @@
 //package org.javaee7.servlet.simple;
-package ru.smurtazin.servlets;
+package ru.smurtazin.simple_servlets;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

@@ -16,5 +16,9 @@
 
         <mapping resource="ru/smurtazin/hibmodels/User.hbm.xml"/>
         <mapping class="ru.smurtazin.hibmodels.User"/>
+        <mapping resource="ru/smurtazin/hibmodels/Comment.hbm.xml"/>
+        <mapping class="ru.smurtazin.hibmodels.Comment"/>
+        <mapping resource="ru/smurtazin/hibmodels/Item.hbm.xml"/>
+        <mapping class="ru.smurtazin.hibmodels.Item"/>
     </session-factory>
 </hibernate-configuration>

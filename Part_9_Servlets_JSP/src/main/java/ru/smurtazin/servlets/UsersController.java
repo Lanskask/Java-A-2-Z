@@ -31,10 +31,13 @@ public class UsersController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html"); // Содержание ответа сервера - text/html
         String login = req.getParameter("login"); // взять параметр запроса
-        PrintWriter writer = new PrintWriter(resp.getOutputStream()); // Асоциировать printWriter_IO с выходным потоком ответа сервера
-        // засунуть поток вывода ответа сервера в IO поток printWriter
+
+        PrintWriter writer = new PrintWriter(resp.getOutputStream());
+                // Асоциировать printWriter_IO с выходным потоком ответа сервера
+                // засунуть поток вывода ответа сервера в IO поток printWriter
         writer.append("hell world!"); // добавить в в поток вывода текст - "hell w"
         writer.append("Users: " + this.users);
+
         writer.flush(); // вписать всё в поток
     }
 
@@ -45,21 +48,21 @@ public class UsersController extends HttpServlet {
         doGet(req, resp);
     }
 
-    /*@Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-        req.getRequestDispatcher("/WEB-INF/views/UsersView.jsp").forward(req, resp);
-    }*/
+//    @Override
+//    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+//            throws ServletException, IOException {
+//        req.getRequestDispatcher("/WEB-INF/views/UsersView.jsp").forward(req, resp);
+//    }
 
-    /*@Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-        resp.setContentType("text/html");
-        UserStorage.getInstance().add(new User(req.getParameter("login"), req.getParameter("email")));
-//        this.users.add(req.getParameter("login"));
-//        this.doGet(req, resp);
-        resp.sendRedirect(String.format("%s/UsersView.jsp", req.getContextPath()));
-    }*/
+//    @Override
+//    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+//            throws ServletException, IOException {
+//        resp.setContentType("text/html");
+//        UserStorage.getInstance().add(new User(req.getParameter("login"), req.getParameter("email")));
+////        this.users.add(req.getParameter("login"));
+////        this.doGet(req, resp);
+//        resp.sendRedirect(String.format("%s/UsersView.jsp", req.getContextPath()));
+//    }
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

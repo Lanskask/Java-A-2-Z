@@ -12,6 +12,13 @@ public class User {
     private String password;
     private Timestamp created;
 
+    public User() {
+    }
+
+    public User(int id) {
+        this.id = id;
+    }
+
     public int getId() {
         return id;
     }
@@ -55,7 +62,6 @@ public class User {
         if (!login.equals(user.login)) return false;
         if (password != null ? !password.equals(user.password) : user.password != null) return false;
         return created != null ? created.equals(user.created) : user.created == null;
-
     }
 
     @Override

@@ -3,6 +3,7 @@ package ru.smurtazin.services;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import ru.smurtazin.hibmodels.Item;
 import ru.smurtazin.hibmodels.User;
 
 import java.sql.Timestamp;
@@ -17,7 +18,9 @@ public class UserStorage {
             .buildSessionFactory();
     Session session = this.factory.openSession();
     User user = new User();
+    Item item = new Item();
     List<User> users;
+    List<Item> items;
 
     public static void main(String[] args) {
         UserStorage main = new UserStorage();
@@ -29,10 +32,13 @@ public class UserStorage {
         this.session.beginTransaction();
 
 //        this.create();
-        this.read();
-        this.printUsers();
+//        this.read();
+//        this.printUsers();
 //        this.update();
 //        this.delete();
+        this.experFunc(); // add Item
+        this.readItems();
+        this.printItems();
 
 //        System.out.println(session.createQuery("from User").list());
         this.session.getTransaction().commit();
@@ -40,26 +46,43 @@ public class UserStorage {
         this.factory.close();
     }
 
-    void create() {
-        this.user.setLogin("test");
+    void experFunc() {
+        Item item = new Item();
+        item.setDesc("Item1 description");
+        item.setCreated(new Timestamp(System.currentTimeMillis()));
+        item.setAuthor(new User());
+    }
+
+    void create(User newUser) {
+//        this.user.setLogin("test"); // TODO: Remove comment - it's old variant
+//        this.user = newUser; // TODO: or:
+        this.user.setId(newUser.getId());
+        this.user.setLogin(newUser.getLogin());
+        this.user.setPassword(newUser.getPassword());
+        this.user.setCreated(newUser.getCreated());
 
         this.session.saveOrUpdate(this.user);
     }
 
-    void read() {
+    void readUsers() {
         this.users = this.session.createQuery("from User").list();
     }
 
-    void update() {
-        this.user.setId(4);
-        this.user.setLogin("murt");
+    void readItems() {
+        this.items = this.session.createQuery("from Item").list();
+    }
+
+    void update(User newUser) {
+        this.user.setId(newUser.getId());
+        this.user.setLogin(newUser.getLogin());
+        this.user.setPassword(newUser.getPassword());
         this.user.setCreated(new Timestamp(System.currentTimeMillis()));
 
         this.session.update(this.user);
     }
 
-    void delete() {
-        this.user.setId(4);
+    void delete(User newUser) {
+        this.user.setId(newUser.getId());
 
         this.session.delete(this.user);
     }
@@ -69,4 +92,12 @@ public class UserStorage {
             System.out.println(user.getLogin());
         }
     }
+
+    void printItems() {
+        for (Item item : this.items) {
+            System.out.println(item.toString());
+        }
+    }
+
+
 }
