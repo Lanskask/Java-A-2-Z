@@ -5,6 +5,8 @@
         xsi:schemaLocation = "http://xmlns.jcp.org/xml/ns/javaee 
             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
 
+
+
     <servlet>
         <servlet-name>Servlet2</servlet-name>
         <servlet-class>ru.smurtazin.simple_servlets.Servlet2</servlet-class>
@@ -15,4 +17,13 @@
         <url-pattern>/simpleServlet2</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>
 </web-app>
