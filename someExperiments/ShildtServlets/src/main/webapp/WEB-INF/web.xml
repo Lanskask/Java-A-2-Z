@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app version="3.1"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+            http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>ru.smurtazin.shildtservlets.HelloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/servlet/HelloServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddCookieServlet</servlet-name>
+        <servlet-class>ru.smurtazin.shildtservlets.AddCookieServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddCookieServlet</servlet-name>
+        <url-pattern>/servlet/AddCookieServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ColorGetServlet</servlet-name>
+        <servlet-class>ru.smurtazin.shildtservlets.ColorGetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ColorGetServlet</servlet-name>
+        <url-pattern>/servlet/ColorGetServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ColorPostServlet</servlet-name>
+        <servlet-class>ru.smurtazin.shildtservlets.ColorPostServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ColorPostServlet</servlet-name>
+        <url-pattern>/servlet/ColorPostServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DateServlet</servlet-name>
+        <servlet-class>ru.smurtazin.shildtservlets.DateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DateServlet</servlet-name>
+        <url-pattern>/servlet/DateServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetCookiesServlet</servlet-name>
+        <servlet-class>ru.smurtazin.shildtservlets.GetCookiesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetCookiesServlet</servlet-name>
+        <url-pattern>/servlet/GetCookiesServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PostParametersServlet</servlet-name>
+        <servlet-class>ru.smurtazin.shildtservlets.PostParametersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PostParametersServlet</servlet-name>
+        <url-pattern>/servlet/PostParametersServlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>

@@ -17,6 +17,7 @@
         <module>JSF</module>
         <module>simple-servlet</module>
         <module>Luv2Code</module>
+        <module>ShildtServlets</module>
     </modules>
 
     <dependencies>
