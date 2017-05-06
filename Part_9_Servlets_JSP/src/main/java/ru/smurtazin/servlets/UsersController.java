@@ -41,6 +41,39 @@ public class UsersController extends HttpServlet {
         writer.flush(); // вписать всё в поток
     }
 
+    protected void doGet2(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("text/html");
+        PrintWriter writer2 = resp.getWriter();
+        PrintWriter writer = new PrintWriter(resp.getOutputStream());
+
+        StringBuilder sb = new StringBuilder("table");
+        for (String login : this.users ) {
+            sb.append("<tr><td>" + login + "</td></tr>");
+            sb.append("</table>");
+
+            writer.append(
+                "<!DOCTYPE html>\n" +
+                "<html lang=\"en\">\n" +
+                "<head>\n" +
+                "\t<meta charset=\"utf-8\">\n" +
+                "\t<title>Login Page</title>\n" +
+                "</head>\n" +
+                "<body>\n" +
+                "\t<form action='" + req.getContextPath() + "/echo' method='post'>\n" +
+                "\t\tName : <input type='text' name='login'>\n" +
+                "\t\t<input type='submit'>\n" +
+                "\t</form>\n" +
+                "\t<br/>\n" +
+                sb.toString() +
+                "</body>\n" +
+                "</html>"
+            );
+
+            writer.flush();
+        }
+
+    }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
