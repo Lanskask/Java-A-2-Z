@@ -29,73 +29,24 @@ public class UsersController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html"); // Содержание ответа сервера - text/html
-        String login = req.getParameter("login"); // взять параметр запроса
-
-        PrintWriter writer = new PrintWriter(resp.getOutputStream());
-                // Асоциировать printWriter_IO с выходным потоком ответа сервера
-                // засунуть поток вывода ответа сервера в IO поток printWriter
-        writer.append("hell world!"); // добавить в в поток вывода текст - "hell w"
-        writer.append("Users: " + this.users);
-
-        writer.flush(); // вписать всё в поток
-    }
-
-    protected void doGet2(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html");
-        PrintWriter writer2 = resp.getWriter();
-        PrintWriter writer = new PrintWriter(resp.getOutputStream());
-
-        StringBuilder sb = new StringBuilder("table");
-        for (String login : this.users ) {
-            sb.append("<tr><td>" + login + "</td></tr>");
-            sb.append("</table>");
-
-            writer.append(
-                "<!DOCTYPE html>\n" +
-                "<html lang=\"en\">\n" +
-                "<head>\n" +
-                "\t<meta charset=\"utf-8\">\n" +
-                "\t<title>Login Page</title>\n" +
-                "</head>\n" +
-                "<body>\n" +
-                "\t<form action='" + req.getContextPath() + "/echo' method='post'>\n" +
-                "\t\tName : <input type='text' name='login'>\n" +
-                "\t\t<input type='submit'>\n" +
-                "\t</form>\n" +
-                "\t<br/>\n" +
-                sb.toString() +
-                "</body>\n" +
-                "</html>"
-            );
-
-            writer.flush();
-        }
-
+        req.setAttribute("users", UserStorage.getInstance().getUsers());
+        req.getRequestDispatcher("/WEB-INF/views/UsersView.jsp").forward(req, resp);
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
         resp.setContentType("text/html");
-        this.users.add(req.getParameter("login"));
-        doGet(req, resp);
+        UserStorage.getInstance().add(
+            new User(
+                req.getParameter("login"),
+                req.getParameter("email")
+            )
+        );
+//        this.users.add(req.getParameter("login"));
+//        this.doGet(req, resp);
+        resp.sendRedirect(String.format("%s/", req.getContextPath()));
     }
-
-//    @Override
-//    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-//            throws ServletException, IOException {
-//        req.getRequestDispatcher("/WEB-INF/views/UsersView.jsp").forward(req, resp);
-//    }
-
-//    @Override
-//    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-//            throws ServletException, IOException {
-//        resp.setContentType("text/html");
-//        UserStorage.getInstance().add(new User(req.getParameter("login"), req.getParameter("email")));
-////        this.users.add(req.getParameter("login"));
-////        this.doGet(req, resp);
-//        resp.sendRedirect(String.format("%s/UsersView.jsp", req.getContextPath()));
-//    }
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
