@@ -18,6 +18,8 @@
         <module>simple-servlet</module>
         <module>Luv2Code</module>
         <module>ShildtServlets</module>
+        <module>JavaEE</module>
+        <module>SpringTesting</module>
     </modules>
 
     <dependencies>
