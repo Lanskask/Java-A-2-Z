@@ -2,6 +2,7 @@
 *.class
 *.txt
 .idea
+**/.gradle/*
 .git
 **/target/*
 My_DB_Project_Description.txt
