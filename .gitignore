@@ -5,6 +5,8 @@
 **/.gradle/*
 .git
 **/target/*
+**/build/*
+**/gradle/*
 My_DB_Project_Description.txt
 !/Part_2_OOP/TrakerToIDEA/OtherFiles
 *.sublime-project
