@@ -20,6 +20,7 @@
         <module>ShildtServlets</module>
         <module>JavaEE</module>
         <module>SpringTesting</module>
+        <module>OtherExperiments</module>
     </modules>
 
     <dependencies>
