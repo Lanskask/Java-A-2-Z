@@ -10,6 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>SpringTesting</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>AngSpr_Tut</module>
+        <module>BuildRestService</module>
+    </modules>
 
 
 </project>

@@ -70,5 +70,25 @@ public class User {
     public Timestamp getCreateDate() {
         return createDate;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setCreateDate(Timestamp createDate) {
+        this.createDate = createDate;
+    }
 }
 

@@ -13,11 +13,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>EJB_frVideo</module>
-        <module>JSF</module>
-        <module>simple-servlet</module>
-        <module>Luv2Code</module>
-        <module>ShildtServlets</module>
         <module>JavaEE</module>
         <module>SpringTesting</module>
         <module>OtherExperiments</module>

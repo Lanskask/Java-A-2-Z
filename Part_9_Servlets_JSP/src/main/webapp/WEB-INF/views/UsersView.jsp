@@ -1,8 +1,9 @@
-<%@ page import="ru.smurtazin.servlets.UserStorage" %>
+<%--<%@ page import="ru.smurtazin.servlets.UserStorage" %>
 <%@ page import="ru.smurtazin.servlets.User" %>
-<%@ page import="java.util.List" %>
+<%@ page import="java.util.List" %>--%>
 <%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: a1
@@ -10,7 +11,7 @@
   Time: 17:18
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <html>
 <head>
 	<style>
@@ -36,7 +37,6 @@
 <body>
 
 <%--<form action="<%=request.getContextPath()%>/" method="post">--%>
-<p>2</p>
 <form action="${pageContext.servletContext.contextPath}/" method="post">
 	<table>
 		<tr>
@@ -55,6 +55,8 @@
 	</table>
 </form>
 
+<p>End of Form</p>
+
 <table id="loginUsersResults">
 	<tr>
 		<th>Login</th>
@@ -62,12 +64,14 @@
 	</tr>
 	<%--<% for (User user : UserStorage.getInstance().getUsers()) { %>--%>
 	<%--<% for (User user : (List<User>) request.getAttribute("users")) { %>--%>
-	<c:forEach items="${users}" var="user">
+	<c:forEach var="user" items="${users}">
 	<tr>
 		<td>
+			<%--${user.login} --%>
 			<c:out value="${user.login}"/>
 		</td>
 		<td>
+			<%--${user.email}--%>
 			<c:out value="${user.email}"/>
 		</td>
 	</tr>
