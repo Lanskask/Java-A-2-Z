@@ -11,7 +11,9 @@ import java.util.ArrayList;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
+import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 // TODO: How to say test. that it is unimportant concreet Timestamp, getted from DB?
 
@@ -21,25 +23,18 @@ import static org.mockito.Mockito.mock;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class DBServiceTest {
 
-	/*
-	* MathOperationsToTest matToTest;
-
-	@Before
-	public void setUp() throws Exception {
-//		this.matToTest = new MathOperationsToTest();
-		this.matToTest = mock(MathOperationsToTest.class);
-	}
-	* */
-
     DBService dbService = new DBService();
 		Timestamp timeStMock;
-
+		User userMock;
     User userToWorkWith;
 
     @Before
     public void setUp() {
         timeStMock = mock(Timestamp.class);
-        userToWorkWith = new User(5, "Marsedy2", "Mars2", "mars22@mail.mr");
+	      userMock = mock(User.class);
+//	      when(userMock.getCreateDate()).then(any(Timestamp.class));
+				when(userMock.getCreateDate()).thenReturn(any(Timestamp.class)); // timeStMock
+				userToWorkWith = new User(5, "Marsedy2", "Mars2", "mars22@mail.mr");
     }
 //    @Before
     public ArrayList<User> createUsersArrayToCompareWith() {
@@ -53,8 +48,6 @@ public class DBServiceTest {
         return arrayToCheckWith;
     }
 
-    @Ignore
-    @Test
     public void printAll() throws Exception {
         for (User user : this.dbService.findAll()) {
             System.out.println(user.toString());

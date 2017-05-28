@@ -9,14 +9,9 @@ import java.time.format.DateTimeFormatter;
  */
 public class User {
 
-    int id;
-    String name, login, email;
-    Timestamp createDate;
-
-    public User(String login, String email) {
-        this.login = login;
-        this.email = email;
-    }
+    private int id;
+		private String name, login, email;
+		private Timestamp createDate;
 
     public User(String name, String login, String email) {
         this.name = name;
@@ -29,13 +24,6 @@ public class User {
         this.name = name;
         this.login = login;
         this.email = email;
-    }
-
-    public User(String name, String login, String email, Timestamp createDate) {
-        this.name = name;
-        this.login = login;
-        this.email = email;
-        this.createDate = createDate;
     }
 
     public User(int id, String name, String login, String email, Timestamp createDate) {
