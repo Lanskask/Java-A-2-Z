@@ -22,6 +22,7 @@ import static org.mockito.Mockito.when;
  */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class DBServiceTest {
+    
 
     DBService dbService = new DBService();
 		Timestamp timeStMock;
