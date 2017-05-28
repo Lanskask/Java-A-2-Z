@@ -18,6 +18,12 @@ public class User {
         this.email = email;
     }
 
+    public User(String name, String login, String email) {
+        this.name = name;
+        this.login = login;
+        this.email = email;
+    }
+
     public User(int id, String name, String login, String email) {
         this.id = id;
         this.name = name;
@@ -71,24 +77,5 @@ public class User {
         return createDate;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setCreateDate(Timestamp createDate) {
-        this.createDate = createDate;
-    }
 }
 

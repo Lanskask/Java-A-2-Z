@@ -25,6 +25,12 @@ import java.util.ArrayList;
 public class DBService {
     public static final Logger Log = LoggerFactory.getLogger(DBService.class);
 
+    public static final DBService instance = new DBService();
+
+    public static DBService getInstance() {
+        return instance;
+    }
+
     String url = "jdbc:postgresql://localhost:5432/users_db";
     String username = "postgres";
     String password = "postgres";
@@ -88,12 +94,12 @@ public class DBService {
     /**
      * Delete item in tasks list
      */
-    public void delete(int id) {
+    public void delete(User user) {
         String sql_query = "DELETE FROM users WHERE id = ?;";
 
         try (Connection conn = DriverManager.getConnection(this.url, this.username, this.password);
              PreparedStatement preparedStatement = conn.prepareStatement(sql_query)) {
-            preparedStatement.setInt(1, id);
+            preparedStatement.setInt(1, user.getId());
 
             preparedStatement.executeUpdate();
         } catch(SQLException e) {
@@ -141,6 +147,37 @@ public class DBService {
         try(Connection conn = DriverManager.getConnection(this.url, this.username, this.password);
             PreparedStatement preparedStatement = this.conn.prepareStatement(sql_query)) {
             this.preparedStatement.setString(1, "%" + name + "%");
+            this.rs = this.preparedStatement.executeQuery();
+
+            while (this.rs.next()) {
+                result.add(new User(
+                        this.rs.getInt("id"),
+                        this.rs.getString("user_name"),
+                        this.rs.getString("user_login"),
+                        this.rs.getString("email"),
+                        this.rs.getTimestamp("createDate")
+                ));
+            }
+
+        } catch(SQLException e) {
+            Log.error("SQLException: " + e.getMessage(), e);
+        }
+
+        return result;
+    }
+
+    /**
+     * Get some pattern in name need to found, back ArrayList of matched Items
+     * @param user
+     * @return ArrayList<Item> result
+     */
+    public ArrayList<User> findByAllUser(User user) {
+        ArrayList<User> result = new ArrayList<User>();
+        String sql_query = "SELECT * FROM users WHERE id = ?;";
+
+        try(Connection conn = DriverManager.getConnection(this.url, this.username, this.password);
+            PreparedStatement preparedStatement = this.conn.prepareStatement(sql_query)) {
+            this.preparedStatement.setInt(1, user.getId());
             this.rs = this.preparedStatement.executeQuery();
 
             while (this.rs.next()) {

@@ -14,6 +14,7 @@ public class UserStorage {
 
     public static final UserStorage instance = new UserStorage();
 
+    // TODO: Rewrite to use with PostgrSQL Storage
     private List<User> users = new CopyOnWriteArrayList<User>();
 
     public UserStorage() {

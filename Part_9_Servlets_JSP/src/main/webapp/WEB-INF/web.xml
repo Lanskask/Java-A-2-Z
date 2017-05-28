@@ -4,7 +4,6 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <!--<web-app>-->
-<!-- For Faces -->
 <web-app version="3.1"
          xmlns="http://xmlns.jcp.org/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -27,6 +26,5 @@
     <servlet-name>Users Controller Servlet</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
-
 
 </web-app>

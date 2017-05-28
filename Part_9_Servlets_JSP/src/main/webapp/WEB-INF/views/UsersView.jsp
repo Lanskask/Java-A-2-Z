@@ -40,6 +40,10 @@
 <form action="${pageContext.servletContext.contextPath}/" method="post">
 	<table>
 		<tr>
+			<td>Name:</td>
+			<td><input type="text" name="name"></td>
+		</tr>
+		<tr>
 			<td>Login:</td>
 			<td><input type="text" name="login"></td>
 		</tr>
@@ -59,20 +63,30 @@
 
 <table id="loginUsersResults">
 	<tr>
+		<th>Id</th>
+		<th>Name</th>
 		<th>Login</th>
 		<th>EMail</th>
+		<th>Creation Date</th>
 	</tr>
 	<%--<% for (User user : UserStorage.getInstance().getUsers()) { %>--%>
 	<%--<% for (User user : (List<User>) request.getAttribute("users")) { %>--%>
 	<c:forEach var="user" items="${users}">
 	<tr>
 		<td>
-			<%--${user.login} --%>
+			<c:out value="${user.id}"/>
+		</td>
+		<td>
+			<c:out value="${user.name}"/>
+		</td>
+		<td>
 			<c:out value="${user.login}"/>
 		</td>
 		<td>
-			<%--${user.email}--%>
 			<c:out value="${user.email}"/>
+		</td>
+		<td>
+			<c:out value="${user.createDate}"/>
 		</td>
 	</tr>
 	</c:forEach>
