@@ -6,6 +6,7 @@ import org.hibernate.cfg.Configuration;
 import ru.smurtazin.hibmodels.Item;
 import ru.smurtazin.hibmodels.User;
 
+import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -103,6 +104,27 @@ public class UserStorage {
 	void readUsers() {
 		this.users = this.session.createQuery("from User").list();
 	}
+
+	User findUserById() {
+		return this.session.createQuery("from User");
+
+
+	}
+
+/*	public User getBusById(Long bus_id) throws SQLException {
+		Session session = null;
+		Bus bus = null;
+		try {
+			session = HibernateUtil.getSessionFactory().openSession();
+			bus = (Bus) session.load(Bus.class, bus_id);
+		} catch (Exception e) {
+		} finally {
+			if (session != null && session.isOpen()) {
+				session.close();
+			}
+		}
+		return bus;
+	}*/
 
 	/**
 	 * List of all Items.
