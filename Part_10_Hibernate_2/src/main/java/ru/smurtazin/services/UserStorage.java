@@ -13,91 +13,121 @@ import java.util.List;
  * Created by a1 on 24.04.17.
  */
 public class UserStorage {
-    SessionFactory factory = new Configuration()
-            .configure()
-            .buildSessionFactory();
-    Session session = this.factory.openSession();
-    User user = new User();
-    Item item = new Item();
-    List<User> users;
-    List<Item> items;
+	SessionFactory factory = new Configuration()
+			.configure()
+			.buildSessionFactory();
+	Session session = this.factory.openSession();
+	User user = new User();
+	Item item = new Item();
+	List<User> users;
+	List<Item> items;
 
-    public static void main(String[] args) {
-        UserStorage main = new UserStorage();
+	public static void main(String[] args) {
+		UserStorage main = new UserStorage();
 
-        main.run();
-    }
+		main.run();
+	}
 
-    void run() {
-        this.session.beginTransaction();
+	void run() {
+		this.session.beginTransaction();
 
 //        this.create();
 //        this.read();
 //        this.printUsers();
 //        this.update();
 //        this.delete();
-        this.experFunc(); // add Item
-        this.readItems();
-        this.printItems();
+		this.experFunc(); // add Item
+		this.readItems();
+		this.printItems();
 
 //        System.out.println(session.createQuery("from User").list());
-        this.session.getTransaction().commit();
-        this.session.close();
-        this.factory.close();
-    }
+		this.session.getTransaction().commit();
+		this.session.close();
+		this.factory.close();
+	}
 
-    void experFunc() {
-        Item item = new Item();
-        item.setDesc("Item1 description");
-        item.setCreated(new Timestamp(System.currentTimeMillis()));
-        item.setAuthor(new User());
-    }
+	/**
+	 * Just create one this.item
+	 */
+	void experFunc() {
+//		Item item = new Item();
+		this.item.setDesc("Item1 description");
+		this.item.setCreated(new Timestamp(System.currentTimeMillis()));
+		this.item.setAuthor(new User());
+	}
 
-    void create(User newUser) {
+	/**
+	 * Creates or Updates one User - newUser
+	 * Insert newUser into Database
+	 * @param newUser
+	 */
+	void create(User newUser) {
 //        this.user.setLogin("test"); // TODO: Remove comment - it's old variant
 //        this.user = newUser; // TODO: or:
-        this.user.setId(newUser.getId());
-        this.user.setLogin(newUser.getLogin());
-        this.user.setPassword(newUser.getPassword());
-        this.user.setCreated(newUser.getCreated());
+		this.user.setId(newUser.getId());
+		this.user.setLogin(newUser.getLogin());
+		this.user.setPassword(newUser.getPassword());
+		this.user.setCreated(newUser.getCreated());
 
-        this.session.saveOrUpdate(this.user);
-    }
+		this.session.saveOrUpdate(this.user);
+	}
 
-    void readUsers() {
-        this.users = this.session.createQuery("from User").list();
-    }
+	/**
+	 * Updates (not create&&||update) one User - newUser
+	 * @param newUser
+	 */
+	void update(User newUser) {
+		this.user.setId(newUser.getId());
+		this.user.setLogin(newUser.getLogin());
+		this.user.setPassword(newUser.getPassword());
+		this.user.setCreated(new Timestamp(System.currentTimeMillis()));
 
-    void readItems() {
-        this.items = this.session.createQuery("from Item").list();
-    }
+		this.session.update(this.user);
+	}
 
-    void update(User newUser) {
-        this.user.setId(newUser.getId());
-        this.user.setLogin(newUser.getLogin());
-        this.user.setPassword(newUser.getPassword());
-        this.user.setCreated(new Timestamp(System.currentTimeMillis()));
+	/**
+	 * Delete one user
+	 * Check through: assertThat(userStorage.users, is(arrayToCompareWith.remove(User)) );
+	 * @param newUser
+	 */
+	void delete(User newUser) {
+		this.user.setId(newUser.getId());
 
-        this.session.update(this.user);
-    }
+		this.session.delete(this.user);
+	}
 
-    void delete(User newUser) {
-        this.user.setId(newUser.getId());
+	/**
+	 * List of all Users.
+	 * get throw: UsesrStorage.users;
+	 */
+	void readUsers() {
+		this.users = this.session.createQuery("from User").list();
+	}
 
-        this.session.delete(this.user);
-    }
+	/**
+	 * List of all Items.
+	 * get through: UsesrStorage.items;
+	 */
+	void readItems() {
+		this.items = this.session.createQuery("from Item").list();
+	}
 
-    void printUsers() {
-        for (User user : this.users) {
-            System.out.println(user.getLogin());
-        }
-    }
+	/**
+	 * Print Users logins
+	 */
+	void printUsers() {
+		for (User user : this.users) {
+			System.out.println(user.getLogin());
+		}
+	}
 
-    void printItems() {
-        for (Item item : this.items) {
-            System.out.println(item.toString());
-        }
-    }
-
+	/**
+	 * Print Items.toString
+	 */
+	void printItems() {
+		for (Item item : this.items) {
+			System.out.println(item.toString());
+		}
+	}
 
 }

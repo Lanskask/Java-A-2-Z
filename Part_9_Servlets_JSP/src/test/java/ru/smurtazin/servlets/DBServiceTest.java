@@ -22,18 +22,19 @@ import static org.mockito.Mockito.when;
  */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class DBServiceTest {
-    
 
     DBService dbService = new DBService();
 		Timestamp timeStMock;
 		User userMock;
     User userToWorkWith;
+    User user;
 
     @Before
     public void setUp() {
         timeStMock = mock(Timestamp.class);
 	      userMock = mock(User.class);
 //	      when(userMock.getCreateDate()).then(any(Timestamp.class));
+
 				when(userMock.getCreateDate()).thenReturn(any(Timestamp.class)); // timeStMock
 				userToWorkWith = new User(5, "Marsedy2", "Mars2", "mars22@mail.mr");
     }
