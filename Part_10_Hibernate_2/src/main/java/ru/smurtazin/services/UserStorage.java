@@ -105,8 +105,8 @@ public class UserStorage {
 		this.users = this.session.createQuery("from User").list();
 	}
 
-	User findUserById() {
-		return this.session.createQuery("from User");
+	User findUserById(int id) {
+//		return this.session.createQuery("from User where id = ?");
 
 
 	}
