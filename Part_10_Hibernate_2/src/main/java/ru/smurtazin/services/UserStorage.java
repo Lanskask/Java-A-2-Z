@@ -105,10 +105,10 @@ public class UserStorage {
 		this.users = this.session.createQuery("from User").list();
 	}
 
-	User findUserById(int id) {
+	User findUserById(int id) { // TODO: Realize this Query
 //		return this.session.createQuery("from User where id = ?");
 
-
+		return new User();
 	}
 
 /*	public User getBusById(Long bus_id) throws SQLException {
