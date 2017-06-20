@@ -1,5 +1,6 @@
 package ru.smurtazin.Collections.services.list.Queue;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
@@ -69,5 +70,22 @@ public class LinkedQueueTest {
 
         assertThat(this.linkedQueue.dequeue(), is(1));
     }
+
+    @Ignore
+    @Test
+    public void toStringTest() throws Exception {
+        System.out.println(this.linkedQueue.toString());
+        this.linkedQueue.enqueue(1);
+        this.linkedQueue.enqueue(2);
+        this.linkedQueue.enqueue(3);
+
+        StringBuilder s = new StringBuilder();
+        for (Integer item : this.linkedQueue)
+            s.append(item + " ");
+
+        assertThat(s.toString(), is("q"));
+//        assertThat(this.linkedQueue.toString(), is("q"));
+    }
+
 
 }
