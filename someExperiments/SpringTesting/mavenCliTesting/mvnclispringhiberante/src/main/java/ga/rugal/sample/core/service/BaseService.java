@@ -1,12 +1,10 @@
 package ga.rugal.sample.core.service;
 
 /**
- *
- * @author Rugal Bernstein
  * @param <T>
+ * @author Rugal Bernstein
  */
-public interface BaseService<T>
-{
+public interface BaseService<T> {
 
-    T getDAO();
+	T getDAO();
 }

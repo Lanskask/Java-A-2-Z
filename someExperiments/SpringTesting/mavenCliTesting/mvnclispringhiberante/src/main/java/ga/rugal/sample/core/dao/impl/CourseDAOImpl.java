@@ -6,16 +6,13 @@ import ml.rugal.sshcommon.hibernate.HibernateBaseDao;
 import org.springframework.stereotype.Repository;
 
 /**
- *
  * @author Rugal Bernstein
  */
 @Repository
-public class CourseDAOImpl extends HibernateBaseDao<Course, Integer> implements CourseDAO
-{
+public class CourseDAOImpl extends HibernateBaseDao<Course, Integer> implements CourseDAO {
 
-    @Override
-    protected Class<Course> getEntityClass()
-    {
-        return Course.class;
-    }
+	@Override
+	protected Class<Course> getEntityClass() {
+		return Course.class;
+	}
 }

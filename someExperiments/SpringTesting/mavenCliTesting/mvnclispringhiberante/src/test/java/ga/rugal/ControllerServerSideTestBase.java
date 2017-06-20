@@ -20,8 +20,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 @WebAppConfiguration
 @ContextConfiguration(classes = config.SpringMVCApplicationContext.class)
 @Ignore
-public abstract class ControllerServerSideTestBase extends UnitTestBase
-{
+public abstract class ControllerServerSideTestBase extends UnitTestBase {
 
     /**
      * This is a request handler used to map all request into handle ACTION class.
@@ -34,8 +33,7 @@ public abstract class ControllerServerSideTestBase extends UnitTestBase
     protected MockHttpServletResponse response;
 
     @Before
-    public void before()
-    {
+    public void before() {
         request = new MockHttpServletRequest();
         request.setCharacterEncoding("UTF-8");
         response = new MockHttpServletResponse();

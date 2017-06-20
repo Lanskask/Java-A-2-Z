@@ -4,17 +4,15 @@ import ga.rugal.sample.core.entity.Registration;
 import ml.rugal.sshcommon.hibernate.Updater;
 
 /**
- *
  * @author Rugal Bernstein
  */
-public interface RegistrationDAO
-{
+public interface RegistrationDAO {
 
-    Registration get(Integer cid);
+	Registration get(Integer cid);
 
-    Registration delete(Registration registration);
+	Registration delete(Registration registration);
 
-    Registration save(Registration registration);
+	Registration save(Registration registration);
 
-    Registration updateByUpdater(Updater<Registration> updater);
+	Registration updateByUpdater(Updater<Registration> updater);
 }

@@ -10,28 +10,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- *
  * @author Rugal Bernstein
  */
 @Setter
 @Service
 @Slf4j
-public class RegistrationServiceImpl implements RegistrationService
-{
+public class RegistrationServiceImpl implements RegistrationService {
 
-    @Autowired
-    private RegistrationDAO registrationDAO;
+	@Autowired
+	private RegistrationDAO registrationDAO;
 
-    @Override
-    public RegistrationDAO getDAO()
-    {
-        return this.registrationDAO;
-    }
+	@Override
+	public RegistrationDAO getDAO() {
+		return this.registrationDAO;
+	}
 
-    @Override
-    public Registration update(Registration registration)
-    {
-        Updater<Registration> updater = new Updater<>(registration);
-        return this.registrationDAO.updateByUpdater(updater);
-    }
+	@Override
+	public Registration update(Registration registration) {
+		Updater<Registration> updater = new Updater<>(registration);
+		return this.registrationDAO.updateByUpdater(updater);
+	}
 }

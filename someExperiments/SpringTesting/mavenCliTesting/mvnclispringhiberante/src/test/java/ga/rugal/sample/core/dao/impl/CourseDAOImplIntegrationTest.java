@@ -11,35 +11,30 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
- *
  * @author Rugal Bernstein
  */
 @Slf4j
-public class CourseDAOImplIntegrationTest extends IntegrationTestBase
-{
+public class CourseDAOImplIntegrationTest extends IntegrationTestBase {
 
-    @Autowired
-    private Course course;
+	@Autowired
+	private Course course;
 
-    @Autowired
-    private CourseDAO courseDAO;
+	@Autowired
+	private CourseDAO courseDAO;
 
-    @Before
-    public void setUp()
-    {
-        this.courseDAO.save(this.course);
-    }
+	@Before
+	public void setUp() {
+		this.courseDAO.save(this.course);
+	}
 
-    @After
-    public void tearDown()
-    {
-        this.courseDAO.delete(this.course);
-    }
+	@After
+	public void tearDown() {
+		this.courseDAO.delete(this.course);
+	}
 
-    @Test
-    public void get()
-    {
-        Course db = this.courseDAO.get(this.course.getCid());
-        Assert.assertEquals(this.course, db);
-    }
+	@Test
+	public void get() {
+		Course db = this.courseDAO.get(this.course.getCid());
+		Assert.assertEquals(this.course, db);
+	}
 }

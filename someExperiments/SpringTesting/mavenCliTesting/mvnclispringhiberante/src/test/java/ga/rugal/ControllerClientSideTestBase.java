@@ -16,8 +16,7 @@ import org.springframework.web.context.WebApplicationContext;
 @ContextConfiguration(classes = config.SpringMVCApplicationContext.class)
 @WebAppConfiguration
 @Ignore
-public abstract class ControllerClientSideTestBase extends IntegrationTestBase
-{
+public abstract class ControllerClientSideTestBase extends IntegrationTestBase {
 
     @Autowired
     public WebApplicationContext wac;
@@ -25,8 +24,7 @@ public abstract class ControllerClientSideTestBase extends IntegrationTestBase
     public MockMvc mockMvc;
 
     @Before
-    public void setup()
-    {
+    public void setup() {
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
     }
 }

@@ -10,29 +10,25 @@ import org.mockito.stubbing.Answer;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
- *
  * @author Rugal Bernstein
  */
-public class RegistrationServiceImplTest extends UnitTestBase
-{
+public class RegistrationServiceImplTest extends UnitTestBase {
 
-    private RegistrationDAO registrationDAO = Mockito.mock(RegistrationDAO.class, (Answer) (invocation) -> null);
+	private RegistrationDAO registrationDAO = Mockito.mock(RegistrationDAO.class, (Answer) (invocation) -> null);
 
-    @Autowired
-    private Registration registration;
+	@Autowired
+	private Registration registration;
 
-    @Autowired
-    private RegistrationServiceImpl courseService;
+	@Autowired
+	private RegistrationServiceImpl courseService;
 
-    @Before
-    public void before()
-    {
-        this.courseService.setRegistrationDAO(this.registrationDAO);
-    }
+	@Before
+	public void before() {
+		this.courseService.setRegistrationDAO(this.registrationDAO);
+	}
 
-    @Test
-    public void persist_update()
-    {
-        this.courseService.update(this.registration);
-    }
+	@Test
+	public void persist_update() {
+		this.courseService.update(this.registration);
+	}
 }

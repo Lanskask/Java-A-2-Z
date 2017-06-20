@@ -10,28 +10,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- *
  * @author Rugal Bernstein
  */
 @Setter
 @Service
 @Slf4j
-public class CourseServiceImpl implements CourseService
-{
+public class CourseServiceImpl implements CourseService {
 
-    @Autowired
-    private CourseDAO courseDAO;
+	@Autowired
+	private CourseDAO courseDAO;
 
-    @Override
-    public CourseDAO getDAO()
-    {
-        return this.courseDAO;
-    }
+	@Override
+	public CourseDAO getDAO() {
+		return this.courseDAO;
+	}
 
-    @Override
-    public Course update(Course course)
-    {
-        Updater<Course> updater = new Updater<>(course);
-        return this.courseDAO.updateByUpdater(updater);
-    }
+	@Override
+	public Course update(Course course) {
+		Updater<Course> updater = new Updater<>(course);
+		return this.courseDAO.updateByUpdater(updater);
+	}
 }

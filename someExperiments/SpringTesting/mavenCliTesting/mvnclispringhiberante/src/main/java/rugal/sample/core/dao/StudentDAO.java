@@ -5,19 +5,17 @@ import ml.rugal.sshcommon.page.Pagination;
 import rugal.sample.core.entity.Student;
 
 /**
- *
  * @author Rugal Bernstein
  */
-public interface StudentDAO
-{
+public interface StudentDAO {
 
-    Student delete(Student bean);
+	Student delete(Student bean);
 
-    Student get(Integer id);
+	Student get(Integer id);
 
-    Pagination getPage(int pageNo, int pageSize);
+	Pagination getPage(int pageNo, int pageSize);
 
-    Student save(Student bean);
+	Student save(Student bean);
 
-    Student updateByUpdater(Updater<Student> updater);
+	Student updateByUpdater(Updater<Student> updater);
 }

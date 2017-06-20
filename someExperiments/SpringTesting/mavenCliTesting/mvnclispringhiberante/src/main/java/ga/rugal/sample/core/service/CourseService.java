@@ -5,12 +5,10 @@ import ga.rugal.sample.core.entity.Course;
 import ga.rugal.sample.core.service.BaseService;
 
 /**
- *
  * @author Rugal Bernstein
  */
-public interface CourseService extends BaseService<CourseDAO>
-{
+public interface CourseService extends BaseService<CourseDAO> {
 
-    Course update(Course course);
+	Course update(Course course);
 
 }

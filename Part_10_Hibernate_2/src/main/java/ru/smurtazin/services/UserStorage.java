@@ -15,12 +15,15 @@ import java.util.List;
  * Created by a1 on 24.04.17.
  */
 public class UserStorage {
-    SessionFactory factory = new Configuration()
+
+	SessionFactory factory = new Configuration()
             .configure()
             .buildSessionFactory();
     Session session = this.factory.openSession();
+
     User user = new User();
     Item item = new Item();
+
     List<User> users;
     List<Item> items;
 
@@ -52,7 +55,6 @@ public class UserStorage {
      * Just create one this.item
      */
     void experFunc() {
-//		Item item = new Item();
         this.item.setDesc("Item1 description");
         this.item.setCreated(new Timestamp(System.currentTimeMillis()));
         this.item.setAuthor(new User());
@@ -65,9 +67,6 @@ public class UserStorage {
      * @param newUser
      */
     void create(User newUser) {
-//        this.user.setLogin("test"); // TODO: Remove comment - it's old variant
-//        this.user = newUser; // TODO: or:
-<<<<<<< HEAD
 		this.user.setId(newUser.getId());
 		this.user.setLogin(newUser.getLogin());
 		this.user.setPassword(newUser.getPassword());
@@ -108,56 +107,7 @@ public class UserStorage {
 		this.users = this.session.createQuery("from User").list();
 	}
 
-	User findUserById(int id) { // TODO: Realize this Query
-//		return this.session.createQuery("from User where id = ?");
-
-		return new User();
-	}
-=======
-        this.user.setId(newUser.getId());
-        this.user.setLogin(newUser.getLogin());
-        this.user.setPassword(newUser.getPassword());
-        this.user.setCreated(newUser.getCreated());
-
-        this.session.saveOrUpdate(this.user);
-    }
-
-    /**
-     * Updates (not create&&||update) one User - newUser
-     *
-     * @param newUser
-     */
-    void update(User newUser) {
-        this.user.setId(newUser.getId());
-        this.user.setLogin(newUser.getLogin());
-        this.user.setPassword(newUser.getPassword());
-        this.user.setCreated(new Timestamp(System.currentTimeMillis()));
-
-        this.session.update(this.user);
-    }
-
-    /**
-     * Delete one user
-     * Check through: assertThat(userStorage.users, is(arrayToCompareWith.remove(User)) );
-     *
-     * @param newUser
-     */
-    void delete(User newUser) {
-        this.user.setId(newUser.getId());
-
-        this.session.delete(this.user);
-    }
-
-    /**
-     * List of all Users.
-     * get throw: UsesrStorage.users;
-     */
-    void readUsers() {
-        this.users = this.session.createQuery("from User").list();
-    }
-
     User findUserById(int id) {
-//		return this.session.createQuery("from User where id = :id").setParameter("id", id).list().get(0);
 
         String hql = "FROM User WHERE id = :id";
         Query query = this.session.createQuery(hql);
@@ -173,22 +123,6 @@ public class UserStorage {
             return null;
         }
     }
->>>>>>> 037d3dd41bdb6239b3b50da665c64b65fc98f786
-
-/*	public User getBusById(Long bus_id) throws SQLException {
-        Session session = null;
-		Bus bus = null;
-		try {
-			session = HibernateUtil.getSessionFactory().openSession();
-			bus = (Bus) session.load(Bus.class, bus_id);
-		} catch (Exception e) {
-		} finally {
-			if (session != null && session.isOpen()) {
-				session.close();
-			}
-		}
-		return bus;
-	}*/
 
     /**
      * List of all Items.

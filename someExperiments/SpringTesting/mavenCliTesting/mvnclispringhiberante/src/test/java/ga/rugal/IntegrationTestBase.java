@@ -10,11 +10,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @author Rugal Bernstein
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes =
-{
+@ContextConfiguration(classes = {
     config.TestApplicationContext.class, config.ApplicationContext.class
 })
 @Ignore
-public abstract class IntegrationTestBase
-{
+public abstract class IntegrationTestBase {
 }

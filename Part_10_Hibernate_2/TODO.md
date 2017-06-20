@@ -1,5 +1,9 @@
 # TODO
 
+## TODO Important
+- [ ] TODO: Check Lombok annotations
+
+
 ## Все_вопросы_Ч10_Hibernate
 
 1. Создать TODO list - необходимо создать простое приложение todolist.

@@ -10,29 +10,25 @@ import org.mockito.stubbing.Answer;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
- *
  * @author Rugal Bernstein
  */
-public class StudentServiceImplTest extends UnitTestBase
-{
+public class StudentServiceImplTest extends UnitTestBase {
 
-    private StudentDAO studentDAO = Mockito.mock(StudentDAO.class, (Answer) (invocation) -> null);
+	private StudentDAO studentDAO = Mockito.mock(StudentDAO.class, (Answer) (invocation) -> null);
 
-    @Autowired
-    private Student student;
+	@Autowired
+	private Student student;
 
-    @Autowired
-    private StudentServiceImpl studentService;
+	@Autowired
+	private StudentServiceImpl studentService;
 
-    @Before
-    public void before()
-    {
-        this.studentService.setStudentDAO(this.studentDAO);
-    }
+	@Before
+	public void before() {
+		this.studentService.setStudentDAO(this.studentDAO);
+	}
 
-    @Test
-    public void update()
-    {
-        this.studentService.update(this.student);
-    }
+	@Test
+	public void update() {
+		this.studentService.update(this.student);
+	}
 }
