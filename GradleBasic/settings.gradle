@@ -1,4 +1,0 @@
-rootProject.name = 'GradleBasic'
-include 'RelationalDataJDBC'
-include 'ValidatingForm'
-
