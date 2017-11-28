@@ -14,7 +14,7 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 
-group = 'ru.smurtazin.springboot.exp1'
+group = 'ru.smurtazin.loan'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
@@ -30,6 +30,8 @@ dependencies {
 	runtime('com.h2database:h2')
 	compileOnly('org.projectlombok:lombok')
 
+	runtime('org.postgresql:postgresql')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
-	compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '1.3.0.RELEASE'
+
+	testCompile("org.springframework.security:spring-security-test")
 }

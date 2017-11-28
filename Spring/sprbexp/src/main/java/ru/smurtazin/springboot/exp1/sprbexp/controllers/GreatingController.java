@@ -1,4 +1,4 @@
-package ru.smurtazin.springboot.exp1.sprbexp.ru.smurtazin.springboot.exp1.sprbexp.controllers;
+package ru.smurtazin.springboot.exp1.sprbexp.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
