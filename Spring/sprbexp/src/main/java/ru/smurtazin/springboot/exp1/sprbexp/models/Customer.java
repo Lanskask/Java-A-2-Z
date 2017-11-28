@@ -10,6 +10,7 @@ import javax.persistence.*;
 @ToString
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Customer {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

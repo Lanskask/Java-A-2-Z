@@ -16,14 +16,15 @@ public class GreetingThymeController {
     @GetMapping("greeting_form")
     public String greetingForm(Model model) {
         List<String> strList = Arrays.asList("asd", "asdas", "asf");
-//        strList.get(0).length()
+
         model.addAttribute("greeting", new Greeting());
         model.addAttribute("list_of_strings", strList );
         return "greeting_form";
     }
 
     @PostMapping("greeting_form")
-    public String greetingSubmit(@ModelAttribute Greeting greeting) {
+    public String greetingSubmit(@ModelAttribute Greeting greeting/*,
+                                 @ModelAttribute List<String> strList*/) {
         return "result";
     }
 
