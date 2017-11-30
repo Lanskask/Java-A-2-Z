@@ -18,7 +18,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Autowired
 	public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
-		
 	  auth.jdbcAuthentication().dataSource(dataSource)
 		.usersByUsernameQuery("select username, password, enabled from users where username=?")
 		.authoritiesByUsernameQuery("select username, role from user_roles where username=?");
@@ -26,7 +25,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-
 	  http.authorizeRequests()
 		.antMatchers("/hello").access("hasRole('ROLE_ADMIN')")		
 		.anyRequest().permitAll()
