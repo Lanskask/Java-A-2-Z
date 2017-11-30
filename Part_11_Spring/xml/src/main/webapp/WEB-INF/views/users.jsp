@@ -10,7 +10,7 @@
 <body>
 <div class="container">
     <h2>Список пользователей</h2>
-    <form>
+    <form action="${pageContext.servletContext.contextPath}/users.do" method="post">
         name: <input type="text" name="home"><br/>
         <input type="submit"><br/>
     </form>
@@ -19,9 +19,9 @@
         <tr>
             <td>Имя</td>
         </tr>
-        <c:forEach items="$(users)" var="user" varStatus="status">
+        <c:forEach items="${users}" var="user" varStatus="status">
             <tr valign="top">
-                <td>$(user.name)</td>
+                <td>${user.name}</td>
             </tr>
         </c:forEach>
     </table>

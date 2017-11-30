@@ -1,6 +1,12 @@
 *.iml
+classes/
 *.class
+.classpath
+gradlew
+gradlew.bat
+.project
 *.txt
+*.war
 .idea
 **/.gradle/*
 .git

@@ -23,9 +23,9 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	public DriverManagerDataSource dataSource() {
 	    DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
 	    driverManagerDataSource.setDriverClassName("org.postgresql.Driver");
-	    driverManagerDataSource.setUrl("jdbc:postgresql://localhost:5432/postgres");
-	    driverManagerDataSource.setUsername("postgres");
-	    driverManagerDataSource.setPassword("12345");
+	    driverManagerDataSource.setUrl("jdbc:postgresql://localhost:5432/frombook");
+	    driverManagerDataSource.setUsername("user1");
+	    driverManagerDataSource.setPassword("password");
 	    return driverManagerDataSource;
 	}
     
@@ -36,9 +36,5 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 		resolver.setSuffix(".jsp");
 		return resolver;
 	}
-    
-        
-   
-    
-     
+
 }

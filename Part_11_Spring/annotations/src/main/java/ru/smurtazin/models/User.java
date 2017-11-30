@@ -1,9 +1,6 @@
 package ru.smurtazin.models;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 /**
  * Created by a1 on 27.04.17.
@@ -11,10 +8,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @Setter @Getter
 @ToString(of = "name")
+@AllArgsConstructor
 public class User {
     private String name;
-
-    public User(String name) {
-        this.name = name;
-    }
 }
