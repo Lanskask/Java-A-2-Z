@@ -1,6 +1,6 @@
 
 -- create database
--- create database frombook with owner = user1 encoding = 'UTF8';
+create database frombook with owner = user1 encoding = 'UTF8';
 -- \c frombook
 
 -- making sequence

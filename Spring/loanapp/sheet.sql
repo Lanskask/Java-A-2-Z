@@ -23,23 +23,20 @@ create table t_users (
   surname varchar(100)
 );
 
-alter table t_loan RENAME TO t_loans;
-drop table if EXISTS t_loan;
-create table t_loan (
-  id bigint unique not null default nextval('hibernate_sequence') primary key,
-  amount bigint,
-  term_end timestamp,
+drop table if EXISTS t_loans;
+create table t_loans (
+id bigint unique not null default nextval('hibernate_sequence') primary key,
+amount bigint,
+term_end timestamp,
 
-  user_id  BIGINT REFERENCES t_users(id)
+user_id  BIGINT REFERENCES t_users(id)
 );
-
---
 
 -- Part 4 Inserting some data
 -- Part 4.1
 insert into t_users(id, name, surname) values
   (1, 'Bob', 'Sinclare');
-insert into t_loan(amount, term_end, user_id) values
+insert into t_loans(amount, term_end, user_id) values
   ( 20, TIMESTAMP 'now' + interval '0.5 year', 1),
   (100, TIMESTAMP 'now' + interval '4 year', 1),
   (300, TIMESTAMP 'now' + interval '2 year', 1);
@@ -47,7 +44,7 @@ insert into t_loan(amount, term_end, user_id) values
 -- Part 4.2
 insert into t_users(id, name, surname) values
   (2, 'Melany', 'Trump');
-insert into t_loan(amount, term_end, user_id) values
+insert into t_loans(amount, term_end, user_id) values
   ( 20, TIMESTAMP 'now' + interval '1 year', 2),
   (100, TIMESTAMP 'now' + interval '2 year', 2),
   (300, TIMESTAMP 'now' + interval '3 year', 2);
@@ -55,7 +52,7 @@ insert into t_loan(amount, term_end, user_id) values
 -- Part 4.3
 insert into t_users(id, name, surname) values
   (3, 'Bob', 'Sinclare');
-insert into t_loan(amount, term_end, user_id) values
+insert into t_loans(amount, term_end, user_id) values
   ( 20, TIMESTAMP 'now' + interval '10 year', 3),
   (100, TIMESTAMP 'now' + interval '21 year', 3),
   (300, TIMESTAMP 'now' + interval '3 year', 3);
