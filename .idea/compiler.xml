@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="annotations" />
+        <module name="annotations2" />
+        <module name="Answers" />
+        <module name="boot" />
+        <module name="BuildRestService" />
+        <module name="Chess" />
+        <module name="Final_Exersize" />
+        <module name="JavaEE" />
+        <module name="Lesson_1" />
+        <module name="lesson_2_DataTypes" />
+        <module name="Lesson_3_IfOperator" />
+        <module name="Lesson_4_Cycle" />
+        <module name="Lesson_5_Arrays" />
+        <module name="MockitoTesting" />
+        <module name="MyOwnSpringTesting" />
+        <module name="Part_10_Hibernate_2" />
+        <module name="Part_5_Collections" />
+        <module name="Part_8_SQL" />
+        <module name="Part_9_Servlets_JSP" />
+        <module name="pf-securing-web" />
+        <module name="spring2-mvc-xml-hello-world" />
+        <module name="Spring4MvcAjaxHelloWorldExample" />
+        <module name="SpringExample" />
+        <module name="tracker" />
+        <module name="xml" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="annotations" target="1.8" />
+      <module name="annotations2" target="1.8" />
+      <module name="Answers" target="1.8" />
+      <module name="boot" target="1.8" />
+      <module name="BuildRestService" target="1.8" />
+      <module name="Chess" target="1.8" />
+      <module name="ConsumRest_main" target="1.8" />
+      <module name="ConsumRest_test" target="1.8" />
+      <module name="experiments" target="1.8" />
+      <module name="Final_Exersize" target="1.8" />
+      <module name="firstxml_main" target="1.8" />
+      <module name="firstxml_test" target="1.8" />
+      <module name="java-a-2-z" target="1.8" />
+      <module name="Java-A-2-Z-Spring_main" target="1.8" />
+      <module name="Java-A-2-Z-Spring_test" target="1.8" />
+      <module name="JavaEE" target="1.8" />
+      <module name="Lesson_1" target="1.8" />
+      <module name="lesson_2_DataTypes" target="1.8" />
+      <module name="Lesson_3_IfOperator" target="1.8" />
+      <module name="Lesson_4_Cycle" target="1.8" />
+      <module name="Lesson_5_Arrays" target="1.8" />
+      <module name="loanapp_main" target="1.8" />
+      <module name="loanapp_test" target="1.8" />
+      <module name="MockitoTesting" target="1.8" />
+      <module name="MyOwnSpringTesting" target="1.8" />
+      <module name="OtherExperiments" target="1.8" />
+      <module name="Part_10_Hibernate_2" target="1.8" />
+      <module name="Part_11_Spring" target="1.8" />
+      <module name="part_1_BasicSyntax" target="1.8" />
+      <module name="Part_2_OOP" target="1.8" />
+      <module name="Part_5_Collections" target="1.8" />
+      <module name="Part_8_SQL" target="1.8" />
+      <module name="Part_9_Servlets_JSP" target="1.8" />
+      <module name="pf-securing-web" target="1.6" />
+      <module name="repoexp_main" target="1.8" />
+      <module name="repoexp_test" target="1.8" />
+      <module name="secondannotations_main" target="1.8" />
+      <module name="secondannotations_test" target="1.8" />
+      <module name="securing_main" target="1.8" />
+      <module name="securing_test" target="1.8" />
+      <module name="simpleweb_main" target="1.8" />
+      <module name="simpleweb_test" target="1.8" />
+      <module name="someExperiments" target="1.8" />
+      <module name="sprbexp_main" target="1.8" />
+      <module name="sprbexp_test" target="1.8" />
+      <module name="spring2-mvc-xml-hello-world" target="1.6" />
+      <module name="spring4-mvc-gradle-annotation-hello-world_main" target="1.8" />
+      <module name="spring4-mvc-gradle-annotation-hello-world_test" target="1.8" />
+      <module name="Spring4MvcAjaxHelloWorldExample" target="1.8" />
+      <module name="Spring_main" target="1.8" />
+      <module name="Spring_test" target="1.8" />
+      <module name="SpringBoot-firstxml_main" target="1.8" />
+      <module name="SpringBoot-firstxml_test" target="1.8" />
+      <module name="SpringBoot-loanapp_main" target="1.8" />
+      <module name="SpringBoot-loanapp_test" target="1.8" />
+      <module name="SpringBoot-repoexp_main" target="1.8" />
+      <module name="SpringBoot-repoexp_test" target="1.8" />
+      <module name="SpringBoot-secondannotations_main" target="1.8" />
+      <module name="SpringBoot-secondannotations_test" target="1.8" />
+      <module name="SpringBoot-simpleweb_main" target="1.8" />
+      <module name="SpringBoot-simpleweb_test" target="1.8" />
+      <module name="SpringExample" target="1.5" />
+      <module name="SpringSecurityJdbcApp-master_main" target="1.8" />
+      <module name="SpringSecurityJdbcApp-master_test" target="1.8" />
+      <module name="SpringTesting" target="1.8" />
+      <module name="tracker" target="1.8" />
+      <module name="xml" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

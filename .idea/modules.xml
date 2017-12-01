@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Part_2_OOP/Answers/Answers.iml" filepath="$PROJECT_DIR$/Part_2_OOP/Answers/Answers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/someExperiments/SpringTesting/BuildRestService/BuildRestService.iml" filepath="$PROJECT_DIR$/someExperiments/SpringTesting/BuildRestService/BuildRestService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_2_OOP/Chess/Chess.iml" filepath="$PROJECT_DIR$/Part_2_OOP/Chess/Chess.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ConsumRest.iml" filepath="$PROJECT_DIR$/.idea/modules/ConsumRest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ConsumRest_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ConsumRest_main.iml" group="ConsumRest" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ConsumRest_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ConsumRest_test.iml" group="ConsumRest" />
+      <module fileurl="file://$PROJECT_DIR$/Part_1_BasicSyntax/Final_Exersize/Final_Exersize.iml" filepath="$PROJECT_DIR$/Part_1_BasicSyntax/Final_Exersize/Final_Exersize.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Java-A-2-Z-Spring.iml" filepath="$PROJECT_DIR$/.idea/modules/Java-A-2-Z-Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Java-A-2-Z-Spring_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Java-A-2-Z-Spring_main.iml" group="Spring" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Java-A-2-Z-Spring_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Java-A-2-Z-Spring_test.iml" group="Spring" />
+      <module fileurl="file://$PROJECT_DIR$/someExperiments/JavaEE/JavaEE.iml" filepath="$PROJECT_DIR$/someExperiments/JavaEE/JavaEE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_1/Lesson_1.iml" filepath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_1/Lesson_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/Lesson_3_IfOperator.iml" filepath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_3_IfOperator/Lesson_3_IfOperator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/Lesson_4_Cycle.iml" filepath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_4_Cycle/Lesson_4_Cycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/Lesson_5_Arrays.iml" filepath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_5_Arrays/Lesson_5_Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/someExperiments/OtherExperiments/MockitoTesting/MockitoTesting.iml" filepath="$PROJECT_DIR$/someExperiments/OtherExperiments/MockitoTesting/MockitoTesting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/someExperiments/SpringTesting/MyOwnSpringTesting/MyOwnSpringTesting.iml" filepath="$PROJECT_DIR$/someExperiments/SpringTesting/MyOwnSpringTesting/MyOwnSpringTesting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/someExperiments/OtherExperiments/OtherExperiments.iml" filepath="$PROJECT_DIR$/someExperiments/OtherExperiments/OtherExperiments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_10_Hibernate_2/Part_10_Hibernate_2.iml" filepath="$PROJECT_DIR$/Part_10_Hibernate_2/Part_10_Hibernate_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_11_Spring/Part_11_Spring.iml" filepath="$PROJECT_DIR$/Part_11_Spring/Part_11_Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_2_OOP/Part_2_OOP.iml" filepath="$PROJECT_DIR$/Part_2_OOP/Part_2_OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_5_Collections/Part_5_Collections.iml" filepath="$PROJECT_DIR$/Part_5_Collections/Part_5_Collections.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_8_SQL/Part_8_SQL.iml" filepath="$PROJECT_DIR$/Part_8_SQL/Part_8_SQL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_9_Servlets_JSP/Part_9_Servlets_JSP.iml" filepath="$PROJECT_DIR$/Part_9_Servlets_JSP/Part_9_Servlets_JSP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Spring.iml" filepath="$PROJECT_DIR$/.idea/modules/Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_11_Spring/Spring4MvcAjaxHelloWorldExample/Spring4MvcAjaxHelloWorldExample.iml" filepath="$PROJECT_DIR$/Part_11_Spring/Spring4MvcAjaxHelloWorldExample/Spring4MvcAjaxHelloWorldExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/firstxml/SpringBoot-firstxml.iml" filepath="$PROJECT_DIR$/.idea/modules/firstxml/SpringBoot-firstxml.iml" group="firstxml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/firstxml/SpringBoot-firstxml_main.iml" filepath="$PROJECT_DIR$/.idea/modules/firstxml/SpringBoot-firstxml_main.iml" group="firstxml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/firstxml/SpringBoot-firstxml_test.iml" filepath="$PROJECT_DIR$/.idea/modules/firstxml/SpringBoot-firstxml_test.iml" group="firstxml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBoot-loanapp.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBoot-loanapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBoot-loanapp_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBoot-loanapp_main.iml" group="loanapp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBoot-loanapp_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBoot-loanapp_test.iml" group="loanapp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBoot-repoexp.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBoot-repoexp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBoot-repoexp_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBoot-repoexp_main.iml" group="repoexp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBoot-repoexp_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBoot-repoexp_test.iml" group="repoexp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/secondannotations/SpringBoot-secondannotations.iml" filepath="$PROJECT_DIR$/.idea/modules/secondannotations/SpringBoot-secondannotations.iml" group="secondannotations" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/secondannotations/SpringBoot-secondannotations_main.iml" filepath="$PROJECT_DIR$/.idea/modules/secondannotations/SpringBoot-secondannotations_main.iml" group="secondannotations" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/secondannotations/SpringBoot-secondannotations_test.iml" filepath="$PROJECT_DIR$/.idea/modules/secondannotations/SpringBoot-secondannotations_test.iml" group="secondannotations" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBoot-securing.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBoot-securing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBoot-simpleweb.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBoot-simpleweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBoot-simpleweb_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBoot-simpleweb_main.iml" group="simpleweb" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBoot-simpleweb_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBoot-simpleweb_test.iml" group="simpleweb" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBoot-sprbexp.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBoot-sprbexp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringExample/SpringExample.iml" filepath="$PROJECT_DIR$/SpringExample/SpringExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringSecurityJdbcApp-master.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringSecurityJdbcApp-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringSecurityJdbcApp-master_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringSecurityJdbcApp-master_main.iml" group="SpringSecurityJdbcApp-master" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringSecurityJdbcApp-master_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringSecurityJdbcApp-master_test.iml" group="SpringSecurityJdbcApp-master" />
+      <module fileurl="file://$PROJECT_DIR$/someExperiments/SpringTesting/SpringTesting.iml" filepath="$PROJECT_DIR$/someExperiments/SpringTesting/SpringTesting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1131996623/Spring_main.iml" filepath="$PROJECT_DIR$/.idea/modules/1131996623/Spring_main.iml" group="Spring" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1131996623/Spring_test.iml" filepath="$PROJECT_DIR$/.idea/modules/1131996623/Spring_test.iml" group="Spring" />
+      <module fileurl="file://$PROJECT_DIR$/Part_11_Spring/annotations/annotations.iml" filepath="$PROJECT_DIR$/Part_11_Spring/annotations/annotations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_11_Spring/annotations2/annotations2.iml" filepath="$PROJECT_DIR$/Part_11_Spring/annotations2/annotations2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_11_Spring/boot/boot.iml" filepath="$PROJECT_DIR$/Part_11_Spring/boot/boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_2_OOP/Experiments/experiments.iml" filepath="$PROJECT_DIR$/Part_2_OOP/Experiments/experiments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/firstxml.iml" filepath="$PROJECT_DIR$/.idea/modules/firstxml.iml" group="firstxml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/firstxml_main.iml" filepath="$PROJECT_DIR$/.idea/modules/firstxml_main.iml" group="firstxml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/firstxml_test.iml" filepath="$PROJECT_DIR$/.idea/modules/firstxml_test.iml" group="firstxml" />
+      <module fileurl="file://$PROJECT_DIR$/java-a-2-z.iml" filepath="$PROJECT_DIR$/java-a-2-z.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_2_DataTypes/lesson_2_DataTypes.iml" filepath="$PROJECT_DIR$/Part_1_BasicSyntax/Lesson_2_DataTypes/lesson_2_DataTypes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/loanapp.iml" filepath="$PROJECT_DIR$/.idea/modules/loanapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/loanapp_main.iml" filepath="$PROJECT_DIR$/.idea/modules/loanapp_main.iml" group="loanapp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/loanapp_test.iml" filepath="$PROJECT_DIR$/.idea/modules/loanapp_test.iml" group="loanapp" />
+      <module fileurl="file://$PROJECT_DIR$/Part_1_BasicSyntax/part_1_BasicSyntax.iml" filepath="$PROJECT_DIR$/Part_1_BasicSyntax/part_1_BasicSyntax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringSecurityJdbcApp-master/pf-securing-web.iml" filepath="$PROJECT_DIR$/SpringSecurityJdbcApp-master/pf-securing-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/repoexp.iml" filepath="$PROJECT_DIR$/.idea/modules/repoexp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/repoexp_main.iml" filepath="$PROJECT_DIR$/.idea/modules/repoexp_main.iml" group="repoexp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/repoexp_test.iml" filepath="$PROJECT_DIR$/.idea/modules/repoexp_test.iml" group="repoexp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/secondannotations.iml" filepath="$PROJECT_DIR$/.idea/modules/secondannotations.iml" group="secondannotations" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1354095088/secondannotations_main.iml" filepath="$PROJECT_DIR$/.idea/modules/1354095088/secondannotations_main.iml" group="secondannotations" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1354095088/secondannotations_test.iml" filepath="$PROJECT_DIR$/.idea/modules/1354095088/secondannotations_test.iml" group="secondannotations" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/securing.iml" filepath="$PROJECT_DIR$/.idea/modules/securing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/securing_main.iml" filepath="$PROJECT_DIR$/.idea/modules/securing_main.iml" group="securing" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/securing_test.iml" filepath="$PROJECT_DIR$/.idea/modules/securing_test.iml" group="securing" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/simpleweb.iml" filepath="$PROJECT_DIR$/.idea/modules/simpleweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/simpleweb_main.iml" filepath="$PROJECT_DIR$/.idea/modules/simpleweb_main.iml" group="simpleweb" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/simpleweb_test.iml" filepath="$PROJECT_DIR$/.idea/modules/simpleweb_test.iml" group="simpleweb" />
+      <module fileurl="file://$PROJECT_DIR$/someExperiments/someExperiments.iml" filepath="$PROJECT_DIR$/someExperiments/someExperiments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sprbexp.iml" filepath="$PROJECT_DIR$/.idea/modules/sprbexp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sprbexp_main.iml" filepath="$PROJECT_DIR$/.idea/modules/sprbexp_main.iml" group="sprbexp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sprbexp_test.iml" filepath="$PROJECT_DIR$/.idea/modules/sprbexp_test.iml" group="sprbexp" />
+      <module fileurl="file://$PROJECT_DIR$/spring2-mvc-xml/spring2-mvc-xml-hello-world.iml" filepath="$PROJECT_DIR$/spring2-mvc-xml/spring2-mvc-xml-hello-world.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring4-mvc-gradle-annotation-hello-world.iml" filepath="$PROJECT_DIR$/.idea/modules/spring4-mvc-gradle-annotation-hello-world.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring4-mvc-gradle-annotation-hello-world_main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring4-mvc-gradle-annotation-hello-world_main.iml" group="spring4-mvc-gradle-annotation-hello-world" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring4-mvc-gradle-annotation-hello-world_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring4-mvc-gradle-annotation-hello-world_test.iml" group="spring4-mvc-gradle-annotation-hello-world" />
+      <module fileurl="file://$PROJECT_DIR$/Part_2_OOP/Tracker/tracker.iml" filepath="$PROJECT_DIR$/Part_2_OOP/Tracker/tracker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Part_11_Spring/xml/xml.iml" filepath="$PROJECT_DIR$/Part_11_Spring/xml/xml.iml" />
+    </modules>
+  </component>
+</project>
