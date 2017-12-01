@@ -1,4 +1,0 @@
-rootProject.name = 'Spring'
-include 'firstxml'
-include 'secondannotations'
-
