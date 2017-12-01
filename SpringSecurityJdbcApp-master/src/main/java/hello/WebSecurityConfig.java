@@ -12,13 +12,15 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-
 	@Autowired
 	DataSource dataSource;
-	
+
+	/*public WebSecurityConfig(DataSource dataSource) {
+		this.dataSource = dataSource;
+	}*/
+
 	@Autowired
 	public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
-		
 	  auth.jdbcAuthentication().dataSource(dataSource)
 		.usersByUsernameQuery("select username, password, enabled from users where username=?")
 		.authoritiesByUsernameQuery("select username, role from user_roles where username=?");

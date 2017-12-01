@@ -37,6 +37,5 @@ dependencies {
     testCompile("org.springframework.security:spring-security-test")
 
     // ------
-//    compile "org.apache.tomcat.embed:tomcat-embed-jasper:*"
-    compile "javax.servlet:jstl:*"
+    compile "javax.servlet:jstl:1.2"
 }

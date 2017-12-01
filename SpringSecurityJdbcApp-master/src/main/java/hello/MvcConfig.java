@@ -19,7 +19,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
         registry.addViewController("/403").setViewName("403");
     }
     
-    @Bean(name = "dataSource")
+    /*@Bean(name = "dataSource")
 	public DriverManagerDataSource dataSource() {
 	    DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
 	    driverManagerDataSource.setDriverClassName("org.postgresql.Driver");
@@ -27,7 +27,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	    driverManagerDataSource.setUsername("user1");
 	    driverManagerDataSource.setPassword("password");
 	    return driverManagerDataSource;
-	}
+	}*/
     
     @Bean
 	public InternalResourceViewResolver viewResolver() {
