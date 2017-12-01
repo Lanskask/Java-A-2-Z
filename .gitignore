@@ -4,6 +4,7 @@
 .idea
 **/.gradle/*
 .git
+.settings/
 out/
 **/target/*
 **/build/*
