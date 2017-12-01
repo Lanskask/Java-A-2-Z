@@ -1,30 +1,12 @@
 package ru.smurtazin.models;
 
+import lombok.*;
+
 /**
  * Created by a1 on 26.04.17.
  */
+@Setter @Getter @ToString
+@AllArgsConstructor @NoArgsConstructor
 public class User {
     private String name;
-
-    public User() {
-    }
-
-    public User(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                '}';
-    }
 }
