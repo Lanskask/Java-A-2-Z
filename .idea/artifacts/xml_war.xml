@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="xml:war">
-    <output-path>$PROJECT_DIR$/Part_11_Spring/xml/target</output-path>
-    <root id="archive" name="xml-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="xml:war exploded" />
-    </root>
-  </artifact>
-</component>

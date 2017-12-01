@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="ShildtServlets:war">
-    <output-path>$PROJECT_DIR$/someExperiments/JavaEE/ShildtServlets/target</output-path>
-    <root id="archive" name="ShildtServlets-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="ShildtServlets:war exploded" />
-    </root>
-  </artifact>
-</component>
