@@ -16,8 +16,8 @@
         </property>
     </bean>
 
-    <bean name="/users1.htm" class="ru.smurtazin.controller.UserController"/>
+    <bean name="users1" class="ru.smurtazin.controller.UserController"/>
 
-    <context:component-scan base-package="ru.smurtazin"/>
+    <!--<context:component-scan base-package="ru.smurtazin"/>-->
 
 </beans>

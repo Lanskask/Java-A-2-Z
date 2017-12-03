@@ -7,6 +7,17 @@
    http://www.springframework.org/schema/context
    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-    <context:annotation-config/>
+    <!--<context:annotation-config/>-->
 
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
+        <property name="prefix">
+            <value>/WEB-INF/views/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+
+    <!--<bean name="users1" class="ru.smurtazin.controller.UserController"/>-->
+    <context:component-scan base-package="ru.smurtazin"/>
 </beans>

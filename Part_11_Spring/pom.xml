@@ -16,7 +16,6 @@
         <module>annotations</module>
         <module>boot</module>
         <module>annotations2</module>
-        <module>Spring4MvcAjaxHelloWorldExample</module>
     </modules>
 
     <dependencies>
