@@ -1,0 +1,50 @@
+rootProject.name = 'java-a-2-z'
+include ':part_1_BasicSyntax:Lesson_1'
+include ':part_1_BasicSyntax:lesson_2_DataTypes'
+include ':part_1_BasicSyntax:Lesson_3_IfOperator'
+include ':part_1_BasicSyntax:Lesson_4_Cycle'
+include ':part_1_BasicSyntax:Lesson_5_Arrays'
+include ':part_1_BasicSyntax:Final_Exersize'
+include ':part_1_BasicSyntax'
+include ':Part_2_OOP:Answers'
+include ':Part_2_OOP:Chess'
+include ':Part_2_OOP'
+include ':Part_5_Collections'
+include ':Part_8_SQL'
+include ':Part_9_Servlets_JSP'
+include ':Part_10_Hibernate_2'
+include ':Part_11_Spring:xml'
+include ':Part_11_Spring:annotations'
+include ':Part_11_Spring:annotations2'
+include ':Part_11_Spring'
+include ':someExperiments:JavaEE'
+include ':someExperiments:OtherExperiments:MockitoTesting'
+include ':someExperiments:OtherExperiments'
+include ':someExperiments:concur'
+include ':someExperiments:patternes'
+include ':someExperiments'
+
+project(':part_1_BasicSyntax:Lesson_1').projectDir = "$rootDir/Part_1_BasicSyntax/Lesson_1" as File
+project(':part_1_BasicSyntax:lesson_2_DataTypes').projectDir = "$rootDir/Part_1_BasicSyntax/Lesson_2_DataTypes" as File
+project(':part_1_BasicSyntax:Lesson_3_IfOperator').projectDir = "$rootDir/Part_1_BasicSyntax/Lesson_3_IfOperator" as File
+project(':part_1_BasicSyntax:Lesson_4_Cycle').projectDir = "$rootDir/Part_1_BasicSyntax/Lesson_4_Cycle" as File
+project(':part_1_BasicSyntax:Lesson_5_Arrays').projectDir = "$rootDir/Part_1_BasicSyntax/Lesson_5_Arrays" as File
+project(':part_1_BasicSyntax:Final_Exersize').projectDir = "$rootDir/Part_1_BasicSyntax/Final_Exersize" as File
+project(':part_1_BasicSyntax').projectDir = "$rootDir/Part_1_BasicSyntax" as File
+project(':Part_2_OOP:Answers').projectDir = "$rootDir/Part_2_OOP/Answers" as File
+project(':Part_2_OOP:Chess').projectDir = "$rootDir/Part_2_OOP/Chess" as File
+project(':Part_2_OOP').projectDir = "$rootDir/Part_2_OOP" as File
+project(':Part_5_Collections').projectDir = "$rootDir/Part_5_Collections" as File
+project(':Part_8_SQL').projectDir = "$rootDir/Part_8_SQL" as File
+project(':Part_9_Servlets_JSP').projectDir = "$rootDir/Part_9_Servlets_JSP" as File
+project(':Part_10_Hibernate_2').projectDir = "$rootDir/Part_10_Hibernate_2" as File
+project(':Part_11_Spring:xml').projectDir = "$rootDir/Part_11_Spring/xml" as File
+project(':Part_11_Spring:annotations').projectDir = "$rootDir/Part_11_Spring/annotations" as File
+project(':Part_11_Spring:annotations2').projectDir = "$rootDir/Part_11_Spring/annotations2" as File
+project(':Part_11_Spring').projectDir = "$rootDir/Part_11_Spring" as File
+project(':someExperiments:JavaEE').projectDir = "$rootDir/someExperiments/JavaEE" as File
+project(':someExperiments:OtherExperiments:MockitoTesting').projectDir = "$rootDir/someExperiments/OtherExperiments/MockitoTesting" as File
+project(':someExperiments:OtherExperiments').projectDir = "$rootDir/someExperiments/OtherExperiments" as File
+project(':someExperiments:concur').projectDir = "$rootDir/someExperiments/concur" as File
+project(':someExperiments:patternes').projectDir = "$rootDir/someExperiments/patternes" as File
+project(':someExperiments').projectDir = "$rootDir/someExperiments" as File
